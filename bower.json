@@ -1,0 +1,15 @@
+{
+  "name": "qdashboard",
+  "description": "Quinnox Finance Dashboard",
+  "main": "server.js",
+  "license": "ISC",
+  "homepage": "https://github.com/SanthoshRaju91/QDashboard",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

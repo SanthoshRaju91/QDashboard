@@ -1,0 +1,19 @@
+{
+  "name": "qdashboard",
+  "version": "1.0.0",
+  "description": "Quinnox Finance Dashboard",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SanthoshRaju91/QDashboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SanthoshRaju91/QDashboard/issues"
+  },
+  "homepage": "https://github.com/SanthoshRaju91/QDashboard"
+}
