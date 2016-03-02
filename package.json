@@ -15,5 +15,19 @@
   "bugs": {
     "url": "https://github.com/SanthoshRaju91/QDashboard/issues"
   },
-  "homepage": "https://github.com/SanthoshRaju91/QDashboard"
+  "homepage": "https://github.com/SanthoshRaju91/QDashboard",
+  "dependencies": {
+    "bcryptjs": "^2.3.0",
+    "body-parser": "^1.15.0",
+    "cron": "^1.1.0",
+    "express": "^4.13.4",
+    "express-jwt": "^3.3.0",
+    "jsonwebtoken": "^5.7.0",
+    "log4js": "^0.6.32",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.4.5",
+    "socket.io": "^1.4.5",
+    "underscore": "^1.8.3",
+    "xlsx-to-json": "^0.2.4"
+  }
 }
