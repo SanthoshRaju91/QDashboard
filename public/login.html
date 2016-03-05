@@ -1,0 +1,35 @@
+<div class="container">
+    <div style="position:absolute; left:0px; top:0px; margin:2% 0 0 10%;"> <img src="image/quinnox_logo.jpg" style=""></div>
+    <div style="overflow:hidden; position:absolute; left:0px; top:50px; margin:126px 0 0 0;"> <img src="image/bg_chev.gif"></div>
+    <img src="http://www.itwconsulting.com/img/strategy-and-consulting-what-we-do.png" style="margin: 15% 0 0 6%;">
+
+    <div class="row">
+        <div class="col-md-offset-6 col-md-6">
+            <div class="panel panel-default" style="
+    margin: -100% 0 0 0;">
+                <div class="panel-body">
+                    <h1 class="text-center animated fadeIn"><span class="ion-person"></span> &nbsp;Login</h1><br/><br/>
+                    <form name="myForm" novalidate class="form-horizontal">
+                        <div class="form-group">
+                            <input type="text" placeholder="Username" name="username" ng-model="username" class="form-control" required style="margin:auto;width:80%!important">
+                            <span style="color:red" ng-show="myForm.username.$dirty && myForm.username.$error.required" />
+
+                        </div>
+                        <div class="form-group">
+                            <input type="password" placeholder="Password" name="password" ng-model="password" class="form-control" required style="margin:auto;width:80%!important">
+                            <span style="color:red" ng-show="myForm.password.$dirty && myForm.password.$error.required"/>
+                        </div>
+                         <span ng-if = "error" class="text-center alert alert-danger"><strong>Invalid Login!!</strong>  either Username or Password is incorrect</span><br/><br/>
+                        <div class="form-group">
+                            <input type="submit" ng-disabled="myForm.username.$error.required ||
+      myForm.password.$error.required" value="Login" class="btn-block btn-success btn" ng-click="login()" style="margin:auto;width:80%!important">
+                        </div>
+                        <div class="form-group">
+                            <a href="#"><div class="help-block text-center">Forgot your password?</div></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

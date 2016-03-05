@@ -1,0 +1,21 @@
+[2016-03-05 20:04:48.293] [INFO] appLog - Server listening on port: 3000
+[2016-03-05 20:04:49.323] [ERROR] appLog - Error in connecting to Mongo DB MongoError: connect ECONNREFUSED 127.0.0.1:27017
+[2016-03-05 20:08:10.860] [INFO] appLog - Server listening on port: 3000
+[2016-03-05 20:08:10.886] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-05 20:09:46.943] [INFO] appLog - User registered successfully
+[2016-03-05 20:58:31.276] [INFO] appLog - Server listening on port: 3000
+[2016-03-05 20:58:31.303] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-05 21:00:30.353] [INFO] appLog - Server listening on port: 3000
+[2016-03-05 21:00:30.379] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-05 22:18:28.183] [INFO] appLog - Server listening on port: 3000
+[2016-03-05 22:18:28.210] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-05 22:19:25.095] [INFO] appLog - Server listening on port: 3000
+[2016-03-05 22:19:25.121] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-05 22:25:34.430] [INFO] appLog - Server listening on port: 3000
+[2016-03-05 22:25:34.459] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-05 22:27:39.833] [INFO] appLog - Server listening on port: 3000
+[2016-03-05 22:27:39.863] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-05 23:24:48.604] [INFO] appLog - Server listening on port: 3000
+[2016-03-05 23:24:48.633] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-05 23:41:26.756] [INFO] appLog - Server listening on port: 3000
+[2016-03-05 23:41:26.821] [INFO] appLog - Connected to Mongo DB successfully

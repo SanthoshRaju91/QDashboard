@@ -1,0 +1,49 @@
+<section class="container">
+    <div class="well well-sm">
+        <h5 class="text-center">Upload Data File.</h5>
+    </div>
+    
+    <div class="alert alert-danger">        
+        <p>Please ensure you are uploading the proper file, because the application renders the exact same data in the data file. Any mismatch/discrepancies seen in the graph are bound to wrong data loaded.</p>
+    </div>
+    
+    <div class = "panel panel-default">
+        <div class="panel-body">
+            <h4 class = "text-center">Upload category</h4>
+            <hr>
+            <form name = "uploadForm" class="form-horizontal">
+                <div class="row">
+                    <label for = "billabilty" class="col-xs-2 control-label label label-danger upload-labels ">Billabilty Data</label>
+                    <div class="col-xs-4">
+                        <input type="file" class="form-control" ngf-select ng-model = "file" name = "file" ngf-pattern = "'*'" accept = "*" > 
+                        <button style = "margin-top: 5px;" type="submit" class = "btn btn-sm btn-danger" ng-click="submit('billability')">submit</button>
+                    </div>
+                    <div class="col-xs-5">
+                        <div class="progress" ng-show = "progressBill">
+                          <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="{{progressBillPercentage}}"
+                          aria-valuemin="0" aria-valuemax="100" style="width:{{progressBillPercentage}}%">                    
+                              {{progressBillPercentage}} %
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <label for = "financial" class="col-xs-2 control-label label label-danger upload-labels">financial Data</label>
+                    <div class="col-xs-4">
+                        <input type="file" class="form-control" ngf-select ng-model = "file" name = "file" ngf-pattern = "'*'" accept = "*" > 
+                        <button style = "margin-top: 5px;" type="submit" class = "btn btn-sm btn-danger" ng-click="submit('financial')">submit</button>
+                    </div>
+                    <div class="col-xs-5">
+                        <div class="progress" ng-show = "progressFin">
+                          <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="{{progressFinPercentage}}"
+                          aria-valuemin="0" aria-valuemax="100" style="width:{{progressFinPercentage}}%">                    
+                              {{progressFinPercentage}} %
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>        
+    </div>        
+</section>
