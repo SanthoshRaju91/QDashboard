@@ -1,6 +1,7 @@
 node_modules
-
+uploads
 # Ignore everything in this directory
 *
 # Except this file
 !.gitignore
+
