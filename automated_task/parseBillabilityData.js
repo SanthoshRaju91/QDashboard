@@ -20,7 +20,7 @@ var OverBillabilityBasedOnVerticalAndLocation = require('../models/overallBillab
 var LevelBillability = require('../models/levelBillability.js');
 var LevelBillabilityBasedOnLoc = require('../models/levelBillabilityBasedOnLoc.js');
 var LevelBillabilityBasedOnVertical = require('../models/levelBillabilityBasedOnVertical.js');
-
+var LevelBillabilityBasedOnLocationAndVertical = require('../models/levelBillabilityBasedOnLocAndVer.js');
 
 //Parsing the given excel file
 exports.parseBillabilityData =  function (filename) {
@@ -37,7 +37,8 @@ exports.parseBillabilityData =  function (filename) {
             loadDataForVerticalAndLocation(JSON.stringify(result));
             processLevelData(JSON.stringify(result));
             processLevelAndLocationData(JSON.stringify(result));
-            processLevelAndVerticalData(JSON.stringify(result));            
+            processLevelAndVerticalData(JSON.stringify(result));  
+            processLevelBasedOnLocationAndVerticalData(JSON.stringify(result));
         }
       });   
 }
@@ -261,8 +262,61 @@ function processLevelAndVerticalData(result) {
     loadLevelVerticalDataToMongo(verticalLevelMap);
 }
 
-//loading overall billing and non billing json to mongodb
 
+function processLevelBasedOnLocationAndVerticalData(result) {
+    var grouped = _.groupBy(JSON.parse(result), 'Week');
+    var groupedData = _.map(grouped, function(current) {
+        return {
+            week: current[0].Week,
+            values: current
+        } 
+    });
+        
+    var levelMap = [];
+    _.map(groupedData, function(current) {
+        var levelGrouped = _.groupBy(current.values, 'LVL');
+        _.each(levelGrouped, function(object) {
+            levelMap.push({
+                week: object[0].Week,
+                level: object[0].LVL,
+                values: object
+            }); 
+        });
+    });
+    
+    var levelLocationMap = [];
+    _.map(levelMap, function(current) {
+        var locationMap = _.groupBy(current.values, 'BASE_LOCATION');
+        _.each(locationMap, function(object) {
+            levelLocationMap.push({
+                week: object[0].Week,
+                level: object[0].LVL,
+                location: object[0].BASE_LOCATION,
+                values: object
+            });
+        });
+    });
+    
+    var levelLocationVerticalMap = [];
+    _.map(levelLocationMap, function(current) {
+        var verticalMap = _.groupBy(current.values, 'PROJECT_BG');
+        _.each(verticalMap, function(object) {
+             levelLocationVerticalMap.push({
+                week: object[0].Week,
+                level: object[0].LVL,
+                location: object[0].BASE_LOCATION,
+                vertical: object[0].PROJECT_BG,
+                values: _.countBy(object, function(object) {
+                    return object['BILLABLE'] == 'Billable' ? 'Billable' : 'NonBillable'
+                 })
+             });
+        });
+    });
+    
+    loadLevelOnLocationAndVerticalToMongo(levelLocationVerticalMap);
+}
+
+//loading overall billing and non billing json to mongodb
 function loadDataToMongo(inputResultToStore) { 
     OverBillability.remove({}, function(err) {
         if(err) {
@@ -414,3 +468,22 @@ function loadLevelVerticalDataToMongo(inputResultToStore) {
     });
 }
 
+function loadLevelOnLocationAndVerticalToMongo(inputResultToStore) {
+    LevelBillabilityBasedOnLocationAndVertical.remove({}, function(err) {
+       if(err) {
+           console.log("LevelBillabilityBasedOnLocationAndVertical : Error in removing data " + err);
+       } else {
+           for(var i=0; i<inputResultToStore.length; i++) {
+               var levelBillabilityBasedOnLocationAndVertical = new LevelBillabilityBasedOnLocationAndVertical({week: inputResultToStore[i].week, level: inputResultToStore[i].level, location: inputResultToStore[i].location, vertical: inputResultToStore[i].vertical, values: inputResultToStore[i].values});
+               
+               levelBillabilityBasedOnLocationAndVertical.save(function(err) {
+                  if(err) {
+                      console.error("LevelBillabilityBasedOnLocationAndVertical : Error in inserting data " + err); 
+                  } else {
+                      console.log("LevelBillabilityBasedOnLocationAndVertical : Inserted successfully");
+                  }
+               });
+           }
+       }
+    });
+}
