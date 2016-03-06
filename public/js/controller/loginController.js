@@ -8,7 +8,7 @@ app.controller('LoginController', ['$scope', '$http', '$location', 'AuthService'
       $http.post(LOGIN_URL, {username: $scope.username, password: $scope.password})
         .success(function(response) {  
             if(response.success) {
-                AuthService.logIn(response.token, response.role);
+                AuthService.logIn(response.token, response.role, response.fullName);
                 $location.path('/landing');   
             } else {
                 $scope.error = true;

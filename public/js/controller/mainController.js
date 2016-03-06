@@ -4,6 +4,8 @@ app.controller('mainController', ['$scope', '$state', 'AuthService', function($s
     $scope.logOut = function() {
         AuthService.logOut();
         $state.transitionTo('login');
-    }
-    $scope.fullName = 'Santhosh' + ' Raju';
+    }    
+    
+    $scope.role = AuthService.getRole();
+    $scope.fullName = AuthService.getUserFullName();
 }]);

@@ -25,8 +25,9 @@ exports.login = function(req, res) {
                   logger.error("Password does not match for the user " + username);
                   return res.json({status: 401, success: false, message:    'password does not match'});
               } else {
+                  var userFullName = user.firstname + " " + user.lastname;
                   var token = jwt.sign(user, config.secretKey, {expiresInMinutes: 60});
-                  return res.json({status: 200, success: true, token: token, role: user.privileges});
+                  return res.json({status: 200, success: true, token: token, role: user.privileges, fullName: userFullName});
               }
            });
        }

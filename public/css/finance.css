@@ -332,3 +332,19 @@ ul.alert-dropdown {
     font-size: 13px;
 }
 
+.chart {
+    width: 400px !important;
+    margin: 0px !important;
+}
+
+.panel-chart {
+    width: 420px;    
+}
+
+.panel-body h5 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    font-weight: 500;
+    font-size: 12px;
+}

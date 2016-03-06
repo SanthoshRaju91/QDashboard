@@ -1,4 +1,4 @@
-var app = angular.module('App', ['ui.router', 'authService', 'login', 'dashBoard','utilization','main', 'upload']);
+var app = angular.module('App', ['ui.router', 'authService', 'login', 'dashBoard','utilization','main', 'upload', 'assignment', 'finance']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
    
@@ -26,6 +26,18 @@ app.config(function($stateProvider, $urlRouterProvider) {
             url: '/utilization',
             templateUrl: 'views/utilization.html',
             controller: 'utilizationController',
+            authenticate: true
+        })
+        .state('landing.finance', {
+            url: '/finance',
+            templateUrl: 'views/finance.html',
+            controller: 'financeController',
+            authenticate: true
+        })
+        .state('landing.assignment', {
+            url: '/assignment',
+            templateUrl: 'views/assignment.html',
+            controller: 'assignmentController',
             authenticate: true
         })
         .state('landing.upload', {

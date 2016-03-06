@@ -4,10 +4,11 @@ app.service('AuthService', ['$window', function($window) {
     
     var user = this;    
         
-    user.logIn = function(token, role) {
+    user.logIn = function(token, role, fullname) {
         $window.localStorage.setItem('isAuthenticated', true);
         $window.localStorage.setItem('token', token);
         $window.localStorage.setItem('role', role);
+        $window.localStorage.setItem('fullname', fullname);
     }
     
     user.logOut = function() {
@@ -28,6 +29,9 @@ app.service('AuthService', ['$window', function($window) {
         return $window.localStorage.getItem('role');    
     }
     
+    user.getUserFullName = function() {
+        return $window.localStorage.getItem('fullname');
+    }
     
     return user;
 }]);

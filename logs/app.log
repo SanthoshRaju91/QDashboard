@@ -65,3 +65,16 @@
 [2016-03-06 11:38:37.424] [INFO] appLog - Connected to Mongo DB successfully
 [2016-03-06 11:40:08.699] [INFO] appLog - Server listening on port: 3000
 [2016-03-06 11:40:08.731] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-06 11:46:22.114] [INFO] appLog - Server listening on port: 3000
+[2016-03-06 11:46:22.138] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-06 13:01:41.752] [INFO] appLog - User registered successfully
+[2016-03-06 13:48:03.460] [INFO] appLog - Server listening on port: 3000
+[2016-03-06 13:48:03.484] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-06 13:52:53.012] [INFO] appLog - Server listening on port: 3000
+[2016-03-06 13:52:53.037] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-06 13:54:12.914] [INFO] appLog - Server listening on port: 3000
+[2016-03-06 13:54:12.938] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-06 13:57:38.610] [INFO] appLog - Server listening on port: 3000
+[2016-03-06 13:57:38.635] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-06 13:58:51.973] [INFO] appLog - Server listening on port: 3000
+[2016-03-06 13:58:51.997] [INFO] appLog - Connected to Mongo DB successfully

@@ -29,13 +29,13 @@
                     <li>
                         <a ui-sref="landing.utilization"><i class="fa fa-fw fa-bar-chart-o"></i> Utilization</a>
                     </li>
-                    <li>
-                        <a href="#"><i class="fa fa-fw fa-table"></i> Finance</a>
+                    <li ng-if="role == 'Admin'">
+                        <a ui-sref="landing.finance"><i class="fa fa-fw fa-table"></i> Finance</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-fw fa-edit"></i> Assigment</a>
+                        <a ui-sref="landing.assignment"><i class="fa fa-fw fa-edit"></i> Assigment</a>
                     </li>
-                    <li>
+                    <li ng-if="role == 'Admin'">
                         <a ui-sref="landing.upload"><i class="fa fa-fw fa-file"></i> Upload</a>
                     </li>
                 </ul>
@@ -51,8 +51,8 @@
     <script>
         $(document).ready(function() {                        
             $('.side-nav li a').click(function() {
-                $('.side-nav li').removeClass('active');
-               $(this).parent().addClass('active'); 
+                $('.side-nav li').removeAttr('class');
+                $(this).parent().attr('class', 'active'); 
             });
         });
     </script>
