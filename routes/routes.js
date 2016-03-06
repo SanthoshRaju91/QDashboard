@@ -29,11 +29,16 @@ router.post('/upload', function(req, res) {
     upload(req, res, function(err) {
        if(err) {
            console.log("Error : " + err);
-           res.json({status: 500, success: false, error_code: 1, desc: err});
-       } else {           
-           console.log("Data uploaded data is being processed for insertion");
-           parseBillabilityData.parseBillabilityData(req.file.filename);
-           res.json({status: 200, success: true,error_code: 0, desc: 'Uploaded!'});
+           res.json({status: 500, success: false, errorCode: 1, desc: err});
+       } else {      
+           if(req.body.option == 'billability') {
+                console.log("Billability Data uploaded, data is being processed for insertion");    
+                parseBillabilityData.parseBillabilityData(req.file.filename);
+                res.json({status: 200, success: true, errorCode: 0, desc: 'Uploaded!'});
+           } else if(req.body.option == 'financial') {
+               console.log("Financial Data uploaded, data is being processed for insertion");
+               res.json({status: 200, success: true, errorCode: 0, desc: 'Uploaded!'});
+           }                      
        }
     });
 });

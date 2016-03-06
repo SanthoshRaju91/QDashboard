@@ -3,7 +3,6 @@ var app = angular.module('upload', ['ngFileUpload']);
 app.controller('uploadController', ['Upload', 'REST_URL', '$scope', function(Upload, REST_URL, $scope) {
     
     $scope.submit = function(option) {                
-        console.log($scope.file);
         if($scope.file) {            
             $scope.upload(option, $scope.file);
         }
@@ -11,15 +10,16 @@ app.controller('uploadController', ['Upload', 'REST_URL', '$scope', function(Upl
     
     $scope.upload = function(option, file) {
         Upload.upload({
-            url: REST_URL + '/upload',
-            data: {file: file}
+            url: REST_URL + '/upload/',
+            data: {option: option, file: file}
         }).then(function(response) {
-           if(response.data.errorCode === 0) {
+            console.log(response);
+            if(response.data.errorCode === 1) {
                $scope.error = true;
                $scope.message = "Failed to upload";
-           } else {
+           } else {               
                $scope.success = true;
-               $scope.message = "Uploaded successfully, backend started processing the data file";
+               $scope.message = option.toUpperCase() + " data uploaded successfully, backend started processing the data file. Please check after a few seconds";
            }
         }, function(response) {
             $scope.error = true;
