@@ -3,5 +3,5 @@ module.exports = {
     'secretKey': 'veryverysecret',
     'loggerFileLocation': 'logs/app.log',
     'port': process.env.PORT || 3000,
-    'excelPath': '../excel/HC_Billing_Non_Billing.xlsx'
+    'excelPath': './uploads/'
 }
