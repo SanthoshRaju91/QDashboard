@@ -17,6 +17,10 @@ var OverBillabilityBasedOnLocation = require('../models/overallBillabilityBasedO
 var OverBillabilityBasedOnVertical = require('../models/overallBillabilityBasedOnVerticalModel.js');
 var OverBillabilityBasedOnVerticalAndLocation = require('../models/overallBillabilityBasedOnVertAndLocModel.js');
 
+var LevelBillability = require('../models/levelBillability.js');
+var LevelBillabilityBasedOnLoc = require('../models/levelBillabilityBasedOnLoc.js');
+var LevelBillabilityBasedOnVertical = require('../models/levelBillabilityBasedOnVertical.js');
+
 
 //Parsing the given excel file
 exports.parseBillabilityData =  function (filename) {
@@ -30,7 +34,10 @@ exports.parseBillabilityData =  function (filename) {
             loadData(JSON.stringify(result));
             loadDataForLocation(JSON.stringify(result));
             loadDataForVertical(JSON.stringify(result));
-            //loadDataForVerticalAndLocation(JSON.stringify(result));
+            loadDataForVerticalAndLocation(JSON.stringify(result));
+            processLevelData(JSON.stringify(result));
+            processLevelAndLocationData(JSON.stringify(result));
+            processLevelAndVerticalData(JSON.stringify(result));            
         }
       });   
 }
@@ -121,46 +128,141 @@ function loadDataForVerticalAndLocation(result) {
         }; 
       });
         
+        var verticalMap = [];
         var vertical = _.map(groupedData, function(current) {
         var verticalGrouped = _.groupBy(current.values, 'PROJECT_BG');    
-            return _.map(verticalGrouped, function(object) {
-               return {
-                   week: current.week,
+            _.each(verticalGrouped, function(object) {
+               verticalMap.push({
+                   week: object[0].Week,
                    vertical: object[0].PROJECT_BG,
                    values: object
-               } 
-            });   
-      });
-            
-        var location = _.map(vertical[0], function(current) {            
+               }); 
+            });       
+        });
+           
+        var locationVerticalMap = [];
+        var location = _.map(verticalMap, function(current) {            
             var locationGrouped = _.groupBy(current.values, 'BASE_LOCATION');                
-            return _.map(locationGrouped, function(object) {
-               return {
-                   week: current.week,
-                   vertical: current.vertical,
-                   location: object[0].BASE_LOCATION,
-                   values: object
-               } 
-            });
-    });
-      
-        
-        var computedResult = _.map(location[0], function(current) {
-        var counted = _.countBy(current.values, function(object) {
-            return object['BILLABLE'] == 'Billable'? 'Billable': 'NonBillable'  
-        }); 
+            _.each(locationGrouped, function(object) {
+               locationVerticalMap.push({
+                   week: object[0].Week,
+                   vertical: object[0].PROJECT_BG,
+                   base_location: object[0].BASE_LOCATION,
+                   values: _.countBy(object, function(object) {
+                       return object['BILLABLE'] == 'Billable' ? 'Billable': 'NonBillable'
+                   })
+               }) 
+            });    
+        });                      
+       loadVerticalAndLocationDataToMongo(locationVerticalMap);
+}
+
+function processLevelData(result) {
+    var grouped = _.groupBy(JSON.parse(result), 'Week');
+    var groupedData = _.map(grouped, function(current) {
         return {
-            week: current.week,
-            location: current.location,
-            vertical: current.vertical,
-            values: counted
-        };        
+            week: current[0].Week,
+            values: current
+        } 
     });
-       //console.info(computedResult);
-       //loadVerticalAndLocationDataToMongo(computedResult);
+    
+    var levelMap = [];
+    var level = _.map(groupedData, function(current) {
+       var levelGrouped = _.groupBy(current.values, 'LVL');
+        _.each(levelGrouped, function(object) {
+           levelMap.push({
+               week: object[0].Week,
+               level: object[0].LVL,
+               values: _.countBy(object, function(object) {
+                  return object['BILLABLE'] == 'Billable' ? 'Billable': 'NonBillable' 
+               })
+           }) 
+        });
+    });
+    loadLevelDataToMongo(levelMap);
+}
+
+function processLevelAndLocationData(result) {
+    var grouped = _.groupBy(JSON.parse(result), 'Week');
+    var groupedData = _.map(grouped, function(current) {
+        return {
+            week: current[0].Week,
+            values: current
+        } 
+    });
+    
+    var levelMap = [];
+    _.map(groupedData, function(current) {
+        var levelGrouped = _.groupBy(current.values, 'LVL');
+        _.each(levelGrouped, function(object) {
+            levelMap.push({
+                week: object[0].Week,
+                level: object[0].LVL,
+                values: object
+            }); 
+        });
+    });
+    
+    var locationLevelMap = [];
+    _.map(groupedData, function(current) {
+        var locationGrouped = _.groupBy(current.values, 'BASE_LOCATION');
+        _.each(locationGrouped, function(object) {
+            locationLevelMap.push({
+                week: object[0].Week,
+                level: object[0].LVL,
+                location: object[0].BASE_LOCATION,
+                values: _.countBy(object, function(object) {
+                    return object['BILLABLE'] == 'Billable' ? 'Billable' : 'NonBillable'
+                })
+            }); 
+        });
+    })
+    
+    loadLevelLocationDataToMongo(locationLevelMap);
+}
+
+
+function processLevelAndVerticalData(result) {
+    var grouped = _.groupBy(JSON.parse(result), 'Week');
+    var groupedData = _.map(grouped, function(current) {
+        return {
+            week: current[0].Week,
+            values: current
+        } 
+    });
+    
+    var levelMap = [];
+    _.map(groupedData, function(current) {
+        var levelGrouped = _.groupBy(current.values, 'LVL');
+        _.each(levelGrouped, function(object) {
+            levelMap.push({
+                week: object[0].Week,
+                level: object[0].LVL,
+                values: object
+            }); 
+        });
+    });
+    
+    var verticalLevelMap = [];
+    _.map(groupedData, function(current) {
+        var verticalGrouped = _.groupBy(current.values, 'PROJECT_BG');
+        _.each(verticalGrouped, function(object) {
+            verticalLevelMap.push({
+                week: object[0].Week,
+                level: object[0].LVL,
+                vertical: object[0].PROJECT_BG,
+                values: _.countBy(object, function(object) {
+                    return object['BILLABLE'] == 'Billable' ? 'Billable' : 'NonBillable'
+                })
+            }); 
+        });
+    });
+    
+    loadLevelVerticalDataToMongo(verticalLevelMap);
 }
 
 //loading overall billing and non billing json to mongodb
+
 function loadDataToMongo(inputResultToStore) { 
     OverBillability.remove({}, function(err) {
         if(err) {
@@ -182,6 +284,7 @@ function loadDataToMongo(inputResultToStore) {
         
         });    
     }
+
 
 //loading location json to mongoDb
 function loadLocationDataToMongo(inputResultToStore) {     
@@ -232,17 +335,17 @@ function loadVerticalDataToMongo(inputResultToStore) {
 function loadVerticalAndLocationDataToMongo(inputResultToStore) { 
      OverBillabilityBasedOnVerticalAndLocation.remove({}, function(err) {
         if(err) {
-            console.error("Error in removing data " + err);
+            console.error("OverBillabilityBasedOnVerticalAndLocation : Error in removing data " + err);
         } else{
         for(var i=0;i<inputResultToStore.length;i++){
-             var overBillabilityBasedOnVerticalAndLocation = new OverBillabilityBasedOnVerticalAndLocation({week: inputResultToStore[i].week, vertical: inputResultToStore[i].vertical, location:inputResultToStore[i].location , value: inputResultToStore[i].values});    
+             var overBillabilityBasedOnVerticalAndLocation = new OverBillabilityBasedOnVerticalAndLocation({week: inputResultToStore[i].week, vertical: inputResultToStore[i].vertical, location:inputResultToStore[i].base_location , value: inputResultToStore[i].values});    
             
              overBillabilityBasedOnVerticalAndLocation.save(function(err) {
                 if(err) {
-                    console.error("Error in inserting " + err);
+                    console.error("OverBillabilityBasedOnVerticalAndLocation : Error in inserting " + err);
                 }
                 else {                
-                    console.info("Inserted successfully");
+                    console.info("OverBillabilityBasedOnVerticalAndLocation : inserted successfully");
                 }
             });
           }
@@ -250,4 +353,64 @@ function loadVerticalAndLocationDataToMongo(inputResultToStore) {
     });    
 }
 
+
+function loadLevelDataToMongo(inputResultToStore) {
+    LevelBillability.remove({}, function(err) {
+       if(err) {
+            console.log("LevelBillability : Error in removing data " + err);
+       } else {
+           for(var i=0; i<inputResultToStore.length; i++) {
+                var levelBillability = new LevelBillability({week: inputResultToStore[i].week, level: inputResultToStore[i].level, values: inputResultToStore[i].values});
+               
+                levelBillability.save(function(err) {
+                   if(err) {
+                       console.error("LevelBillability : Error in inserting " + err);
+                   } else {
+                       console.log("LevelBillability : inserted successfully");
+                   }
+                });
+           }           
+       }
+    });
+}
+
+function loadLevelLocationDataToMongo(inputResultToStore) {
+    LevelBillabilityBasedOnLoc.remove({}, function(err) {
+        if(err) {
+            console.log("LevelBillabilityBasedOnLoc : Error in removing data " + err);
+        } else {
+            for(var i=0; i<inputResultToStore.length; i++) {
+                var levelBillabilityBasedOnLoc = new LevelBillabilityBasedOnLoc({week: inputResultToStore[i].week, level: inputResultToStore[i].level, location: inputResultToStore[i].location, values: inputResultToStore[i].values});
+                
+                levelBillabilityBasedOnLoc.save(function(err) {
+                    if(err) {
+                        console.error("LevelBillabilityBasedOnLoc : Error in inserting " + err);                        
+                    } else {
+                        console.log("LevelBillabilityBasedOnLoc : inserted successfully");
+                    }
+                });
+            }
+        }
+    });
+}
+
+function loadLevelVerticalDataToMongo(inputResultToStore) {
+    LevelBillabilityBasedOnVertical.remove({}, function(err) {
+        if(err) {
+            console.log("LevelBillabilityBasedOnVertical: Error in removing data " + err);
+        } else {
+            for(var i=0; i<inputResultToStore.length; i++) {
+                var levelBillabilityBasedOnVertical = new LevelBillabilityBasedOnVertical({week: inputResultToStore[i].week, level: inputResultToStore[i].level, vertical: inputResultToStore[i].vertical, values: inputResultToStore[i].values});
+                
+                levelBillabilityBasedOnVertical.save(function(err) {
+                    if(err) {
+                        console.error("LevelBillabilityBasedOnVertical : Error in inserting " + err);                        
+                    } else {
+                        console.log("LevelBillabilityBasedOnVertical: inserted successfully");
+                    }
+                });
+            } 
+        }
+    });
+}
 
