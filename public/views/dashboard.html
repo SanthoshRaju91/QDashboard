@@ -1,19 +1,154 @@
 <div class="container-fluid">    
+    <div class = "well well-sm">
+        <h5 class = "text-clear">Select week to refresh</h5>
+        <select class = "form-control" ng-model = "selectedDate" ng-change = "selectDate(selectedDate)">
+            <option ng-repeat = "date in dates" value = "{{date.week}}">{{date.week}}</option>
+        </select>
+    </div>
 <div class="row">
-        <div class = "col-md-6">
-            <div class="panel panel-default panel-chart">
+        <div class = "col-md-4">
+            <div class="panel panel-default">
                 <div class="panel-body">
-                    <h5 class="text-center">Overall Billable v/s Non-Billable</h5>
-                     <highchart  class = "chart" id="chart1" config="reportConfig"></highchart>
+                    <h5 class="text-center">Overall Billable v/s Non-Billable <span> | {{selectedDate}}</span></h5>
+                     <highchart id="chart1" config="reportConfig"></highchart>
                 </div>                                
             </div>
         </div>
-        <div class = "col-md-6">
-            <div class="panel panel-default" style="float:left">
+    <div class="col-md-4"> 
+        <div class="panel panel-default">
+            <div class="panel-body">                
+                <h5 class="text-center">Based on Location | {{selectedDate}} </h5>
+              <table class="table table-condensed table-striped table-custom">
+                <thead>
+                  <tr>
+                    <th>Based on Location</th>
+                    <th>Billable</th>
+                    <th>Non-Billable</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat = "location in locationBillablity">
+                        <td>{{location.Location}}</td>
+                        <td>{{location.Billable}}</td>
+                        <td>{{location.NonBillable}}</td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+       </div>
+     <div class="col-md-4">
+         <div class="panel panel-default">
                 <div class="panel-body">
-                    <h5 class="text-center">Non Billable</h5>
-                </div>         
+                    <h5 class="text-center">Based on Vertical | {{selectedDate}} </h5>
+          <table class="table table-condensed table-striped table-custom">
+            <thead>
+              <tr>
+                <th>Based on Vertical</th>
+                <th>Billable</th>
+                <th>Non-Billable</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="vertical in verticalBillablity">
+              <td>{{vertical.Vertical}}</td>
+              <td>{{vertical.Billable}}</td>
+              <td>{{vertical.NonBillable}}</td>
+                </tr>
+            </tbody>
+          </table>
+             </div>
+         </div>
+       </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h4 class="text-center"> Overall Billable v/s Non-Billable based on Location | {{selectedDate}}</h4>
+            <br>
+            <div class="row">
+                <div class = "col-md-4">
+                    <div class="panel panel-default panel-borderless">
+                        <div class="panel-body">
+                            <h5 class="text-center">Billabilty - Bengaluru</h5>
+                            <highchart id="chart1" config="bangConfig"></highchart>                           
+                        </div>         
+                    </div>
+                </div>
+                <div class = "col-md-4">
+                    <div class="panel panel-default panel-borderless">
+                        <div class="panel-body">
+                            <h5 class="text-center">Billabilty - Pune</h5>
+                            <highchart id="chart1" config="puneConfig"></highchart>                    
+                        </div>         
+                    </div>
+                </div>
+                <div class = "col-md-4">
+                    <div class="panel panel-default panel-borderless">
+                        <div class="panel-body">
+                            <h5 class="text-center">Billabilty - London</h5>
+                            <highchart id="chart1" config="londonConfig"></highchart>                            
+                        </div>         
+                    </div>
+                </div>
+            </div>
+                  <div class="row">
+                <div class = "col-md-4">
+                    <div class="panel panel-default panel-borderless">
+                        <div class="panel-body">
+                            <h5 class="text-center">Billabilty - Mumbai</h5>
+                            <highchart id="chart1" config="mumbaiConfig"></highchart>                           
+                        </div>         
+                    </div>
+                </div>
+                <div class = "col-md-4">
+                    <div class="panel panel-default panel-borderless">
+                        <div class="panel-body">
+                            <h5 class="text-center">Billabilty - Hyderbad</h5>
+                            <highchart id="chart1" config="hyderabadConfig"></highchart>                    
+                        </div>         
+                    </div>
+                </div>
+                <div class = "col-md-4">
+                    <div class="panel panel-default panel-borderless">
+                        <div class="panel-body">
+                            <h5 class="text-center">Billabilty - Naperville</h5>
+                            <highchart id="chart1" config="napervilleConfig"></highchart>                            
+                        </div>         
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h4 class="text-center"> Overall Billable v/s Non-Billable based on Vertical | {{selectedDate}}</h4>
+            <div class="row">
+                <div class = "col-md-4">
+                    <div class="panel panel-default panel-borderless">
+                        <div class="panel-body">
+                            <h5 class="text-center">Retail and Distribution</h5>
+                            <highchart id="chart1" config="rdConfig"></highchart>                            
+                        </div>         
+                    </div>
+                </div>
+                <div class = "col-md-4">
+                    <div class="panel panel-default panel-borderless">
+                        <div class="panel-body">
+                            <h5 class="text-center">Manufacturing and Services</h5>
+                            <highchart id="chart1" config="msConfig"></highchart>                            
+                        </div>         
+                    </div>
+                </div>
+                <div class = "col-md-4">
+                    <div class="panel panel-default panel-borderless">
+                        <div class="panel-body">
+                            <h5 class="text-center">Financial Services</h5>
+                            <highchart id="chart1" config="fsConfig"></highchart>                            
+                        </div>         
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>        
 </div>

@@ -20,10 +20,18 @@ body {
     padding-left: 0;
 }
 
-#page-wrapper {
-    width: 100%;
+.container-fluid {
+    width: 95%;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 10px;
+    overflow-x: hidden;
+}
+
+#page-wrapper {    
     padding: 0;
     background-color: #fff;
+    overflow-x: hidden;
 }
 
 .huge {
@@ -92,8 +100,7 @@ body {
 
 ul.message-dropdown {
     padding: 0;
-    max-height: 250px;
-    overflow-x: hidden;
+    max-height: 250px;    
     overflow-y: auto;
 }
 
@@ -290,14 +297,12 @@ ul.alert-dropdown {
 #page-wrapper {
     margin: 0px;
     padding: 0px;
-    margin-top: 7.5%;    
-    overflow-x: hidden;
+    margin-top: 7.5%;        
 }
 
 #page-wrapper section {
     margin: 0px;
     padding: 0px;
-    width: 98%;    
 }
 
 .well {
@@ -347,4 +352,48 @@ ul.alert-dropdown {
     word-spacing: 1px;
     font-weight: 500;
     font-size: 12px;
+}
+.well-sm {
+    border-left: 3px solid #F22613;
+}
+
+.text-clear { 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+
+.well-sm h5 {
+    display: inline !important;
+}
+
+.well-sm select {
+    display: inline !important;
+    margin-left: 20px;
+    width: 20%;
+}
+
+.panel-body h4, 
+.panel-body h5 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+
+.panel-body h4 {
+    font-weight: 500;
+}
+
+.panel-body h4 span,
+.panel-body h5 span {
+    font-weight: 700;
+}
+
+.panel-borderless {
+    border: 0px;
+}
+
+.table-custom th, .table-custom td {
+    font-size: 13px;
+    letter-spacing: 1px;
 }
