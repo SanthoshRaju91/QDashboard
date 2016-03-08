@@ -22,6 +22,10 @@ var LevelBillabilityBasedOnLoc = require('../models/levelBillabilityBasedOnLoc.j
 var LevelBillabilityBasedOnVertical = require('../models/levelBillabilityBasedOnVertical.js');
 var LevelBillabilityBasedOnLocationAndVertical = require('../models/levelBillabilityBasedOnLocAndVer.js');
 
+var DepartmentBillability = require('../models/departmentBillability.js');
+var DepartmentBillabilityBasedOnLocation = require('../models/departmentBillabilityBasedOnLocation.js');
+var DepartmentBillabilityBasedOnVertical = require('../models/departmentBillabilityBasedOnVertical.js')
+
 //Parsing the given excel file
 exports.parseBillabilityData =  function (filename) {
     xlsxj({
@@ -39,6 +43,8 @@ exports.parseBillabilityData =  function (filename) {
             processLevelAndLocationData(JSON.stringify(result));
             processLevelAndVerticalData(JSON.stringify(result));  
             processLevelBasedOnLocationAndVerticalData(JSON.stringify(result));
+            processDepartment(JSON.stringify(result));
+            processDepartmentBasedOnLocation(JSON.stringify(result));
         }
       });   
 }
@@ -316,6 +322,109 @@ function processLevelBasedOnLocationAndVerticalData(result) {
     loadLevelOnLocationAndVerticalToMongo(levelLocationVerticalMap);
 }
 
+function processDepartment(result) {
+    var grouped = _.groupBy(JSON.parse(result), 'Week');
+    var groupedData = _.map(grouped, function(current) {
+        return {
+            week: current[0].Week,
+            values: current
+        } 
+    });
+    
+    var departmentMap = [];
+    _.map(groupedData, function(current) {
+        var departmentGrouped = _.groupBy(current.values, 'DEPARTMENT'); 
+        _.each(departmentGrouped, function(object) {
+           departmentMap.push({
+               week: object[0].Week,
+               department: object[0].DEPARTMENT,
+               values: _.countBy(object, function(object) {
+                    return object['BILLABLE'] == 'Billable' ? 'Billable' : 'NonBillable'
+                })
+           });  
+        });
+    });
+    
+    loadDepartmentOnDateToMongo(departmentMap);
+}
+
+function processDepartmentBasedOnLocation(result) {
+    var grouped = _.groupBy(JSON.parse(result), 'Week');
+    var groupedData = _.map(grouped, function(current) {
+        return {
+            week: current[0].Week,
+            values: current
+        } 
+    });
+    
+    var departmentMap = [];
+    _.map(groupedData, function(current) {
+        var departmentGrouped = _.groupBy(current.values, 'DEPARTMENT'); 
+        _.each(departmentGrouped, function(object) {
+           departmentMap.push({
+               week: object[0].Week,
+               department: object[0].DEPARTMENT,
+               values: object
+           });  
+        });
+    });
+    
+    var departmentLocationMap = [];
+    _.map(departmentMap, function(current) {
+        var departmentLocationGrouped = _.groupBy(current.values, 'BASE_LOCATION');
+        _.each(departmentLocationGrouped, function(object) {
+            departmentLocationMap.push({
+                week: object[0].Week,
+                department: object[0].DEPARTMENT,
+                location: object[0].BASE_LOCATION,
+                values: _.countBy(object, function(object) {
+                    return object['BILLABLE'] == 'Billable' ? 'Billable' : 'NonBillable'
+                })
+            });
+        });
+    });
+    
+    loadDepartmentOnDateLocationToMongo(departmentLocationMap);
+}
+
+//Department based on vertiacl
+function processDepartmentBasedOnVertical(){
+    var grouped=_.groupBy(JSON.parse(result),'Week');//the week data is stored in array format
+    var groupedData=_.map(grouped,function(current){
+        return{
+            week:current[0].Week,
+            values:current
+        }
+    });
+     var departmentMap = [];
+    _.map(groupedData, function(current) {
+        var departmentGrouped = _.groupBy(current.values, 'DEPARTMENT'); 
+        _.each(departmentGrouped, function(object) {
+           departmentMap.push({
+               week: object[0].Week,
+               department: object[0].DEPARTMENT,
+               values: object
+           });  
+        });
+    });
+      var departmentVerticalMap = [];
+    _.map(departmentMap, function(current) {
+        var departmentVerticalGrouped = _.groupBy(current.values, 'PROJECT_BG');
+        _.each(departmentVerticalGrouped, function(object) {
+            departmentVerticalMap.push({
+                week: object[0].Week,
+                department: object[0].DEPARTMENT,
+                vertical: object[0].PROJECT_BG,
+                values: _.countBy(object, function(object) {
+                    return object['BILLABLE'] == 'Billable' ? 'Billable' : 'NonBillable'
+                })
+            });
+        });
+    });
+    
+    loadDepartmentOnDateVerticalToMongo(departmentVerticalMap);
+}
+
 //loading overall billing and non billing json to mongodb
 function loadDataToMongo(inputResultToStore) { 
     OverBillability.remove({}, function(err) {
@@ -486,4 +595,65 @@ function loadLevelOnLocationAndVerticalToMongo(inputResultToStore) {
            }
        }
     });
+}
+
+function loadDepartmentOnDateToMongo(inputResultToStore) {
+    DepartmentBillability.remove({}, function(err) {
+        if(err) {
+            console.log("DepartmentBillability: Error in removing data " + err);            
+        } else {
+            for(var i=0; i<inputResultToStore.length; i++) {
+                var departmentBillability = new DepartmentBillability({week: inputResultToStore[i].week, department: inputResultToStore[i].department, values: inputResultToStore[i].values});
+                
+                departmentBillability.save(function(err) {
+                    if(err) {
+                        console.log("DepartmentBillability: Error in inserting data " + err);
+                    } else {
+                        console.log("DepartmentBillability: inserted successfully");
+                    }
+                });
+            }
+        }
+    });
+}
+
+function loadDepartmentOnDateLocationToMongo(inputResultToStore) {
+    DepartmentBillabilityBasedOnLocation.remove({}, function(err) {
+        if(err) {
+            console.log("DepartmentBillabilityBasedOnLocation: Error in removing data " + err);
+        } else {
+            for(var i=0; i<inputResultToStore.length; i++) {
+                var departmentBillabilityBasedOnLocation = new DepartmentBillabilityBasedOnLocation({week: inputResultToStore[i].week, location: inputResultToStore[i].location, department: inputResultToStore[i].department});
+                
+                departmentBillabilityBasedOnLocation.save(function(err) {
+                    if(err) {
+                        console.log("DepartmentBillabilityBasedOnLocation: Error in inserting data " + err);
+                    } else {
+                        console.log("DepartmentBillabilityBasedOnLocation: inserted successfully");
+                    }
+                });
+            }
+        }
+    });
+}
+
+function loadDepartmentOnDateVerticalToMongo(inputResultToStore){
+    DepartmentBillabilityBasedOnVertical.remove({},function(err){
+        if(err){
+            console.log("DepartmentBillabilityBasedOnVertical: Error in removing data " + err);
+        }else{
+             for(var i=0; i<inputResultToStore.length; i++) {
+                 var departmentBillabilityBasedOnVertical = new DepartmentBillabilityBasedOnVertical({week: inputResultToStore[i].week, vertical: inputResultToStore[i].vertical, department: inputResultToStore[i].department});
+                 
+                  departmentBillabilityBasedOnVertical.save(function(err) {
+                    if(err) {
+                        console.log("DepartmentBillabilityBasedOnVertical: Error in inserting data " + err);
+                    } else {
+                        console.log("DepartmentBillabilityBasedOnVertical: inserted successfully");
+                    }
+                });
+                 
+             }
+        }
+    })
 }

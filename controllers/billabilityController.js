@@ -2,10 +2,6 @@ var OverallBillabilityBasedOnLoc = require('../models/overallBillabilityBasedOnL
 var OverallBillabilityBasedOnVertical = require('../models/overallBillabilityBasedOnVerticalModel.js');
 var OverallBillabilityBasedOnVerticalAndLocation = require('../models/overallBillabilityBasedOnVertAndLocModel.js');
 var OverallBillability = require('../models/overallBillability.js');
-var LevelBillability = require('../models/levelBillability.js');
-var LevelBillabilityBasedOnLoc = require('../models/levelBillabilityBasedOnLoc.js');
-var LevelBillabilityBasedOnVertical = require('../models/levelBillabilityBasedOnVertical.js');
-var LevelBillabilityBasedOnLocAndVer = require('../models/levelBillabilityBasedOnLocAndVer.js');
 var logger = require('../utils/loggerUtil.js').logger;
 
 exports.getDates = function(req, res) {
@@ -22,10 +18,8 @@ exports.getDates = function(req, res) {
     });
 }
 
-exports.getLevel = function(req, res) {
-    
-    //level drop down
-    var query = LevelBillability.find({}).select('level').sort('-level');
+exports.getLevels = function(req, res) {
+    var query = LevelBillability.find({"week": req.params.date}).distinct('level');
     query.exec(function(err, result) {
         if(err) {
             logger.error("Error in fetching the dates " + err);
@@ -150,18 +144,6 @@ exports.getOverallBillabilitydate = function(req, res) {
 }
 
 
-//levels
 
-exports.levelBillability = function(req, res) {    
-    OverallBillability.find({}, function(err, resultSet) {
-        if(err) {
-            logger.error("Error in fetching" + err);
-            res.json({status: 500, message: 'Error'});  
-        } 
-        else {
-            console.log("result fetched");
-            res.json({status: 200,success: true, result: resultSet});
-        }
-   });
-}
+
 

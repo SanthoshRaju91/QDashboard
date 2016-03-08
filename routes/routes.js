@@ -3,7 +3,7 @@ var router = express.Router();
 var multer = require('multer');
 
 var OverallBillability = require('../controllers/billabilityController.js');
-var LevelBillability = require('../controllers/billabilityController.js');
+var LevelBillability = require('../controllers/levelBillabilityController.js');
 var parseBillabilityData = require('../automated_task/parseBillabilityData.js');
 
 var storage = multer.diskStorage({
@@ -22,7 +22,6 @@ var upload = multer({
 
 
 router.get('/getDates', OverallBillability.getDates);
-router.get('/getLevel', LevelBillability.getLevel);
 router.get('/getBillability', OverallBillability.getOverallBillability);
 router.get('/getOverallBillabilityBasedOnLoc/:location',OverallBillability.getOverallBillabilityBasedOnLoc);
 router.get('/getOverallBillabilityBasedOnVerticalAndLocation',OverallBillability.getOverallBillabilityBasedOnVerticalAndLocation);
@@ -35,12 +34,13 @@ router.get('/getOverallBillabilityBasedOnVertical/:vertical/:date',OverallBillab
 router.get('/getOverallBillabilityBasedOnVerticalAndLocation/:date',OverallBillability.getOverallBillabilityBasedOnVerticalAndLocationdate);
 router.get('/getBillability/:date', OverallBillability.getOverallBillabilitydate);
 
+//Routes for Level Billability
+router.get('/getlevelBillability', LevelBillability.getlevelBillability);
+router.get('/getlevelBillability/:date', LevelBillability.getlevelBillabilityDate);
+router.get('/getlevelBillabilityLocation/:date/:location', LevelBillability.getlevelBillabilityLocation);
+router.get('/getlevelBillabilityVertical/:date/:vertical',LevelBillability.getlevelBillabilityVertical);
+router.get('/getlevelBillabilityVerticalandLocation/:date/:location/:vertical', LevelBillability.getlevelBillabilityVerticalandLocation);
 
-
-//router.get('/getBillability', OverallBillability.getOverallBillability);
-//router.get('/getOverallBillabilityBasedOnLoc',OverallBillability.getOverallBillabilityBasedOnLoc);
-//router.get('/getOverallBillabilityBasedOnVerticalAndLocation',OverallBillability.getOverallBillabilityBasedOnVerticalAndLocation);
-//router.get('/getOverallBillabilityBasedOnVertical',OverallBillability.getOverallBillabilityBasedOnVertical);
 
 router.post('/upload', function(req, res) {
     upload(req, res, function(err) {

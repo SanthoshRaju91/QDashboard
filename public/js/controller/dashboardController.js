@@ -129,11 +129,11 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function($
                 data: [{
                     name: 'Billable',
                     y: billable,
-                    color:'#59ABE3'
+                    color:'#03C9A9'
                 }, {
                     name: 'Non-Billable',
                     y: nonbillable,
-                     color:'#510202'
+                     color:'#FDE3A7'
                 }]
             }]
         } 
@@ -196,11 +196,11 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function($
                 data: [{
                     name: 'Billable',
                     y: billable,
-                    color:'#59ABE3'
+                    color:'#03C9A9'
                 }, {
                     name: 'Non-Billable',
                     y: nonbillable,
-                     color:'#510202'
+                     color:'#FDE3A7'
                 }]
             }]
         } 
@@ -262,7 +262,7 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function($
                 data: [{
                     name: 'Billable',
                     y: billable,
-                    color:'#59ABE3'
+                    color:'#03C9A9'
                 }]
             }]
         } 
@@ -324,11 +324,11 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function($
                   data: [{
                     name: 'Billable',
                     y: billable,
-                    color:'#59ABE3'
+                    color:'#03C9A9'
                 }, {
                     name: 'Non-Billable',
                     y: nonbillable,
-                    color:'#510202'                                                        
+                    color:'#FDE3A7'                                                        
                 }]
             }]
         } 
@@ -390,11 +390,11 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function($
                   data: [{
                     name: 'Billable',
                     y: billable,
-                    color:'#59ABE3'
+                    color:'#03C9A9'
                 }, {
                     name: 'Non-Billable',
                     y: nonbillable,
-                    color:'#510202'                                                        
+                    color:'#FDE3A7'                                                        
                 }]
             }]
         } 
@@ -456,11 +456,11 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function($
                   data: [{
                     name: 'Billable',
                     y: billable,
-                    color:'#59ABE3'
+                    color:'#03C9A9'
                 }, {
                     name: 'Non-Billable',
                     y: nonbillable,
-                    color:'#510202'                                                        
+                    color:'#FDE3A7'                                                        
                 }]
             }]
         } 
@@ -526,7 +526,7 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function($
                 }, {
                     name: 'Non-Billable',
                     y: nonbillable,
-                    color:'#510202'                                                        
+                    color:'#6C7A89'                                                        
                 }]
             }]
         } 
@@ -591,7 +591,7 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function($
                 }, {
                     name: 'Non-Billable',
                     y: nonbillable,
-                    color:'#510202'                                                        
+                    color:'#6C7A89'                                                        
                 }]
             }]
         } 
@@ -656,7 +656,7 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function($
                 }, {
                     name: 'Non-Billable',
                     y: nonbillable,
-                    color:'#510202'                                                        
+                    color:'#6C7A89'                                                        
                 }]
             }]
         } 
@@ -943,16 +943,6 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function($
              $scope.verticalBillablity.push(obj);
              loadBillableDataBasedOnMSVer(billabilty.vertical, billabilty.value[0].Billable, billabilty.value[0].NonBillable);
         });
-     $http.get(REST_URL + '/getLevel')
-        .success(function(response) {
-        if(response.success) {
-            console.log("Response from level")
-            console.log(response);
-//            $scope.dates = response.result;
-//            console.log($scope.dates);
-        } else {
-            console.log("Error in getting the levels");
-        }
-    })
+
 }]);
 

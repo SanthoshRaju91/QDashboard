@@ -366,3 +366,144 @@
 [2016-03-08 00:12:00.726] [INFO] appLog - Results fetched
 [2016-03-08 00:12:08.620] [INFO] appLog - Results fetched
 [2016-03-08 00:12:08.791] [INFO] appLog - Results fetched
+[2016-03-08 11:16:53.793] [INFO] appLog - Server listening on port: 3000
+[2016-03-08 11:16:54.807] [ERROR] appLog - Error in connecting to Mongo DB MongoError: connect ECONNREFUSED 127.0.0.1:27017
+[2016-03-08 11:17:13.047] [INFO] appLog - Server listening on port: 3000
+[2016-03-08 11:17:13.065] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-08 11:17:36.385] [INFO] appLog - Results fetched
+[2016-03-08 11:17:36.701] [INFO] appLog - Results fetched
+[2016-03-08 11:17:48.053] [INFO] appLog - Results fetched
+[2016-03-08 11:17:48.545] [INFO] appLog - Results fetched
+[2016-03-08 11:20:06.114] [INFO] appLog - Results fetched
+[2016-03-08 11:20:06.631] [INFO] appLog - Results fetched
+[2016-03-08 11:22:05.736] [INFO] appLog - Results fetched
+[2016-03-08 11:22:06.039] [INFO] appLog - Results fetched
+[2016-03-08 11:24:13.817] [INFO] appLog - Results fetched
+[2016-03-08 11:24:14.195] [INFO] appLog - Results fetched
+[2016-03-08 11:25:07.417] [INFO] appLog - Results fetched
+[2016-03-08 11:25:07.832] [INFO] appLog - Results fetched
+[2016-03-08 11:26:12.079] [INFO] appLog - Results fetched
+[2016-03-08 11:26:12.439] [INFO] appLog - Results fetched
+[2016-03-08 11:26:22.349] [INFO] appLog - Results fetched
+[2016-03-08 11:26:22.662] [INFO] appLog - Results fetched
+[2016-03-08 11:26:34.943] [INFO] appLog - Results fetched
+[2016-03-08 11:26:35.308] [INFO] appLog - Results fetched
+[2016-03-08 13:18:02.831] [INFO] appLog - Server listening on port: 3000
+[2016-03-08 13:18:02.918] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-08 13:22:30.815] [INFO] appLog - Server listening on port: 3000
+[2016-03-08 13:22:30.832] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-08 13:26:27.844] [INFO] appLog - Results fetched
+[2016-03-08 13:40:56.163] [INFO] appLog - Results fetched
+[2016-03-08 13:40:56.177] [INFO] appLog - Results fetched
+[2016-03-08 13:46:52.823] [INFO] appLog - Results fetched
+[2016-03-08 13:46:53.584] [INFO] appLog - Results fetched
+[2016-03-08 13:46:53.596] [INFO] appLog - Results fetched
+[2016-03-08 13:47:51.126] [INFO] appLog - Results fetched
+[2016-03-08 13:47:51.135] [INFO] appLog - Results fetched
+[2016-03-08 13:51:10.461] [INFO] appLog - Results fetched
+[2016-03-08 13:51:10.467] [INFO] appLog - Results fetched
+[2016-03-08 13:52:00.133] [INFO] appLog - Server listening on port: 3000
+[2016-03-08 13:52:00.151] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-08 13:52:13.981] [INFO] appLog - Results fetched
+[2016-03-08 13:52:13.995] [INFO] appLog - Results fetched
+[2016-03-08 13:52:55.200] [INFO] appLog - Results fetched
+[2016-03-08 13:52:55.212] [INFO] appLog - Results fetched
+[2016-03-08 13:53:46.607] [INFO] appLog - Results fetched
+[2016-03-08 13:53:46.620] [INFO] appLog - Results fetched
+[2016-03-08 13:54:32.424] [INFO] appLog - Results fetched
+[2016-03-08 13:54:32.438] [INFO] appLog - Results fetched
+[2016-03-08 13:54:56.353] [INFO] appLog - Results fetched
+[2016-03-08 13:54:56.364] [INFO] appLog - Results fetched
+[2016-03-08 13:55:16.180] [INFO] appLog - Results fetched
+[2016-03-08 13:55:16.188] [INFO] appLog - Results fetched
+[2016-03-08 13:55:27.725] [INFO] appLog - Results fetched
+[2016-03-08 13:55:27.738] [INFO] appLog - Results fetched
+[2016-03-08 13:55:51.937] [INFO] appLog - Results fetched
+[2016-03-08 13:55:51.946] [INFO] appLog - Results fetched
+[2016-03-08 14:07:56.191] [INFO] appLog - Server listening on port: 3000
+[2016-03-08 14:07:56.210] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-08 14:08:17.435] [INFO] appLog - Results fetched
+[2016-03-08 14:08:17.871] [INFO] appLog - Results fetched
+[2016-03-08 14:08:49.404] [INFO] appLog - Server listening on port: 3000
+[2016-03-08 14:08:49.422] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-08 15:04:27.150] [INFO] appLog - Server listening on port: 3000
+[2016-03-08 15:04:27.167] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-08 16:24:05.484] [INFO] appLog - Results fetched
+[2016-03-08 16:24:07.467] [INFO] appLog - Results fetched
+[2016-03-08 16:24:07.484] [INFO] appLog - Results fetched
+[2016-03-08 16:24:20.922] [INFO] appLog - Results fetched
+[2016-03-08 16:24:32.688] [INFO] appLog - Results fetched
+[2016-03-08 16:24:32.702] [INFO] appLog - Results fetched
+[2016-03-08 16:25:54.207] [INFO] appLog - Server listening on port: 3000
+[2016-03-08 16:25:54.225] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-08 16:26:13.686] [INFO] appLog - Results fetched
+[2016-03-08 16:26:26.565] [INFO] appLog - Results fetched
+[2016-03-08 16:26:46.238] [INFO] appLog - Server listening on port: 3000
+[2016-03-08 16:26:46.256] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-08 16:26:53.015] [INFO] appLog - Results fetched
+[2016-03-08 16:27:12.385] [INFO] appLog - Results fetched
+[2016-03-08 16:27:19.785] [INFO] appLog - Server listening on port: 3000
+[2016-03-08 16:27:19.802] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-08 16:27:24.575] [INFO] appLog - Results fetched
+[2016-03-08 16:28:07.055] [INFO] appLog - Server listening on port: 3000
+[2016-03-08 16:28:07.072] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-08 16:28:17.000] [INFO] appLog - Results fetched
+[2016-03-08 16:28:43.558] [INFO] appLog - Server listening on port: 3000
+[2016-03-08 16:28:43.577] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-08 16:28:47.624] [INFO] appLog - Results fetched
+[2016-03-08 16:29:06.226] [INFO] appLog - Server listening on port: 3000
+[2016-03-08 16:29:06.243] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-08 16:29:10.940] [INFO] appLog - Results fetched
+[2016-03-08 16:29:33.334] [INFO] appLog - Results fetched
+[2016-03-08 16:29:36.283] [INFO] appLog - Server listening on port: 3000
+[2016-03-08 16:29:36.300] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-08 16:29:40.023] [INFO] appLog - Results fetched
+[2016-03-08 16:29:40.034] [INFO] appLog - Results fetched
+[2016-03-08 16:30:40.332] [INFO] appLog - Results fetched
+[2016-03-08 16:30:40.351] [INFO] appLog - Results fetched
+[2016-03-08 16:31:14.925] [INFO] appLog - Results fetched
+[2016-03-08 16:33:26.955] [INFO] appLog - Server listening on port: 3000
+[2016-03-08 16:33:26.977] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-08 16:34:33.866] [INFO] appLog - Results fetched
+[2016-03-08 16:34:39.689] [INFO] appLog - Results fetched
+[2016-03-08 16:34:39.696] [INFO] appLog - Results fetched
+[2016-03-08 16:38:21.926] [INFO] appLog - Results fetched
+[2016-03-08 16:39:09.630] [INFO] appLog - Server listening on port: 3000
+[2016-03-08 16:39:09.648] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-08 16:39:15.047] [INFO] appLog - Results fetched
+[2016-03-08 16:39:18.645] [INFO] appLog - Results fetched
+[2016-03-08 16:39:38.146] [INFO] appLog - Results fetched
+[2016-03-08 16:39:39.802] [INFO] appLog - Results fetched
+[2016-03-08 16:40:05.670] [INFO] appLog - Results fetched
+[2016-03-08 16:40:08.388] [INFO] appLog - Results fetched
+[2016-03-08 16:40:17.692] [INFO] appLog - Results fetched
+[2016-03-08 16:40:27.480] [INFO] appLog - Results fetched
+[2016-03-08 16:41:01.176] [INFO] appLog - Results fetched
+[2016-03-08 16:41:05.663] [INFO] appLog - Results fetched
+[2016-03-08 16:41:08.384] [INFO] appLog - Results fetched
+[2016-03-08 16:41:09.994] [INFO] appLog - Results fetched
+[2016-03-08 16:41:11.776] [INFO] appLog - Results fetched
+[2016-03-08 16:41:46.785] [INFO] appLog - Results fetched
+[2016-03-08 16:41:49.645] [INFO] appLog - Results fetched
+[2016-03-08 16:43:22.227] [INFO] appLog - Results fetched
+[2016-03-08 16:44:03.686] [INFO] appLog - Results fetched
+[2016-03-08 16:50:36.821] [INFO] appLog - Results fetched
+[2016-03-08 16:51:52.532] [INFO] appLog - Results fetched
+[2016-03-08 16:57:35.986] [INFO] appLog - Server listening on port: 3000
+[2016-03-08 16:57:36.003] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-08 16:58:15.919] [INFO] appLog - Results fetched
+[2016-03-08 16:58:26.339] [INFO] appLog - Results fetched
+[2016-03-08 17:02:53.376] [INFO] appLog - Server listening on port: 3000
+[2016-03-08 17:02:53.393] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-08 17:03:28.726] [INFO] appLog - Results fetched
+[2016-03-08 17:10:54.315] [INFO] appLog - Results fetched
+[2016-03-08 17:10:58.128] [INFO] appLog - Results fetched
+[2016-03-08 18:44:17.171] [INFO] appLog - Server listening on port: 3000
+[2016-03-08 18:44:17.190] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-08 18:46:39.814] [INFO] appLog - Server listening on port: 3000
+[2016-03-08 18:46:39.831] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-08 19:01:52.877] [INFO] appLog - Server listening on port: 3000
+[2016-03-08 19:01:52.904] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-08 19:01:54.211] [INFO] appLog - Results fetched
+[2016-03-08 19:04:05.032] [INFO] appLog - Server listening on port: 3000
+[2016-03-08 19:04:05.053] [INFO] appLog - Connected to Mongo DB successfully
