@@ -393,7 +393,20 @@ ul.alert-dropdown {
     border: 0px;
 }
 
+.table-custom {
+    z-index: 99999px;
+}
+
 .table-custom th, .table-custom td {
     font-size: 13px;
     letter-spacing: 1px;
+    color: #fff;
+    z-index: 99999;
+}
+
+.panel-table {
+    z-index: -99999px;
+    background-image: linear-gradient(rgba(253, 160, 160, 0.5), rgba(253, 160, 160, 0.5)), url(../image/128320_Papel-de-Parede-Mac-Quente_1680x1050.jpg);
+    background-position: center;
+    background-size: cover;
 }

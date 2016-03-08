@@ -15,13 +15,13 @@
             </div>
         </div>
     <div class="col-md-4"> 
-        <div class="panel panel-default">
+        <div class="panel panel-default panel-table" style = "z-index: -999px !important;">
             <div class="panel-body">                
-                <h5 class="text-center">Based on Location | {{selectedDate}} </h5>
-              <table class="table table-condensed table-striped table-custom">
+              <h5 class="text-center" style = "color:#fff; z-index: 9999px; ">Based on Location | {{selectedDate}} </h5>
+              <table class="table table-condensed table-custom animated fadeIn">
                 <thead>
                   <tr>
-                    <th>Based on Location</th>
+                    <th>Location</th>
                     <th>Billable</th>
                     <th>Non-Billable</th>
                   </tr>
@@ -38,25 +38,25 @@
         </div>
        </div>
      <div class="col-md-4">
-         <div class="panel panel-default">
+         <div class="panel panel-default panel-table">
                 <div class="panel-body">
-                    <h5 class="text-center">Based on Vertical | {{selectedDate}} </h5>
-          <table class="table table-condensed table-striped table-custom">
-            <thead>
-              <tr>
-                <th>Based on Vertical</th>
-                <th>Billable</th>
-                <th>Non-Billable</th>
-              </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="vertical in verticalBillablity">
-              <td>{{vertical.Vertical}}</td>
-              <td>{{vertical.Billable}}</td>
-              <td>{{vertical.NonBillable}}</td>
-                </tr>
-            </tbody>
-          </table>
+                  <h5 class="text-center" style="color:#fff;">Based on Vertical | {{selectedDate}} </h5>
+                  <table class="table table-condensed table-custom animated fadeIn">
+                    <thead>
+                      <tr>
+                        <th>Vertical</th>
+                        <th>Billable</th>
+                        <th>Non-Billable</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="vertical in verticalBillablity">
+                      <td>{{vertical.Vertical}}</td>
+                      <td>{{vertical.Billable}}</td>
+                      <td>{{vertical.NonBillable}}</td>
+                        </tr>
+                    </tbody>
+                  </table>
              </div>
          </div>
        </div>
