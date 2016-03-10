@@ -7,12 +7,27 @@ var logger = require('../utils/loggerUtil.js').logger;
 exports.getDates = function(req, res) {
     //week drop down
     var query = OverallBillability.find({}).select('week').sort('-week');
+    console.log(query);
     query.exec(function(err, result) {
         if(err) {
             logger.error("Error in fetching the dates " + err);
             res.json({status: 500, success: false, result: 'Error in fetching date'});
         } else {
             logger.info("Results fetched");
+            res.json({status: 200, success: true, result: result});
+                    
+        }
+    });
+}
+
+exports.getLocations = function(req, res) {
+    var query = OverallBillabilityBasedOnLoc.find({}).distinct('base_location');
+    query.exec(function(err, result) {
+        if(err) {
+            logger.error("Error in fetching the dates" + err);
+            res.json({status: 500, success: false, result: 'Error in fetching date'});
+        } else {
+            logger.info("Results fetched location"+result);
             res.json({status: 200, success: true, result: result});
         }
     });
@@ -145,5 +160,17 @@ exports.getOverallBillabilitydate = function(req, res) {
 
 
 
-
+exports.billabilityTrend = function(req, res) {
+    OverallBillabilityBasedOnVertical.find({}, function(err, result) {
+       if(err) {
+           logger.error("billabilityTrend: Error in fetching " + err);
+           res.json({status: 500, success: false, message: 'Error'});
+       } else {
+           result = result.slice(Math.max(result.length - 5, 1));
+           logger.info("billabilityTrend: results fetched");
+           res.json({status: 200, success: true, result: result});
+       }
+    });
+    
+}
 

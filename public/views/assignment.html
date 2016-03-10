@@ -1,0 +1,78 @@
+<div class="container-fluid">
+    <div class="well well-sm">
+        <h5 class="text-clear">Select week to refresh</h5>
+        <select class="form-control" ng-model="selectedDate" ng-change="selectDate(selectedDate)">
+            <option ng-repeat="date in dates" value="{{date.week}}">{{date.week}}</option>
+        </select>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h5 class = "text-center">Billable v/s Non-billabe based on department</h5>
+                    <highchart id="chart1" config="departmentConfig"></highchart>  
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+             <div class="panel panel-default panel-table" style = "z-index: -999px !important;">
+                <div class="panel-body">
+                    <table class="table table-condensed table-custom animated fadeIn">
+                    <thead>
+                        <th>Department</th>
+                        <th>Billable</th>
+                        <th>Non-Billable</th>
+                    </thead>
+                        <tbody>
+                            <tr ng-repeat="department in departmentBillable">
+                            <td>{{department.department}}</td>
+                            <td>{{department.Billable}}</td>
+                            <td>{{department.NonBillable}}</td>    
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class = "col-md-4">
+            <div class="panel panel-default panel-table" style = "color: #fff;">
+                <div class="panel-body">     
+                    <h5 class="text-center">Select Location to refresh</h5>
+                    <select class="form-control" ng-model="selectedLocation" ng-change="selectedLocations(selectedLocation)">
+                        <option ng-repeat="place in locations" value="{{place.value}}">{{place.text}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>    
+        <div class = "col-md-8">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h5 class="text-center">DEPARTMENT BILLABLE V/S NON-BILLABE BASED ON LOCATION</h5>
+                    <highchart id="chart1" config="departmentLocationConfig"></highchart> 
+                </div>
+            </div>
+        </div>
+    </div>
+     <div class="row">
+        <div class = "col-md-4">
+            <div class="panel panel-default panel-table" style = "color: #fff;">
+                <div class="panel-body">     
+                    <h5 class="text-center">Select Vertical to refresh</h5>
+                    <select class="form-control" ng-model="selectedVertical" ng-change="selectedVerticals(selectedVertical)">
+                        <option ng-repeat="vertical in verticals" value="{{vertical.value}}">{{vertical.text}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>    
+        <div class = "col-md-8">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h5 class="text-center">DEPARTMENT BILLABLE V/S NON-BILLABE BASED ON VERTICAl</h5>
+                    <highchart id="chart1" config="departmentVerticalConfig"></highchart> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

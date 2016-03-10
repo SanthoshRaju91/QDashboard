@@ -410,3 +410,9 @@ ul.alert-dropdown {
     background-position: center;
     background-size: cover;
 }
+@media (min-width: 1200px){
+.container {
+    width: 1076px;
+    padding-left: 0px;
+}
+}

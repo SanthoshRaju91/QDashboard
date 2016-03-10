@@ -8,7 +8,6 @@ app.controller('utilizationController', ['$scope', '$http','REST_URL', function(
         .success(function(response) {
             if(response.success) {
                 $scope.dates = response.result;
-                console.log($scope.dates);
             } else {
                 console.log("Error in getting the dates");
             }
@@ -26,13 +25,11 @@ app.controller('utilizationController', ['$scope', '$http','REST_URL', function(
             });
      }
      
-     $http.get(REST_URL+'/getlevelBillability')
+     $http.get(REST_URL+'/getBillabilityTrend')
         .success(function(response) {
             if(response.success) { 
-                if(response.result.length > 0) {                        
-                    
-                    var billabilty = response.result[response.result.length -1];
-                     
+                if(response.result.length > 0) {                                              
+                     console.log(response.result);
                 }
             }
         });
