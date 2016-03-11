@@ -1,10 +1,28 @@
-<div class="container-fluid">    
-    <div class = "well well-sm">
+<div class="container-fluid">        
+    <div class="row">
+		<div class = "col-md-10">
+			<div class = "panel panel-default">
+				<div class="panel-body">
+					<h5 class="text-center">Billable Vertical Trend</h5>
+					<highchart id="chart1" config="billableVerticalTrend"></highchart>  
+				</div>
+			</div>
+		</div>	
+	</div>
+	<div class="row">
+		<div class = "col-md-10">
+			<div class = "panel panel-default">
+				<div class="panel-body">
+					<h5 class="text-center">Non-Billable Vertical Trend</h5>
+					<highchart id="chart1" config="nonBillableVerticalTrend"></highchart>  
+				</div>
+			</div>
+		</div>	
+	</div>
+	<div class = "well well-sm">
         <h5 class = "text-clear">Select week to refresh</h5>
         <select class = "form-control" ng-model = "selectedDate" ng-change = "selectDate(selectedDate)">
             <option ng-repeat = "date in dates" value = "{{date.week}}">{{date.week}}</option>
         </select>        
     </div>
-<div class="row">
-
 </div>

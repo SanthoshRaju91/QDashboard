@@ -35,7 +35,7 @@ exports.parseBillabilityData = function (filename) {
         if (err) {
             console.error(err);
         } else {
-           /* loadData(JSON.stringify(result));
+            /*loadData(JSON.stringify(result));
             loadDataForLocation(JSON.stringify(result));
             loadDataForVertical(JSON.stringify(result));
             loadDataForVerticalAndLocation(JSON.stringify(result));
@@ -398,29 +398,25 @@ function processBillabilityTrendOnVertical(result) {
         }  
     });
     
-    var verticalBillabilityTrendMap = [];
+    var verticalTrendMap = [];
     _.each(groupedData, function(current) {
-        var verticalBillability = {};
-        verticalBillability.week = current.week;
-        _.map(current.values, function(object) {
-            var verticalMapData = [];
-            var verticalGrouped = _.groupBy(object, 'PROJECT_BG');
-            _.each(verticalGrouped, function(objectMap) {
-                var obj = {
-                    vertical: objectMap[0].PROJECT_BG,
-                    values: _.countBy(objectMap, function(currentObject) {
+        var vertical = {};
+        vertical.week = current.week;
+
+        var verticalGrouped = _.groupBy(current.values, 'PROJECT_BG');
+        var verticalMap = _.map(verticalGrouped, function(object) {
+            return {
+                vertical: object[0].PROJECT_BG,
+                values: _.countBy(object, function(objectMap) {
                         return objectMap['BILLABLE'] == 'Billable' ? 'Billable' : 'NonBillable';
                     })
-                }
-                verticalMapData.push(obj);
-            });            
-            verticalBillability.data = verticalMapData;
-        });        
-        verticalBillabilityTrendMap.push(verticalBillability);        
+            }
+        });
+        vertical.data = verticalMap;
+        verticalTrendMap.push(vertical);
     });
-    
-    console.log("Result " + JSON.stringify(verticalBillabilityTrendMap));
-    loadVerticalBillabilityTrendToMongo(verticalBillabilityTrendMap);
+    console.log(JSON.stringify(verticalTrendMap));
+    loadVerticalBillabilityTrendToMongo(verticalTrendMap);
 }
 
 //Department based on vertiacl
@@ -744,19 +740,18 @@ function loadVerticalBillabilityTrendToMongo(inputResultToStore) {
        if(err) {
            console.error("OverallBillabilityTrendOnVertical: Error in removing data " + err);
        } else {
-           for(var prop in inputResultToStore) {
-               for(var i=0; i<inputResultToStore[prop].data; i++) {
-                   var overallBillabilityTrendOnVertical = new OverallBillabilityTrendOnVertical({week: inputResultToStore[prop].week, data: [{vertical: inputResultToStore[prop].data[i].vertical, values: inputResultToStore[prop].data[i].values}]});
-                   
+            for(var i=0; i<inputResultToStore.length; i++) {
+                for(var current in inputResultToStore[i].data) {
+                    var overallBillabilityTrendOnVertical = new OverallBillabilityTrendOnVertical({week: inputResultToStore[i].week, data: [{vertical: inputResultToStore[i].data[current].vertical, values: inputResultToStore[i].data[current].values}]});
                     overallBillabilityTrendOnVertical.save(function(err) {
                         if(err) {
-                            console.log("OverallBillabilityTrendOnVertical : Error in inserting data " + err);
+                            console.log("OverallBillabilityTrendOnVertical: Error in inserting data " + err);
                         } else {
-                            console.log("OverallBillabilityTrendOnVertical : inserted successfully");
+                            console.log("OverallBillabilityTrendOnVertical: inserted successfully");
                         }
-                    }); 
-               }
-           }
+                    })
+                }
+            }
        }
     });
 }

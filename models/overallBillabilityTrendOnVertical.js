@@ -11,7 +11,7 @@ var OverallBillabilityTrendOnVerticalSchema = new Schema({
             type: String,
             required: true
         },
-        data: [Schema.Types.Mixed]
+        values: [Schema.Types.Mixed]
     }]
 });
 

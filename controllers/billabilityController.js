@@ -2,12 +2,22 @@ var OverallBillabilityBasedOnLoc = require('../models/overallBillabilityBasedOnL
 var OverallBillabilityBasedOnVertical = require('../models/overallBillabilityBasedOnVerticalModel.js');
 var OverallBillabilityBasedOnVerticalAndLocation = require('../models/overallBillabilityBasedOnVertAndLocModel.js');
 var OverallBillability = require('../models/overallBillability.js');
+var OverallBillabilityTrendOnVertical = require('../models/overallBillabilityTrendOnVertical.js');
 var logger = require('../utils/loggerUtil.js').logger;
+var async = require('async');
+var Fiber = require('fibers');
 
-exports.getDates = function(req, res) {
-    //week drop down
+
+function sleep(ms) {
+    var fiber = Fiber.current;
+    setTimeout(function() {
+        fiber.run();
+    }, ms);
+    Fiber.yield();
+}
+
+exports.getDates = function(req, res) {    
     var query = OverallBillability.find({}).select('week').sort('-week');
-    console.log(query);
     query.exec(function(err, result) {
         if(err) {
             logger.error("Error in fetching the dates " + err);
@@ -27,7 +37,7 @@ exports.getLocations = function(req, res) {
             logger.error("Error in fetching the dates" + err);
             res.json({status: 500, success: false, result: 'Error in fetching date'});
         } else {
-            logger.info("Results fetched location"+result);
+            logger.info("Results fetched location");
             res.json({status: 200, success: true, result: result});
         }
     });
@@ -55,7 +65,7 @@ exports.getOverallBillabilityBasedOnLoc = function(req, res) {
             res.json({status: 500, message: 'Error'});  
         } 
         else {
-            console.log("result fetched");
+            logger.log("result fetched");
             res.json({status: 200,success: true, result: resultSet});
         }
    });
@@ -69,7 +79,7 @@ exports.getOverallBillabilityBasedOnVertical = function(req, res) {
             res.json({status: 500, message: 'Error'});  
         } 
         else {
-            console.log("result fetched");
+            logger.log("result fetched");
             res.json({status: 200,success: true, result: resultSet});
         }
    });
@@ -82,7 +92,7 @@ exports.getOverallBillabilityBasedOnVerticalAndLocation = function(req, res) {
             res.json({status: 500, message: 'Error'});  
         } 
         else {
-            console.log("result fetched");
+            logger.log("result fetched");
             res.json({status: 200,success: true, result: resultSet});
         }
    });
@@ -95,7 +105,7 @@ exports.getOverallBillability = function(req, res) {
             res.json({status: 500, message: 'Error'});  
         } 
         else {
-            console.log("result fetched");
+            logger.log("result fetched");
             res.json({status: 200,success: true, result: resultSet});
         }
    });
@@ -108,7 +118,7 @@ exports.getOverallBillabilityBasedOnLocdate = function(req, res) {
             res.json({status: 500, message: 'Error'});  
         } 
         else {
-            console.log("result fetched" + resultSet);            
+            logger.log("result fetched" + resultSet);            
             res.json({status: 200,success: true, result: resultSet});
         }
    });
@@ -123,7 +133,7 @@ exports.getOverallBillabilityBasedOnVerticaldate = function(req, res) {
             res.json({status: 500, message: 'Error'});  
         } 
         else {
-            console.log("result fetched");
+            logger.log("result fetched");
             res.json({status: 200,success: true, result: resultSet});
         }
    });
@@ -137,14 +147,13 @@ exports.getOverallBillabilityBasedOnVerticalAndLocationdate = function(req, res)
             res.json({status: 500, message: 'Error'});  
         } 
         else {
-            console.log("result fetched");
+            logger.log("result fetched");
             res.json({status: 200,success: true, result: resultSet});
         }
    });
 }
 
 //based on billable date
-
 exports.getOverallBillabilitydate = function(req, res) {    
     OverallBillability.find({"week":req.params.date}, function(err, resultSet) {
         if(err) {
@@ -152,25 +161,45 @@ exports.getOverallBillabilitydate = function(req, res) {
             res.json({status: 500, message: 'Error'});  
         } 
         else {
-            console.log("result fetched");
+            resultSet = resultSet.slice(10);
+            logger.log("result fetched");
             res.json({status: 200,success: true, result: resultSet});
         }
    });
 }
 
 
-
 exports.billabilityTrend = function(req, res) {
-    OverallBillabilityBasedOnVertical.find({}, function(err, result) {
+    var query = OverallBillabilityTrendOnVertical.find({}).distinct('week');
+    query.exec(function(err, result) {
        if(err) {
            logger.error("billabilityTrend: Error in fetching " + err);
            res.json({status: 500, success: false, message: 'Error'});
-       } else {
-           result = result.slice(Math.max(result.length - 5, 1));
-           logger.info("billabilityTrend: results fetched");
-           res.json({status: 200, success: true, result: result});
-       }
+       } else {           
+            var verticalMap = [];
+            dateRange = result.slice(Math.max(result.length - 5, 1));
+            Fiber(function() {
+                for(var i=0; i < dateRange.length; i++) {
+                    var subQuery = OverallBillabilityTrendOnVertical.find({"week": dateRange[i]});
+                    subQuery.exec(function(err, resultSet) {
+                        if(err) {
+                            console.log("Error in fetching the results" + err);
+                        } else {                            
+                            var verticalTrend = {};                            
+                            var dataMap = [];
+                            verticalTrend.week = resultSet[0].week;
+                            for(var current in resultSet) {                                
+                                dataMap.push(resultSet[current].data);
+                            }
+                            verticalTrend.data = dataMap;
+                            verticalMap.push(verticalTrend);
+                        }
+                    });                                                                             
+                } 
+                sleep(2000);
+                res.json({status: 200, success: true, result: verticalMap});
+            }).run();                        
+        }
     });
-    
 }
 
