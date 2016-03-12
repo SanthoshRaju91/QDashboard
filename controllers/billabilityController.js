@@ -177,7 +177,7 @@ exports.billabilityTrend = function(req, res) {
            res.json({status: 500, success: false, message: 'Error'});
        } else {           
             var verticalMap = [];
-            dateRange = result.slice(Math.max(result.length - 5, 1));
+            dateRange = result.slice(Math.max(result.length - 10, 1));
             Fiber(function() {
                 for(var i=0; i < dateRange.length; i++) {
                     var subQuery = OverallBillabilityTrendOnVertical.find({"week": dateRange[i]});

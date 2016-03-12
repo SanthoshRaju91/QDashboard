@@ -5,6 +5,48 @@ app.constant('REST_URL', document.location.origin + '/api');
 app.controller('utilizationController', ['$scope', '$http','REST_URL', function($scope, $http,REST_URL) {
     
 
+        $scope.locations = [
+          {
+              "value" : "Naperville",
+              "text": "Naperville"
+          },
+          {
+              "value" : "Mumbai",
+              "text": "Mumbai"
+          },
+          {
+              "value" : "Pune",
+              "text": "Pune"
+          },
+          {
+              "value" : "Bengaluru",
+              "text": "Bengaluru"
+          },
+          {
+              "value" : "Hyderabad",
+              "text": "Hyderabad"
+          },
+          {
+              "value" : "London",
+              "text": "London"
+          }
+      ]
+        $scope.verticals=[
+            {
+                "value" : "Retail & Distribution",
+                "text":"Retail & Distribution"
+            },
+            {
+                "value" : "Financial Services",
+                "text":"Financial Services"
+            },
+            {
+                "value":"Manufacturing & Services",
+                "text":"Manufacturing & Services"        
+            }
+            
+        ]
+
         function loadBillableVerticalTrendGraph (weeksMap, billableFinMap, billableManMap, billableRetMap) {
             $scope.billableVerticalTrend = {
                 options: {
@@ -101,6 +143,51 @@ app.controller('utilizationController', ['$scope', '$http','REST_URL', function(
             }
         };
 
+        function loadLevelBillableTrendGraph (levelMap, billableMap, nonBillableMap) {
+            $scope.levelBillabilityTrend = {
+                options: {
+                    chart: {
+                        type: 'column',
+                        height: 300
+                    },
+                    credits: {
+                               enabled: false
+                              },
+                    title: {
+                        text: '',
+                        x: -20
+                    },
+                    subtitle: {
+                        text: '',
+                        x: -20
+                    },
+                    tooltip: {
+                        valueSuffix: ''
+                    }
+                },
+                xAxis: {
+                    categories: levelMap
+                },
+                yAxis: {
+                    title: {
+                        text: 'Values'
+                    },
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                series: [{
+                    name: 'Billable',
+                    data: billableMap
+                }, {
+                    name: 'Non-Billable',
+                    data: nonBillableMap
+                }]
+            }
+        };
+
       $http.get(REST_URL + '/getDates')
         .success(function(response) {
             if(response.success) {
@@ -136,7 +223,6 @@ app.controller('utilizationController', ['$scope', '$http','REST_URL', function(
                     for(var i=0; i< response.result.length; i++) {
                         weeksMap.push(response.result[i].week);
                         for(var prop in response.result[i].data) {
-                            console.log(response.result[i].data[prop][0].vertical);
                             if(response.result[i].data[prop][0].vertical == 'Financial Services') {
                                 billableFinMap.push(response.result[i].data[prop][0].values[0].Billable || 0);
                                 nonBillableFinMap.push(response.result[i].data[prop][0].values[0].NonBillable || 0);
@@ -150,8 +236,27 @@ app.controller('utilizationController', ['$scope', '$http','REST_URL', function(
                         }
                     }
                     loadBillableVerticalTrendGraph(weeksMap, billableFinMap, billableManMap, billableRetMap);
-                    loadNonBillableVerticalTrendGraph(weeksMap, nonBillableFinMap, nonBillableManMap, nonBillableRetMap);
-                }
+                    loadNonBillableVerticalTrendGraph(weeksMap, nonBillableFinMap, nonBillableManMap, nonBillableRetMap);                    
+                }                
             }
         });
+
+        $http.get(REST_URL + '/getlevelBillability')
+            .success(function(response) {
+                if(response.success) {
+                    if(response.result.length > 0) {
+                        console.log("Response " + JSON.stringify(response.result));
+                        var billabilty = response.result[response.result.length - 1];
+                        var obj = {
+                            "level": billabilty.level,
+                            "billable": billabilty.values[0].Billable,
+                            "nonBillable": billabilty.values[0].NonBillable
+                        }
+                        var levelArray = []; levelArray.push(obj.level);
+                        var billableArray = []; billableArray.push(obj.billable);
+                        var nonBillableArray = []; nonBillableArray.push(obj.nonBillable);
+                        loadLevelBillableTrendGraph(levelArray, billableArray, nonBillableArray);
+                    }
+                }
+            })
 }]);

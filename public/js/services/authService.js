@@ -51,7 +51,6 @@ app.service('AuthInterceptor', ['AuthService', '$location', function(AuthService
     interceptorFactory.responseError = function(response) {
       /*  console.log("Auth response  " + response.status);*/
         if(response.status == 401) {
-            console.log("Token expired ");
             AuthService.logOut();
             $location.path('/login');
         }

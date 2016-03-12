@@ -154,11 +154,13 @@ app.controller('assignmentController', ['$scope', '$http', 'REST_URL', function 
             },
             series: [{
                 name: 'Billable - ' + location,
-                data: billableGroup
+                data: billableGroup,
+                index: 0
 
             }, {
                 name: 'Non Billable - ' + location,
-                data: nonBillableGroup
+                data: nonBillableGroup,
+                index: 0
 
             }]
         }

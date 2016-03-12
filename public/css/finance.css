@@ -411,8 +411,19 @@ ul.alert-dropdown {
     background-size: cover;
 }
 @media (min-width: 1200px){
-.container {
-    width: 1076px;
-    padding-left: 0px;
+    .container {
+        width: 1076px;
+        padding-left: 0px;
+    }
 }
+
+.panel-header h5 {
+    display: inline;
+    float: left;
+}
+
+.panel-header select {
+    width: 35%;
+    display: inline;
+    float: right;
 }

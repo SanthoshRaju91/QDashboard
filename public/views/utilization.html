@@ -25,4 +25,41 @@
             <option ng-repeat = "date in dates" value = "{{date.week}}">{{date.week}}</option>
         </select>        
     </div>
+    <div class="row">
+    	<div class="col-md-12">
+    		<div class="panel panel-default">
+	    		<div class="panel-body">
+	    			<h5 class="text-center">Billability based on level</h5>
+	    			<highchart id = "chart1" config = "levelBillabilityTrend"></highcharts>
+	    		</div>
+	    	</div>
+    	</div>    	
+    </div>
+    <div class="row">
+    	<div class="col-md-6">
+    		<div class="panel panel-default">
+    			<div class="panel-body">
+    				<div class = "panel-header">
+    					<h5 class="text-center">Level Billability based on Location</h5>
+    					<select class = "form-control" ng-model = "selectedLocation" ng-change = "">
+    						<option ng-repeat = "location in locations" value = "{{location.value}}">{{location.text}}</option>
+    					</select>
+    				</div>
+    				
+    			</div>
+    		</div>
+    	</div>
+    	<div class="col-md-6">
+    		<div class="panel panel-default">
+    			<div class="panel-body">
+    				<div class="panel-header">
+    					<h5 class="text-center">Level Billability based on vertical</h5>
+    					<select class = "form-control" ng-model = "selectedVertical" ng-change = "">
+    						<option ng-repeat = "vertical in verticals" value = "{{vertical.value}}">{{vertical.text}}</option>
+    					</select>
+    				</div>    				
+    			</div>
+    		</div>
+    	</div>
+    </div>
 </div>
