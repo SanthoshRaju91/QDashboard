@@ -154,14 +154,13 @@ exports.getOverallBillabilityBasedOnVerticalAndLocationdate = function(req, res)
 }
 
 //based on billable date
-exports.getOverallBillabilitydate = function(req, res) {    
+exports.getOverallBillabilitydate = function(req, res) {        
     OverallBillability.find({"week":req.params.date}, function(err, resultSet) {
         if(err) {
             logger.error("Error in fetching" + err);
             res.json({status: 500, message: 'Error'});  
         } 
-        else {
-            resultSet = resultSet.slice(10);
+        else {            
             logger.log("result fetched");
             res.json({status: 200,success: true, result: resultSet});
         }

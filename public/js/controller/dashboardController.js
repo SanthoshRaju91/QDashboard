@@ -9,6 +9,7 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
     $scope.verticalBillablity = [];
 
     function loadBillableData(billable, nonBillable) {
+        console.log("Loaded with billable data");
         $scope.reportConfig = {
             options: {
                 chart: {
@@ -682,10 +683,9 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
         $scope.verticalBillablity = [];
         $http.get(REST_URL + '/getBillability/' + selectedDate)
             .success(function (response) {
-                if (response.success) {
-                    if (response.result.length > 0) {
+                if (response.success) {                    
+                    if (response.result.length > 0) {                        
                         var billabilty = response.result[0].value[0];
-
                         loadBillableData(billabilty.Billable, billabilty.NonBillable);
                     }
                 }
@@ -826,7 +826,6 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
             if (response.status == 200) {
                 var billabilty = response.result[0].value[0];
                 loadBillableData(billabilty.Billable, billabilty.NonBillable);
-
             }
         });
 
