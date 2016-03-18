@@ -17,7 +17,7 @@ function sleep(ms) {
 }
 
 exports.getDates = function(req, res) {    
-    var query = OverallBillability.find({}).select('week').sort('-week');
+    var query = OverallBillability.find({}).select('week').sort('-date');
     query.exec(function(err, result) {
         if(err) {
             logger.error("Error in fetching the dates " + err);
@@ -99,13 +99,15 @@ exports.getOverallBillabilityBasedOnVerticalAndLocation = function(req, res) {
 }
 
 exports.getOverallBillability = function(req, res) {    
-    OverallBillability.find({}, function(err, resultSet) {
+    var previous10days = new Date('2016, 2, 21');
+    previous10days = new Date(previous10days.setDate(previous10days.getDate() - 10));
+    OverallBillability.find({"date": {"$gte": previous10days, "$lt": new Date('2016, 2, 21')}}, function(err, resultSet) {
         if(err) {
             logger.error("Error in fetching" + err);
             res.json({status: 500, message: 'Error'});  
         } 
         else {
-            logger.log("result fetched");
+            logger.log("result fetched in OverallBillability" + resultSet);
             res.json({status: 200,success: true, result: resultSet});
         }
    });

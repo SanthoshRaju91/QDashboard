@@ -24,7 +24,7 @@ var upload = multer({
 
 router.get('/getDates', OverallBillability.getDates);
 router.get('/getLocations/:date', OverallBillability.getLocations);
-router.get('/getBillability', OverallBillability.getOverallBillability);
+router.get('/getOverallBillability', OverallBillability.getOverallBillability);
 router.get('/getOverallBillabilityBasedOnLoc/:location', OverallBillability.getOverallBillabilityBasedOnLoc);
 router.get('/getOverallBillabilityBasedOnVerticalAndLocation', OverallBillability.getOverallBillabilityBasedOnVerticalAndLocation);
 router.get('/getOverallBillabilityBasedOnVertical/:vertical', OverallBillability.getOverallBillabilityBasedOnVertical);
@@ -34,7 +34,7 @@ router.get('/getOverallBillabilityBasedOnVertical/:vertical', OverallBillability
 router.get('/getOverallBillabilityBasedOnLoc/:location/:date', OverallBillability.getOverallBillabilityBasedOnLocdate);
 router.get('/getOverallBillabilityBasedOnVertical/:vertical/:date', OverallBillability.getOverallBillabilityBasedOnVerticaldate);
 router.get('/getOverallBillabilityBasedOnVerticalAndLocation/:date', OverallBillability.getOverallBillabilityBasedOnVerticalAndLocationdate);
-router.get('/getBillability/:date', OverallBillability.getOverallBillabilitydate);
+router.get('/getOverallBillability/:date', OverallBillability.getOverallBillabilitydate);
 
 //Routes for Level Billability
 router.get('/getlevelBillability', LevelBillability.getlevelBillability);

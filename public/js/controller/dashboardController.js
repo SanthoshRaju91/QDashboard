@@ -681,7 +681,7 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
     $scope.selectDate = function (selectedDate) {
         $scope.locationBillablity = [];
         $scope.verticalBillablity = [];
-        $http.get(REST_URL + '/getBillability/' + selectedDate)
+        $http.get(REST_URL + '/getOverallBillability/' + selectedDate)
             .success(function (response) {
                 if (response.success) {                    
                     if (response.result.length > 0) {                        
@@ -821,10 +821,11 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
 
 
     //Overall Billability
-    $http.get(REST_URL + '/getBillability/')
+    $http.get(REST_URL + '/getOverallBillability/')
         .success(function (response) {
             if (response.status == 200) {
                 var billabilty = response.result[0].value[0];
+                $scope.selectedDate = response.result[0].week;
                 loadBillableData(billabilty.Billable, billabilty.NonBillable);
             }
         });

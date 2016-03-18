@@ -35,8 +35,8 @@ exports.parseBillabilityData = function (filename) {
         if (err) {
             console.error(err);
         } else {
-            /*loadData(JSON.stringify(result));
-            loadDataForLocation(JSON.stringify(result));
+            loadData(JSON.stringify(result));
+            /*loadDataForLocation(JSON.stringify(result));
             loadDataForVertical(JSON.stringify(result));
             loadDataForVerticalAndLocation(JSON.stringify(result));
             processLevelData(JSON.stringify(result));
@@ -45,8 +45,8 @@ exports.parseBillabilityData = function (filename) {
             processLevelBasedOnLocationAndVerticalData(JSON.stringify(result));
             processDepartment(JSON.stringify(result));
             processDepartmentBasedOnLocation(JSON.stringify(result));
-            processDepartmentBasedOnVertical(JSON.stringify(result));*/
-            processBillabilityTrendOnVertical(JSON.stringify(result));
+            processDepartmentBasedOnVertical(JSON.stringify(result));
+            processBillabilityTrendOnVertical(JSON.stringify(result));*/
         }
     });
 }
@@ -65,10 +65,11 @@ function loadData(result) {
             return object['BILLABLE'] == 'Billable' ? 'Billable' : 'NonBillable'
         });
         return {
+            date: new Date(Date.parse(current.week)),
             week: current.week,
             values: counted
         };
-    });
+    });    
     loadDataToMongo(computedResult);
 }
 
@@ -464,6 +465,7 @@ function loadDataToMongo(inputResultToStore) {
         } else {
             for (var i = 0; i < inputResultToStore.length; i++) {
                 var overBillability = new OverBillability({
+                    date: inputResultToStore[i].date,
                     week: inputResultToStore[i].week,
                     value: inputResultToStore[i].values
                 });
