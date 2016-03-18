@@ -336,7 +336,7 @@ ul.alert-dropdown {
     border-left: 3px solid #ec4444;
 }
 .well h5 {
-    text-transform: uppercase;
+/*    text-transform: uppercase;*/
     letter-spacing: 1px;
     word-spacing: 1px;
     font-weight: 600;
@@ -348,7 +348,7 @@ ul.alert-dropdown {
 }
 
 .upload-labels {
-    text-transform: uppercase;
+/*    text-transform: uppercase;*/
     font-size: 13px !important;    
     letter-spacing: 0.5px;
     padding: 12px;
@@ -369,7 +369,7 @@ ul.alert-dropdown {
 }
 
 .text-clear { 
-    text-transform: uppercase;
+/*    text-transform: uppercase;*/
     letter-spacing: 1px;
     word-spacing: 1px;
     font-size: 12px;
@@ -387,7 +387,7 @@ ul.alert-dropdown {
 
 .panel-body h4, 
 .panel-body h5 {
-    text-transform: uppercase;
+/*    text-transform: uppercase;*/
     letter-spacing: 1px;
     word-spacing: 1px;
     font-size: 12px;
@@ -409,6 +409,7 @@ ul.alert-dropdown {
 .table-custom {
     z-index: 99999px;
 }
+
 
 .table-custom th, .table-custom td {
     font-size: 13px;

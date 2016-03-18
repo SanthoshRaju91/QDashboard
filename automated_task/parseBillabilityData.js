@@ -36,7 +36,7 @@ exports.parseBillabilityData = function (filename) {
             console.error(err);
         } else {
             loadData(JSON.stringify(result));
-            /*loadDataForLocation(JSON.stringify(result));
+            loadDataForLocation(JSON.stringify(result));
             loadDataForVertical(JSON.stringify(result));
             loadDataForVerticalAndLocation(JSON.stringify(result));
             processLevelData(JSON.stringify(result));
@@ -46,10 +46,11 @@ exports.parseBillabilityData = function (filename) {
             processDepartment(JSON.stringify(result));
             processDepartmentBasedOnLocation(JSON.stringify(result));
             processDepartmentBasedOnVertical(JSON.stringify(result));
-            processBillabilityTrendOnVertical(JSON.stringify(result));*/
+            processBillabilityTrendOnVertical(JSON.stringify(result));
         }
     });
 }
+
 
 //Loading data for overall billable and non-billable
 function loadData(result) {
@@ -339,6 +340,7 @@ function processDepartment(result) {
         var departmentGrouped = _.groupBy(current.values, 'DEPARTMENT');
         _.each(departmentGrouped, function (object) {
             departmentMap.push({
+                date: new Date(Date.parse(current.week)),
                 week: object[0].Week,
                 department: object[0].DEPARTMENT,
                 values: _.countBy(object, function (object) {
@@ -377,6 +379,7 @@ function processDepartmentBasedOnLocation(result) {
         var departmentLocationGrouped = _.groupBy(current.values, 'BASE_LOCATION');
         _.each(departmentLocationGrouped, function (object) {
             departmentLocationMap.push({
+                date: new Date(Date.parse(object[0].Week)),
                 week: object[0].Week,
                 department: object[0].DEPARTMENT,
                 location: object[0].BASE_LOCATION,
@@ -445,6 +448,7 @@ function processDepartmentBasedOnVertical(result) {
         var departmentVerticalGrouped = _.groupBy(current.values, 'PROJECT_BG');
         _.each(departmentVerticalGrouped, function (object) {
             departmentVerticalMap.push({
+                date: new Date(Date.parse(object[0].Week)),
                 week: object[0].Week,
                 department: object[0].DEPARTMENT,
                 vertical: object[0].PROJECT_BG,
@@ -669,6 +673,7 @@ function loadDepartmentOnDateToMongo(inputResultToStore) {
         } else {
             for (var i = 0; i < inputResultToStore.length; i++) {
                 var departmentBillability = new DepartmentBillability({
+                    date: inputResultToStore[i].date,
                     week: inputResultToStore[i].week,
                     department: inputResultToStore[i].department,
                     values: inputResultToStore[i].values
@@ -693,6 +698,7 @@ function loadDepartmentOnDateLocationToMongo(inputResultToStore) {
         } else {
             for (var i = 0; i < inputResultToStore.length; i++) {
                 var departmentBillabilityBasedOnLocation = new DepartmentBillabilityBasedOnLocation({
+                    date: inputResultToStore[i].date,
                     week: inputResultToStore[i].week,
                     location: inputResultToStore[i].location,
                     department: inputResultToStore[i].department,
@@ -718,6 +724,7 @@ function loadDepartmentOnDateVerticalToMongo(inputResultToStore) {
         } else {
             for (var i = 0; i < inputResultToStore.length; i++) {
                 var departmentBillabilityBasedOnVertical = new DepartmentBillabilityBasedOnVertical({
+                    date: inputResultToStore[i].date,
                     week: inputResultToStore[i].week,
                     vertical: inputResultToStore[i].vertical,
                     department: inputResultToStore[i].department,

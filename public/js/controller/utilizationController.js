@@ -2,8 +2,7 @@ var app = angular.module('utilization', ["highcharts-ng"]);
 
 app.constant('REST_URL', document.location.origin + '/api');
 
-app.controller('utilizationController', ['$scope', '$http','REST_URL', function($scope, $http,REST_URL) {
-    
+app.controller('utilizationController', ['$scope', '$http','REST_URL', function($scope, $http,REST_URL) {    
 
         $scope.locations = [
           {
@@ -46,6 +45,52 @@ app.controller('utilizationController', ['$scope', '$http','REST_URL', function(
             }
             
         ]
+        
+        function loadLevelBillableLocGraph (levelMap, billableMap, nonBillableMap) {
+            $scope.levelBillabilityLocTrend = {
+                options: {
+                    chart: {
+                        type: 'column',
+                        height: 300
+                    },
+                    credits: {
+                               enabled: false
+                              },
+                    title: {
+                        text: '',
+                        x: -20
+                    },
+                    subtitle: {
+                        text: '',
+                        x: -20
+                    },
+                    tooltip: {
+                        valueSuffix: ''
+                    },
+                    exporting: { enabled: false }
+                },
+                xAxis: {
+                    categories: levelMap
+                },
+                yAxis: {
+                    title: {
+                        text: 'Values'
+                    },
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                series: [{
+                    name: 'Billable',
+                    data: billableMap
+                }, {
+                    name: 'Non-Billable',
+                    data: nonBillableMap
+                }]
+            }
+        };
 
         function loadBillableVerticalTrendGraph (weeksMap, billableFinMap, billableManMap, billableRetMap) {
             $scope.billableVerticalTrend = {
@@ -187,7 +232,98 @@ app.controller('utilizationController', ['$scope', '$http','REST_URL', function(
                 }]
             }
         };
-
+    
+       function loadLevelBillableTrendGraph (levelMap, billableMap, nonBillableMap) {
+            $scope.levelBillabilityTrend = {
+                options: {
+                    chart: {
+                        type: 'column',
+                        height: 300
+                    },
+                    credits: {
+                               enabled: false
+                              },
+                    title: {
+                        text: '',
+                        x: -20
+                    },
+                    subtitle: {
+                        text: '',
+                        x: -20
+                    },
+                    tooltip: {
+                        valueSuffix: ''
+                    }
+                },
+                xAxis: {
+                    categories: levelMap
+                },
+                yAxis: {
+                    title: {
+                        text: 'Values'
+                    },
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                series: [{
+                    name: 'Billable',
+                    data: billableMap
+                }, {
+                    name: 'Non-Billable',
+                    data: nonBillableMap
+                }]
+            }
+        };
+        
+    function loadLevelBillableVerGraph (levelMap, billableMap, nonBillableMap) {
+        $scope.levelBillabilityVerTrend = {
+            options: {
+                chart: {
+                    type: 'column',
+                    height: 300
+                },
+                credits: {
+                           enabled: false
+                          },
+                title: {
+                    text: '',
+                    x: -20
+                },
+                subtitle: {
+                    text: '',
+                    x: -20
+                },
+                tooltip: {
+                    valueSuffix: ''
+                },
+                exporting: { enabled: false }
+            },
+            xAxis: {
+                categories: levelMap
+            },
+            yAxis: {
+                title: {
+                    text: 'Values'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            series: [{
+                name: 'Billable',
+                data: billableMap
+            }, {
+                name: 'Non-Billable',
+                data: nonBillableMap
+            }]
+        }
+    };
+    
       $http.get(REST_URL + '/getDates')
         .success(function(response) {
             if(response.success) {
@@ -208,6 +344,60 @@ app.controller('utilizationController', ['$scope', '$http','REST_URL', function(
                 }
             });
      }
+     
+     $scope.selectVertical=function(selectedVertical){
+        if($scope.selectedDate){
+                $http.get(REST_URL + '/getlevelBillabilityVertical/' + $scope.selectedDate + '/' +selectedVertical)
+                .success(function (response) {
+                    console.log(response.result);
+                     if(response.success){
+                        if(response.result.length > 0){
+                             var billabilty = response.result[response.result.length - 1];
+                        var obj = {
+                            "level": billabilty.level,
+                            "billable": billabilty.values[0].Billable,
+                            "nonBillable": billabilty.values[0].NonBillable
+                        }
+                        var levelArray = []; levelArray.push(obj.level);
+                        var billableArray = []; billableArray.push(obj.billable);
+                        var nonBillableArray = []; nonBillableArray.push(obj.nonBillable);
+                        loadLevelBillableVerGraph(levelArray, billableArray, nonBillableArray);
+
+                        }
+                    }
+                });               
+        }else {
+            alert("Please select date as well");
+        }
+    }
+    
+    $scope.selectLocation = function(selectedLocation){
+        if($scope.selectedDate) {
+            $http.get(REST_URL + '/getlevelBillabilityLocation/' + $scope.selectedDate + '/' + selectedLocation)
+                .success(function (response) {
+                    if (response.success) {
+                    if (response.result.length > 0) {                        
+//                      console.log("Response " + JSON.stringify(response.result));
+                        var billabilty = response.result[response.result.length - 1];
+                        var obj = {
+                            "level": billabilty.level,
+                            "billable": billabilty.values[0].Billable,
+                            "nonBillable": billabilty.values[0].NonBillable
+                        }
+                        var levelArray = []; levelArray.push(obj.level);
+                        var billableArray = []; billableArray.push(obj.billable);
+                        var nonBillableArray = []; nonBillableArray.push(obj.nonBillable);
+                        loadLevelBillableLocGraph(levelArray, billableArray, nonBillableArray);
+                        }
+                    }
+                });
+        } 
+     else {
+            alert("Please select date as well");
+        }             
+    }
+
+     
      
      $http.get(REST_URL+'/getBillabilityTrend')
         .success(function(response) {
@@ -258,5 +448,42 @@ app.controller('utilizationController', ['$scope', '$http','REST_URL', function(
                         loadLevelBillableTrendGraph(levelArray, billableArray, nonBillableArray);
                     }
                 }
-            })
+            });
+        $http.get(REST_URL + '/getlevelBillabilityBasedOnLocation/Bengaluru')
+            .success(function(response) {
+                if(response.success) {
+                    if(response.result.length > 0) {
+                        console.log("Response " + JSON.stringify(response.result));
+                        var billabilty = response.result[response.result.length - 1];
+                        var obj = {
+                            "level": billabilty.level,
+                            "billable": billabilty.values[0].Billable,
+                            "nonBillable": billabilty.values[0].NonBillable
+                        }
+                        var levelArray = []; levelArray.push(obj.level);
+                        var billableArray = []; billableArray.push(obj.billable);
+                        var nonBillableArray = []; nonBillableArray.push(obj.nonBillable);
+                        loadLevelBillableTrendGraph(levelArray, billableArray, nonBillableArray);
+                    }
+                }
+            });
+        $http.get(REST_URL + '/getlevelBillabilityBasedOnLocation/Retail & Distribution')
+            .success(function(response) {
+                if(response.success) {
+                    if(response.result.length > 0) {
+                        console.log("Response " + JSON.stringify(response.result));
+                        var billabilty = response.result[response.result.length - 1];
+                        var obj = {
+                            "level": billabilty.level,
+                            "billable": billabilty.values[0].Billable,
+                            "nonBillable": billabilty.values[0].NonBillable
+                        }
+                        var levelArray = []; levelArray.push(obj.level);
+                        var billableArray = []; billableArray.push(obj.billable);
+                        var nonBillableArray = []; nonBillableArray.push(obj.nonBillable);
+                        loadLevelBillableTrendGraph(levelArray, billableArray, nonBillableArray);
+                    }
+                }
+            });
+        
 }]);

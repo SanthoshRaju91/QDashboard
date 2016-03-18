@@ -197,7 +197,7 @@ exports.billabilityTrend = function(req, res) {
                         }
                     });                                                                             
                 } 
-                sleep(2000);
+                sleep(100);
                 res.json({status: 200, success: true, result: verticalMap});
             }).run();                        
         }

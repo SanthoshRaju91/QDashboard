@@ -73,19 +73,24 @@ app.controller('assignmentController', ['$scope', '$http', 'REST_URL', function 
                            enabled: false
                           },
                 title: {
-                    text: ''
+                    text: 'Department Billable v/s NonBillable',
+                     style: {
+                        color: '#2c3e50',
+                        fontSize:'13px'
+                    }
                 },
                 subtitle: {
                     text: ''
                 },
                 tooltip: {
-                    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-                    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                        '<td style="padding:0"><b>{point.y}</b></td></tr>',
+                     headerFormat: '<span style="font-size:12px">{point.key}</span><table>',
+                    pointFormat: '<tr><td style="color:{series.color};padding:0;font-size:12px">{series.name}: </td>' +
+                        '<td style="padding:0;font-size:12px"><b>{point.y}</b></td></tr>',
                     footerFormat: '</table>',
                     shared: true,
                     useHTML: true
-                }
+                },
+                exporting: { enabled: false }
             },
             xAxis: {
                 categories: departmentGroup,
@@ -127,19 +132,24 @@ app.controller('assignmentController', ['$scope', '$http', 'REST_URL', function 
                            enabled: false
                           },
                 title: {
-                    text: ''
+                    text: 'Department Billablilty Based On Location',
+                     style: {
+                        color: '#2c3e50',
+                        fontSize:'13px'
+                    }
                 },
                 subtitle: {
                     text: ''
                 },
                 tooltip: {
-                    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-                    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                        '<td style="padding:0"><b>{point.y}</b></td></tr>',
+                     headerFormat: '<span style="font-size:12px">{point.key}</span><table>',
+                    pointFormat: '<tr><td style="color:{series.color};padding:0;font-size:12px">{series.name}: </td>' +
+                        '<td style="padding:0;font-size:12px"><b>{point.y}</b></td></tr>',
                     footerFormat: '</table>',
                     shared: true,
                     useHTML: true
-                }
+                },
+                exporting: { enabled: false }
             },
             xAxis: {
                 categories: departmentGroup,
@@ -183,19 +193,24 @@ app.controller('assignmentController', ['$scope', '$http', 'REST_URL', function 
                            enabled: false
                           },
                 title: {
-                    text: ''
+                    text: 'Department Billablilty Based Vertical',
+                     style: {
+                        color: '#2c3e50',
+                        fontSize:'13px'
+                    }
                 },
                 subtitle: {
                     text: ''
                 },
                 tooltip: {
-                    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-                    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                        '<td style="padding:0"><b>{point.y}</b></td></tr>',
+                    headerFormat: '<span style="font-size:12px">{point.key}</span><table>',
+                    pointFormat: '<tr><td style="color:{series.color};padding:0;font-size:12px">{series.name}: </td>' +
+                        '<td style="padding:0;font-size:12px"><b>{point.y}</b></td></tr>',
                     footerFormat: '</table>',
                     shared: true,
                     useHTML: true
-                }
+                },
+                exporting: { enabled: false }
             },
             xAxis: {
                 categories: departmentGroup,
@@ -383,4 +398,97 @@ app.controller('assignmentController', ['$scope', '$http', 'REST_URL', function 
             alert("Please select date as well");
         }
     }
+    
+     $http.get(REST_URL + '/getDepartmentBillability/')
+            .success(function (response) {
+                var departmentBillability  = [];
+                console.log(response.result[0].date);
+                $scope.selectedDate = response.result[0].week;
+                if (response.success) {
+                    if (response.result.length > 0) {
+                        for(var prop in response.result) {
+                            var obj = {
+                                department: response.result[prop].department,
+                                Billable: response.result[prop].values[0].Billable || 0,
+                                NonBillable: response.result[prop].values[0].NonBillable || 0
+                            };
+                            departmentBillability.push(obj);
+                        }
+                        $scope.departmentBillable = departmentBillability;
+                        var departmentGroup = [];
+                        var billableGroup = [];
+                        var nonBillableGroup = [];
+                        for(var obj in departmentBillability) {
+                            departmentGroup.push(departmentBillability[obj].department);
+                            billableGroup.push(departmentBillability[obj].Billable);
+                            nonBillableGroup.push(departmentBillability[obj].NonBillable);
+                            
+                        }                    
+                        loadDepartmentBillabiltyGrap(departmentGroup, billableGroup, nonBillableGroup, Math.max(...billableGroup));
+                    }
+                }
+            });
+        
+              $http.get(REST_URL + '/getDepartmentBillabilityBasedOnLocation/' + 'Bengaluru')
+                .success(function (response) {
+                    console.log(response);
+                    if (response.success) {
+                    if (response.result.length > 0) {                    
+                            var departmentBillabilityLocation = [];
+                            for(var prop in response.result) {
+                                var obj = {
+                                    location: response.result[prop].location,
+                                    department:response.result[prop].department,
+                                    Billable: response.result[prop].values[0].Billable || 0,
+                                    NonBillable: response.result[prop].values[0].NonBillable || 0
+                                };
+                                departmentBillabilityLocation.push(obj);
+                            }                                                
+                            $scope.selectedLocation = response.result[0].location; 
+                            var departmentGroup = [];
+                            var locationGroup=[];
+                            var billableGroup = [];
+                            var nonBillableGroup = [];
+                            for(var obj in departmentBillabilityLocation) {
+                                departmentGroup.push(departmentBillabilityLocation[obj].department);
+                                locationGroup.push(departmentBillabilityLocation[obj].location);
+                                billableGroup.push(departmentBillabilityLocation[obj].Billable);
+                                nonBillableGroup.push(departmentBillabilityLocation[obj].NonBillable); 
+                            }                                        
+                            loadDepartmentBillabiltyBasedOnLocation(departmentGroup, $scope.selectedLocation, billableGroup, nonBillableGroup, Math.max(...billableGroup));
+                        }
+                    }
+                });
+              
+                $http.get(REST_URL + '/getDepartmentBillabilityBasedOnVertical/' +'Retail & Distribution')
+                .success(function (response) {
+                     if(response.success){
+                        if(response.result.length > 0){
+                            var departmentBillabilityVertical = [];
+                            for(var prop in response.result){
+                                var obj={
+                                    vertical:response.result[prop].vertical,
+                                    department:response.result[prop].department,
+                                    Billable:response.result[prop].values[0].Billable || 0,
+                                    NonBillable: response.result[prop].values[0].NonBillable || 0
+                                };
+                                departmentBillabilityVertical.push(obj);
+                                $scope.selectedVertical = response.result[0].vertical;
+                                var departmentGroup = [];
+                                var verticalGroup = [];
+                                var billableGroup =[];
+                                var nonbillableGroup =[];
+                                for(var obj in departmentBillabilityVertical){
+                                    departmentGroup.push(departmentBillabilityVertical[obj].department);
+                                    verticalGroup.push(departmentBillabilityVertical[obj].vertical);
+                                    billableGroup.push(departmentBillabilityVertical[obj].Billable);
+                                    nonbillableGroup.push(departmentBillabilityVertical[obj].NonBillable); 
+
+                                }
+                                 loadDepartmentBillabiltyBasedOnVertical(departmentGroup, $scope.selectedVertical, billableGroup, nonbillableGroup, Math.max(...billableGroup));
+                            }
+                        }
+                    }
+                });  
+ 
 }]);

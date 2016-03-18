@@ -45,10 +45,12 @@ router.get('/getlevelBillabilityVerticalandLocation/:date/:location/:vertical', 
 
 
 //Routes for Department
-router.get('/getDepartmentBillability/:date', DepartmentBillability.getDepartmentBillability);
+router.get('/getDepartmentBillability',DepartmentBillability.getDepartmentBillability)
+router.get('/getDepartmentBillability/:date', DepartmentBillability.getDepartmentBillabilityDate);
+router.get('/getDepartmentBillabilityBasedOnLocation/:location', DepartmentBillability.getDepartmentBillabilityBasedOnLocationLatest);
 router.get('/getDepartmentBillabilityBasedOnLocation/:date/:location', DepartmentBillability.getDepartmentBillabilityBasedOnLocation);
 router.get('/getDepartmentBillabilityBasedOnVertical/:date/:vertical',DepartmentBillability.getDepartmentBillabilityBasedOnVertical);
-
+router.get('/getDepartmentBillabilityBasedOnVertical/:vertical', DepartmentBillability.getDepartmentBillabilityBaseOnVerticalLatest);
 router.get('/getBillabilityTrend', OverallBillability.billabilityTrend);
 
 

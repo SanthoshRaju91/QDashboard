@@ -22,6 +22,7 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                         fontWeight: 'bold'
                     }
                 },
+                exporting: { enabled: false },
                 plotOptions: {
                     series: {
                         dataLabels: {
@@ -34,12 +35,20 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                         }
                     },
                     pie: {
-                        allowPointSelect: true,
+                        allowPointSelect: false,
                         cursor: 'pointer',
                         dataLabels: {
                             enabled: false
                         },
-                        showInLegend: true
+                        showInLegend: true,
+                        allowPointSelect: false,
+                           point:{
+                               events : {
+                                legendItemClick: function(e){
+                                    e.preventDefault();
+                                }
+                               }
+                           }
                     }
                 },
 
@@ -48,7 +57,11 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                 enabled: false
             },
             title: {
-                text: ''
+                text: 'Overall Billable v/s Non-Billable',
+                style: {
+                    color: '#2c3e50',
+                    fontSize:'13px'
+                }
             },
             xAxis: {
                 categories: 'month'
@@ -89,6 +102,7 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                         fontWeight: 'bold'
                     }
                 },
+                exporting: { enabled: false },
                 plotOptions: {
                     series: {
                         dataLabels: {
@@ -106,7 +120,15 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                         dataLabels: {
                             enabled: false
                         },
-                        showInLegend: true
+                        showInLegend: true,
+                        allowPointSelect: false,
+                           point:{
+                               events : {
+                                legendItemClick: function(e){
+                                    e.preventDefault();
+                                }
+                               }
+                           }
                     }
                 },
 
@@ -115,7 +137,11 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                 enabled: false
             },
             title: {
-                text: ''
+                text: 'Billabilty - Bengaluru',
+                 style: {
+                    color: '#2c3e50',
+                    fontSize:'13px'
+                }
             },
             xAxis: {
                 categories: 'month'
@@ -156,6 +182,7 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                         fontWeight: 'bold'
                     }
                 },
+                exporting: { enabled: false },
                 plotOptions: {
                     series: {
                         dataLabels: {
@@ -167,13 +194,21 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                             color: 'Black'
                         }
                     },
-                    pie: {
+                   pie: {
                         allowPointSelect: false,
                         cursor: 'pointer',
                         dataLabels: {
                             enabled: false
                         },
-                        showInLegend: true
+                        showInLegend: true,
+                        allowPointSelect: false,
+                           point:{
+                               events : {
+                                legendItemClick: function(e){
+                                    e.preventDefault();
+                                }
+                               }
+                           }
                     }
                 },
 
@@ -182,7 +217,11 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                 enabled: false
             },
             title: {
-                text: ''
+                text: 'Billabilty - Pune',
+                 style: {
+                    color: '#2c3e50',
+                    fontSize:'13px'
+                }
             },
             xAxis: {
                 categories: 'month'
@@ -222,6 +261,7 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                         fontWeight: 'bold'
                     }
                 },
+                exporting: { enabled: false },
                 plotOptions: {
                     series: {
                         dataLabels: {
@@ -239,7 +279,15 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                         dataLabels: {
                             enabled: false
                         },
-                        showInLegend: true
+                        showInLegend: true,
+                        allowPointSelect: false,
+                           point:{
+                               events : {
+                                legendItemClick: function(e){
+                                    e.preventDefault();
+                                }
+                               }
+                           }
                     }
                 },
 
@@ -248,7 +296,11 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                 enabled: false
             },
             title: {
-                text: ''
+                text: 'Billabilty - London',
+                 style: {
+                    color: '#2c3e50',
+                    fontSize:'13px'
+                }
             },
             xAxis: {
                 categories: 'month'
@@ -284,6 +336,7 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                         fontWeight: 'bold'
                     }
                 },
+                exporting: { enabled: false },
                 plotOptions: {
                     series: {
                         dataLabels: {
@@ -295,13 +348,21 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                             color: 'Black'
                         }
                     },
-                    pie: {
+                   pie: {
                         allowPointSelect: false,
                         cursor: 'pointer',
                         dataLabels: {
                             enabled: false
                         },
-                        showInLegend: true
+                        showInLegend: true,
+                        allowPointSelect: false,
+                           point:{
+                               events : {
+                                legendItemClick: function(e){
+                                    e.preventDefault();
+                                }
+                               }
+                           }
                     }
                 },
 
@@ -310,7 +371,11 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                 enabled: false
             },
             title: {
-                text: ''
+                text: 'Billabilty - Naperville',
+                 style: {
+                    color: '#2c3e50',
+                    fontSize:'13px'
+                }
             },
             xAxis: {
                 categories: 'month'
@@ -350,6 +415,7 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                         fontWeight: 'bold'
                     }
                 },
+                exporting: { enabled: false },
                 plotOptions: {
                     series: {
                         dataLabels: {
@@ -367,7 +433,15 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                         dataLabels: {
                             enabled: false
                         },
-                        showInLegend: true
+                        showInLegend: true,
+                        allowPointSelect: false,
+                           point:{
+                               events : {
+                                legendItemClick: function(e){
+                                    e.preventDefault();
+                                }
+                               }
+                           }
                     }
                 },
 
@@ -376,7 +450,11 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                 enabled: false
             },
             title: {
-                text: ''
+                text: 'Billabilty - Mumbai',
+                 style: {
+                    color: '#2c3e50',
+                    fontSize:'13px'
+                }
             },
             xAxis: {
                 categories: 'month'
@@ -416,6 +494,7 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                         fontWeight: 'bold'
                     }
                 },
+                exporting: { enabled: false },
                 plotOptions: {
                     series: {
                         dataLabels: {
@@ -433,7 +512,15 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                         dataLabels: {
                             enabled: false
                         },
-                        showInLegend: true
+                        showInLegend: true,
+                        allowPointSelect: false,
+                           point:{
+                               events : {
+                                legendItemClick: function(e){
+                                    e.preventDefault();
+                                }
+                               }
+                           }
                     }
                 },
 
@@ -442,7 +529,11 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                 enabled: false
             },
             title: {
-                text: ''
+                text: 'Billabilty - Hyderbad',
+                 style: {
+                    color: '#2c3e50',
+                    fontSize:'13px'
+                }
             },
             xAxis: {
                 categories: 'month'
@@ -482,6 +573,7 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                         fontWeight: 'bold'
                     }
                 },
+                exporting: { enabled: false },
                 plotOptions: {
                     series: {
                         dataLabels: {
@@ -499,7 +591,15 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                         dataLabels: {
                             enabled: false
                         },
-                        showInLegend: true
+                        showInLegend: true,
+                        allowPointSelect: false,
+                           point:{
+                               events : {
+                                legendItemClick: function(e){
+                                    e.preventDefault();
+                                }
+                               }
+                           }
                     }
                 },
 
@@ -508,7 +608,11 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                 enabled: false
             },
             title: {
-                text: ''
+                text: 'Retail and Distribution',
+                 style: {
+                    color: '#2c3e50',
+                    fontSize:'13px'
+                }
             },
             xAxis: {
                 categories: 'month'
@@ -548,6 +652,7 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                         fontWeight: 'bold'
                     }
                 },
+                exporting: { enabled: false },
                 plotOptions: {
                     series: {
                         dataLabels: {
@@ -565,7 +670,15 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                         dataLabels: {
                             enabled: false
                         },
-                        showInLegend: true
+                        showInLegend: true,
+                        allowPointSelect: false,
+                           point:{
+                               events : {
+                                legendItemClick: function(e){
+                                    e.preventDefault();
+                                }
+                               }
+                           }
                     }
                 },
 
@@ -574,7 +687,11 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                 enabled: false
             },
             title: {
-                text: ''
+                text: 'Manufacturing and Services',
+                 style: {
+                    color: '#2c3e50',
+                    fontSize:'13px'
+                }
             },
             xAxis: {
                 categories: 'month'
@@ -614,6 +731,7 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                         fontWeight: 'bold'
                     }
                 },
+                exporting: { enabled: false },
                 plotOptions: {
                     series: {
                         dataLabels: {
@@ -631,7 +749,15 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                         dataLabels: {
                             enabled: false
                         },
-                        showInLegend: true
+                        showInLegend: true,
+                        allowPointSelect: false,
+                           point:{
+                               events : {
+                                legendItemClick: function(e){
+                                    e.preventDefault();
+                                }
+                               }
+                           }
                     }
                 },
 
@@ -640,7 +766,11 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
                 enabled: false
             },
             title: {
-                text: ''
+                text: 'Financial Services',
+                 style: {
+                    color: '#2c3e50',
+                    fontSize:'13px'
+                }
             },
             xAxis: {
                 categories: 'month'
@@ -666,6 +796,7 @@ app.controller('dashboardController', ['$scope', '$http', 'REST_URL', function (
         }
 
     };
+   
     //OverAll Billability 
 
     $http.get(REST_URL + '/getDates')

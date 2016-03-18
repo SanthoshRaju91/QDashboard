@@ -1,6 +1,6 @@
 <div class="container-fluid">        
     <div class="row">
-		<div class = "col-md-10">
+		<div class = "col-md-12">
 			<div class = "panel panel-default border-calm">
 				<div class="panel-body">
 					<h5 class="text-center">Billable Vertical Trend</h5>
@@ -9,8 +9,9 @@
 			</div>
 		</div>	
 	</div>
+    
 	<div class="row">
-		<div class = "col-md-10">
+		<div class = "col-md-12">
 			<div class = "panel panel-default border-warning">
 				<div class="panel-body">
 					<h5 class="text-center">Non-Billable Vertical Trend</h5>
@@ -35,31 +36,38 @@
 	    	</div>
     	</div>    	
     </div>
-    <div class="row">
-    	<div class="col-md-6">
-    		<div class="panel panel-default border-success">
-    			<div class="panel-body">
-    				<div class = "panel-header">
-    					<h5 class="text-center">Level Billability based on Location</h5>
-    					<select class = "form-control" ng-model = "selectedLocation" ng-change = "">
-    						<option ng-repeat = "location in locations" value = "{{location.value}}">{{location.text}}</option>
-    					</select>
-    				</div>
-    				
-    			</div>
-    		</div>
-    	</div>
-    	<div class="col-md-6">
-    		<div class="panel panel-default border-warning">
-    			<div class="panel-body">
-    				<div class="panel-header">
-    					<h5 class="text-center">Level Billability based on vertical</h5>
-    					<select class = "form-control" ng-model = "selectedVertical" ng-change = "">
-    						<option ng-repeat = "vertical in verticals" value = "{{vertical.value}}">{{vertical.text}}</option>
-    					</select>
-    				</div>    				
-    			</div>
-    		</div>
-    	</div>
+         <div class="well well-sm">
+        <h5 class="text-clear">Level Billability based on Location</h5>
+        <select class="form-control" ng-model="selectedLocation" ng-change="selectLocation(selectedLocation)">
+                <option ng-repeat="location in locations" value="{{location.value}}">{{location.text}}</option>
+           </select>
     </div>
-</div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default border-warning">
+                <div class="panel-body">
+                        <h5 class="text-center">DEPARTMENT BILLABLE V/S NON-BILLABE BASED ON LOCATION-{{selectedDate}}</h5>
+                        <highchart id="chart1" config="levelBillabilityLocTrend"></highchart>
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+    
+       <div class="well well-sm">
+        <h5 class="text-clear">Level Billability based on vertical</h5>
+         <select class="form-control" ng-model="selectedVertical" ng-change="selectVertical(selectedVertical)">
+                <option ng-repeat="vertical in verticals" value="{{vertical.value}}">{{vertical.text}}</option>
+        </select>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default border-primary">
+                <div class="panel-body">
+                        <h5 class="text-center">DEPARTMENT BILLABLE V/S NON-BILLABE BASED ON VERTICAL-{{selectedDate}}</h5>
+                        <highchart id="chart1" config="levelBillabilityVerTrend"></highchart>
+                    </div>
+            </div>
+        </div>
+    </div>
+    </div>
