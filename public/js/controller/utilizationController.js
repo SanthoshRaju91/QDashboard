@@ -553,23 +553,29 @@ app.controller('utilizationController', ['$scope', '$http','REST_URL', function(
         //Practice Billability data   
         $http.get(REST_URL + '/getPracticeBillability')
             .success(function(response) {
-                console.log(response);
                 if(response.success) {
                     if(response.result.length > 0) {
                         $scope.practiceList = [];
                         var practiceArray = [];
                         var billableArray = [];
                         var nonBillableArray = [];
+                        $scope.practiceListArray = []; 
                         $scope.selectedDate = response.result[0].week;                        
                         for(var i=0; i<response.result.length; i++) {
                             $scope.practiceList.push({
                                 id: response.result[i].practice,
                                 label: response.result[i].practice
                             });
+                            $scope.practiceListArray.push({
+                                practice: response.result[i].practice || 0,
+                                billable: response.result[i].values[0].Billable || 0,
+                                nonBillable: response.result[i].values[0].NonBillable || 0
+                            });
                             practiceArray.push(response.result[i].practice);
                             billableArray.push(response.result[i].values[0].Billable);
                             nonBillableArray.push(response.result[i].values[0].NonBillable);
                         }
+                        console.log(JSON.stringify($scope.practiceListArray));
                         loadPracticeTrendGraph(practiceArray, billableArray, nonBillableArray);
                     }
                 }
@@ -582,11 +588,27 @@ app.controller('utilizationController', ['$scope', '$http','REST_URL', function(
         scrollable: true        
     }
     $scope.selectedList = [];
-
-    $scope.change = function() {
-        console.log("Cahnged");
-    }
-    $scope.$watch('selectedList', function(newVal, oldVal) {
-        console.log("Changed" + JSON.stringify(newVal));
+    
+    $scope.$watch('selectedList', function(newVal, oldVal) {        
+        var filtered = [];
+        
+        for(var i = 0; i < $scope.selectedList.length; i++) {
+            var filter = _.filter($scope.practiceListArray, function(item) {
+                return item.practice.indexOf($scope.selectedList[i].id) != -1;                
+            });
+            filtered.push(filter[0]);
+        }     
+       
+        var practiceArray = [];
+        var billableArray = [];
+        var nonBillableArray = [];
+        for(var i =0; i < filtered.length; i++) {
+            practiceArray.push(filtered[i].practice);
+            billableArray.push(filtered[i].billable);
+            nonBillableArray.push(filtered[i].nonBillable);               
+        }
+        if(filtered.length > 0) {
+            loadPracticeTrendGraph(practiceArray, billableArray, nonBillableArray);
+        }       
     }, true); 
 }]);

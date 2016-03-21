@@ -23,6 +23,7 @@
     "ng-file-upload": "^12.0.1",
     "angular-socket-io": "^0.7.0",
     "angularMultipleSelect": "angular-multiple-select#^1.1.1",
-    "angularjs-dropdown-multiselect": "^1.5.2"
+    "angularjs-dropdown-multiselect": "^1.5.2",
+    "underscore": "^1.8.3"
   }
 }
