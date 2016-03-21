@@ -3518,3 +3518,360 @@
 [2016-03-18 22:23:28.755] [INFO] appLog - Results fetched
 [2016-03-18 22:23:32.399] [INFO] appLog - Results fetched
 [2016-03-18 22:23:32.406] [INFO] appLog - 
+[2016-03-19 11:27:44.391] [INFO] appLog - Server listening on port: 3000
+[2016-03-19 11:27:44.415] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-19 11:27:56.163] [INFO] appLog - Results fetched
+[2016-03-19 11:27:57.418] [INFO] appLog - Results fetched
+[2016-03-19 11:27:57.452] [INFO] appLog - 
+[2016-03-19 11:27:57.520] [INFO] appLog - 
+[2016-03-19 11:27:57.523] [INFO] appLog - 
+[2016-03-19 11:27:57.527] [INFO] appLog - 
+[2016-03-19 11:27:57.547] [INFO] appLog - 
+[2016-03-19 11:27:57.593] [INFO] appLog - 
+[2016-03-19 11:27:57.619] [INFO] appLog - 
+[2016-03-19 11:27:57.668] [INFO] appLog - 
+[2016-03-19 11:27:57.670] [INFO] appLog - 
+[2016-03-19 11:27:57.684] [INFO] appLog - 
+[2016-03-19 11:27:59.710] [INFO] appLog - Results fetched
+[2016-03-19 11:28:03.724] [INFO] appLog - Results fetched
+[2016-03-19 11:28:03.733] [INFO] appLog - 
+[2016-03-19 11:28:03.752] [INFO] appLog - 
+[2016-03-19 11:28:03.780] [INFO] appLog - 
+[2016-03-19 11:28:03.788] [INFO] appLog - 
+[2016-03-19 11:28:03.822] [INFO] appLog - 
+[2016-03-19 11:28:03.825] [INFO] appLog - 
+[2016-03-19 11:28:03.843] [INFO] appLog - 
+[2016-03-19 11:28:03.855] [INFO] appLog - 
+[2016-03-19 11:28:03.868] [INFO] appLog - 
+[2016-03-19 11:28:03.878] [INFO] appLog - 
+[2016-03-19 11:28:09.156] [INFO] appLog - Results fetched
+[2016-03-19 11:28:16.391] [INFO] appLog - Results fetched
+[2016-03-19 11:28:16.403] [INFO] appLog - 
+[2016-03-19 11:28:25.422] [INFO] appLog - Results fetched
+[2016-03-19 11:28:55.677] [INFO] appLog - Results fetched
+[2016-03-19 11:28:55.682] [INFO] appLog - 
+[2016-03-19 11:28:55.713] [INFO] appLog - 
+[2016-03-19 11:28:55.744] [INFO] appLog - 
+[2016-03-19 11:28:55.753] [INFO] appLog - 
+[2016-03-19 11:28:55.758] [INFO] appLog - 
+[2016-03-19 11:28:55.783] [INFO] appLog - 
+[2016-03-19 11:28:55.792] [INFO] appLog - 
+[2016-03-19 11:28:55.818] [INFO] appLog - 
+[2016-03-19 11:28:55.820] [INFO] appLog - 
+[2016-03-19 11:28:55.822] [INFO] appLog - 
+[2016-03-19 11:29:00.390] [INFO] appLog - Results fetched
+[2016-03-19 11:29:02.380] [INFO] appLog - Results fetched
+[2016-03-19 11:29:02.394] [INFO] appLog - 
+[2016-03-19 11:30:58.968] [INFO] appLog - Results fetched
+[2016-03-19 11:31:31.561] [INFO] appLog - Results fetched
+[2016-03-19 11:31:31.565] [INFO] appLog - 
+[2016-03-19 11:41:31.174] [INFO] appLog - Results fetched
+[2016-03-19 12:21:26.227] [INFO] appLog - Results fetched
+[2016-03-19 12:21:30.404] [INFO] appLog - Results fetched
+[2016-03-19 12:21:32.272] [INFO] appLog - Results fetched
+[2016-03-19 12:21:32.281] [INFO] appLog - 
+[2016-03-19 13:51:46.252] [INFO] appLog - Results fetched
+[2016-03-19 13:51:46.259] [INFO] appLog - 
+[2016-03-19 13:51:46.269] [INFO] appLog - 
+[2016-03-19 13:51:46.292] [INFO] appLog - 
+[2016-03-19 13:51:46.318] [INFO] appLog - 
+[2016-03-19 13:51:46.378] [INFO] appLog - 
+[2016-03-19 13:51:46.380] [INFO] appLog - 
+[2016-03-19 13:51:46.395] [INFO] appLog - 
+[2016-03-19 13:51:46.407] [INFO] appLog - 
+[2016-03-19 13:51:46.418] [INFO] appLog - 
+[2016-03-19 13:51:46.434] [INFO] appLog - 
+[2016-03-19 13:51:49.816] [INFO] appLog - Results fetched
+[2016-03-19 13:51:56.314] [INFO] appLog - Results fetched
+[2016-03-19 13:51:56.326] [INFO] appLog - 
+[2016-03-19 14:06:02.447] [INFO] appLog - Results fetched
+[2016-03-19 14:08:16.935] [INFO] appLog - Results fetched
+[2016-03-19 14:09:10.380] [INFO] appLog - Results fetched
+[2016-03-19 14:09:32.019] [INFO] appLog - Results fetched
+[2016-03-19 14:09:58.966] [INFO] appLog - Results fetched
+[2016-03-19 14:10:35.974] [INFO] appLog - Results fetched
+[2016-03-19 14:11:11.537] [INFO] appLog - Results fetched
+[2016-03-19 14:11:22.616] [INFO] appLog - Results fetched
+[2016-03-19 14:12:09.166] [INFO] appLog - Results fetched
+[2016-03-19 14:13:12.879] [INFO] appLog - Results fetched
+[2016-03-19 14:14:02.140] [INFO] appLog - Results fetched
+[2016-03-19 14:14:52.526] [INFO] appLog - Results fetched
+[2016-03-19 14:16:49.186] [INFO] appLog - Results fetched
+[2016-03-19 14:18:31.101] [INFO] appLog - Results fetched
+[2016-03-19 14:18:59.746] [INFO] appLog - Results fetched
+[2016-03-19 14:20:07.705] [INFO] appLog - Results fetched
+[2016-03-19 14:20:21.908] [INFO] appLog - Results fetched
+[2016-03-19 14:22:24.127] [INFO] appLog - Results fetched
+[2016-03-19 14:23:57.014] [INFO] appLog - Results fetched
+[2016-03-19 14:27:44.305] [INFO] appLog - Results fetched
+[2016-03-19 14:31:38.226] [INFO] appLog - Results fetched
+[2016-03-19 14:32:14.477] [INFO] appLog - Results fetched
+[2016-03-19 14:34:31.155] [INFO] appLog - Results fetched
+[2016-03-19 14:34:48.717] [INFO] appLog - Results fetched
+[2016-03-19 14:35:29.543] [INFO] appLog - Results fetched
+[2016-03-19 14:35:40.797] [INFO] appLog - Results fetched
+[2016-03-19 14:45:15.435] [INFO] appLog - Server listening on port: 3000
+[2016-03-19 14:45:15.460] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-19 14:46:03.789] [INFO] appLog - Results fetched
+[2016-03-19 14:46:16.211] [INFO] appLog - Results fetched
+[2016-03-19 14:59:23.384] [INFO] appLog - Server listening on port: 3000
+[2016-03-19 14:59:23.408] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-19 14:59:27.810] [INFO] appLog - Results fetched
+[2016-03-19 15:00:24.722] [INFO] appLog - Results fetched
+[2016-03-19 15:00:58.066] [INFO] appLog - Server listening on port: 3000
+[2016-03-19 15:00:58.089] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-19 15:01:03.802] [INFO] appLog - Results fetched
+[2016-03-19 15:01:34.718] [INFO] appLog - Results fetched
+[2016-03-19 15:02:46.213] [INFO] appLog - Server listening on port: 3000
+[2016-03-19 15:02:46.237] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-19 15:02:51.580] [INFO] appLog - Results fetched
+[2016-03-19 15:05:15.261] [INFO] appLog - Results fetched
+[2016-03-19 15:06:03.850] [INFO] appLog - Results fetched
+[2016-03-19 15:06:54.119] [INFO] appLog - Results fetched
+[2016-03-19 15:08:19.848] [INFO] appLog - Results fetched
+[2016-03-19 15:10:14.681] [INFO] appLog - Results fetched
+[2016-03-19 15:10:14.758] [INFO] appLog - 
+[2016-03-19 15:10:52.245] [INFO] appLog - Results fetched
+[2016-03-19 15:10:52.259] [INFO] appLog - 
+[2016-03-19 15:11:05.930] [INFO] appLog - Results fetched
+[2016-03-19 15:11:05.951] [INFO] appLog - 
+[2016-03-19 15:11:13.545] [INFO] appLog - Results fetched
+[2016-03-19 15:11:13.556] [INFO] appLog - 
+[2016-03-19 15:11:21.039] [INFO] appLog - 
+[2016-03-19 15:11:21.043] [INFO] appLog - Results fetched
+[2016-03-19 15:11:48.049] [INFO] appLog - Results fetched
+[2016-03-19 15:11:48.061] [INFO] appLog - 
+[2016-03-19 15:11:55.977] [INFO] appLog - Results fetched
+[2016-03-19 15:12:08.045] [INFO] appLog - Results fetched
+[2016-03-19 15:12:08.056] [INFO] appLog - 
+[2016-03-19 15:12:08.077] [INFO] appLog - 
+[2016-03-19 15:12:08.081] [INFO] appLog - 
+[2016-03-19 15:12:08.105] [INFO] appLog - 
+[2016-03-19 15:12:08.129] [INFO] appLog - 
+[2016-03-19 15:12:08.149] [INFO] appLog - 
+[2016-03-19 15:12:08.154] [INFO] appLog - 
+[2016-03-19 15:12:08.180] [INFO] appLog - 
+[2016-03-19 15:12:08.192] [INFO] appLog - 
+[2016-03-19 15:12:08.205] [INFO] appLog - 
+[2016-03-19 15:12:14.600] [INFO] appLog - 
+[2016-03-19 15:12:14.602] [INFO] appLog - 
+[2016-03-19 15:12:14.606] [INFO] appLog - 
+[2016-03-19 15:12:14.609] [INFO] appLog - 
+[2016-03-19 15:12:14.614] [INFO] appLog - 
+[2016-03-19 15:12:14.616] [INFO] appLog - 
+[2016-03-19 15:12:14.642] [INFO] appLog - 
+[2016-03-19 15:12:14.647] [INFO] appLog - 
+[2016-03-19 15:12:14.650] [INFO] appLog - 
+[2016-03-19 15:12:14.652] [INFO] appLog - 
+[2016-03-19 15:12:19.906] [INFO] appLog - Results fetched
+[2016-03-19 15:12:26.887] [INFO] appLog - Results fetched
+[2016-03-19 15:12:26.906] [INFO] appLog - 
+[2016-03-19 15:13:55.757] [INFO] appLog - Results fetched
+[2016-03-19 15:13:55.786] [INFO] appLog - 
+[2016-03-19 15:13:55.802] [INFO] appLog - 
+[2016-03-19 15:13:55.811] [INFO] appLog - 
+[2016-03-19 15:13:55.864] [INFO] appLog - 
+[2016-03-19 15:13:55.867] [INFO] appLog - 
+[2016-03-19 15:13:55.869] [INFO] appLog - 
+[2016-03-19 15:13:55.907] [INFO] appLog - 
+[2016-03-19 15:13:55.908] [INFO] appLog - 
+[2016-03-19 15:13:55.911] [INFO] appLog - 
+[2016-03-19 15:13:55.924] [INFO] appLog - 
+[2016-03-19 15:14:00.117] [INFO] appLog - Results fetched
+[2016-03-19 15:14:06.214] [INFO] appLog - Results fetched
+[2016-03-19 15:14:06.233] [INFO] appLog - 
+[2016-03-19 15:15:58.960] [INFO] appLog - Results fetched
+[2016-03-19 15:15:58.971] [INFO] appLog - 
+[2016-03-19 15:15:59.000] [INFO] appLog - 
+[2016-03-19 15:15:59.005] [INFO] appLog - 
+[2016-03-19 15:15:59.035] [INFO] appLog - 
+[2016-03-19 15:15:59.059] [INFO] appLog - 
+[2016-03-19 15:15:59.062] [INFO] appLog - 
+[2016-03-19 15:15:59.082] [INFO] appLog - 
+[2016-03-19 15:15:59.129] [INFO] appLog - 
+[2016-03-19 15:15:59.132] [INFO] appLog - 
+[2016-03-19 15:15:59.146] [INFO] appLog - 
+[2016-03-19 15:16:02.318] [INFO] appLog - Results fetched
+[2016-03-19 15:16:06.650] [INFO] appLog - Results fetched
+[2016-03-19 15:16:06.669] [INFO] appLog - 
+[2016-03-19 15:16:15.136] [INFO] appLog - Results fetched
+[2016-03-19 18:51:35.030] [INFO] appLog - Server listening on port: 3000
+[2016-03-19 18:51:35.214] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-19 18:52:02.250] [INFO] appLog - Results fetched
+[2016-03-19 18:52:02.284] [INFO] appLog - 
+[2016-03-19 18:52:02.340] [INFO] appLog - 
+[2016-03-19 18:52:02.353] [INFO] appLog - 
+[2016-03-19 18:52:02.378] [INFO] appLog - 
+[2016-03-19 18:52:02.403] [INFO] appLog - 
+[2016-03-19 18:52:02.406] [INFO] appLog - 
+[2016-03-19 18:52:02.422] [INFO] appLog - 
+[2016-03-19 18:52:02.450] [INFO] appLog - 
+[2016-03-19 18:52:02.478] [INFO] appLog - 
+[2016-03-19 18:52:02.500] [INFO] appLog - 
+[2016-03-19 18:52:05.531] [INFO] appLog - Results fetched
+[2016-03-19 18:52:05.548] [INFO] appLog - 
+[2016-03-19 18:52:17.912] [INFO] appLog - Results fetched
+[2016-03-19 18:53:47.508] [INFO] appLog - Results fetched
+[2016-03-19 19:01:35.047] [INFO] appLog - Results fetched
+[2016-03-19 19:02:00.488] [INFO] appLog - Results fetched
+[2016-03-19 19:04:28.346] [INFO] appLog - Server listening on port: 3000
+[2016-03-19 19:04:28.375] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-19 19:06:36.215] [INFO] appLog - Server listening on port: 3000
+[2016-03-19 19:06:36.243] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-19 19:07:55.373] [INFO] appLog - Server listening on port: 3000
+[2016-03-19 19:07:55.401] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-19 19:08:23.038] [INFO] appLog - Server listening on port: 3000
+[2016-03-19 19:08:23.066] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-19 19:43:09.543] [INFO] appLog - Server listening on port: 3000
+[2016-03-19 19:43:09.567] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-19 19:51:03.017] [INFO] appLog - Server listening on port: 3000
+[2016-03-19 19:51:03.042] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-19 19:51:50.539] [INFO] appLog - Server listening on port: 3000
+[2016-03-19 19:51:50.563] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-19 19:54:52.615] [INFO] appLog - Server listening on port: 3000
+[2016-03-19 19:54:52.638] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-19 20:02:01.805] [INFO] appLog - Server listening on port: 3000
+[2016-03-19 20:02:01.829] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-19 20:02:21.996] [INFO] appLog - Server listening on port: 3000
+[2016-03-19 20:02:22.021] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-19 20:02:57.054] [INFO] appLog - Server listening on port: 3000
+[2016-03-19 20:02:57.078] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-19 20:03:05.237] [INFO] appLog - Results fetched
+[2016-03-19 20:03:25.447] [INFO] appLog - Results fetched
+[2016-03-19 20:03:25.518] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-19 20:39:18.070] [INFO] appLog - Server listening on port: 3000
+[2016-03-19 20:39:18.094] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-19 20:39:29.441] [INFO] appLog - Results fetched
+[2016-03-19 20:39:29.494] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-19 20:42:30.406] [INFO] appLog - Results fetched
+[2016-03-19 20:42:30.515] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-19 22:11:29.942] [INFO] appLog - Results fetched
+[2016-03-19 22:11:30.010] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-19 22:43:58.280] [INFO] appLog - Server listening on port: 3000
+[2016-03-19 22:43:58.305] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-19 22:45:09.102] [INFO] appLog - Results fetched
+[2016-03-19 22:45:09.195] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-19 22:45:36.073] [INFO] appLog - Results fetched
+[2016-03-19 22:45:36.190] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 11:05:40.166] [INFO] appLog - Server listening on port: 3000
+[2016-03-20 11:05:40.203] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-20 11:09:10.553] [INFO] appLog - Server listening on port: 3000
+[2016-03-20 11:09:10.579] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-20 11:09:43.237] [INFO] appLog - Results fetched
+[2016-03-20 11:09:43.303] [INFO] appLog - 
+[2016-03-20 11:09:43.325] [INFO] appLog - 
+[2016-03-20 11:09:43.351] [INFO] appLog - 
+[2016-03-20 11:09:43.382] [INFO] appLog - 
+[2016-03-20 11:09:43.402] [INFO] appLog - 
+[2016-03-20 11:09:43.424] [INFO] appLog - 
+[2016-03-20 11:09:43.453] [INFO] appLog - 
+[2016-03-20 11:09:43.455] [INFO] appLog - 
+[2016-03-20 11:09:43.474] [INFO] appLog - 
+[2016-03-20 11:09:43.488] [INFO] appLog - 
+[2016-03-20 11:09:48.310] [INFO] appLog - Results fetched
+[2016-03-20 11:09:48.343] [INFO] appLog - 
+[2016-03-20 11:09:54.803] [INFO] appLog - Results fetched
+[2016-03-20 11:09:54.959] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 11:11:25.867] [INFO] appLog - Results fetched
+[2016-03-20 11:11:25.973] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 11:11:58.752] [INFO] appLog - Results fetched
+[2016-03-20 11:11:58.827] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 11:13:06.095] [INFO] appLog - Results fetched
+[2016-03-20 11:13:06.215] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 11:13:56.723] [INFO] appLog - Results fetched
+[2016-03-20 11:13:56.838] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 11:15:27.014] [INFO] appLog - Results fetched
+[2016-03-20 11:15:27.108] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 11:43:09.136] [INFO] appLog - Server listening on port: 3000
+[2016-03-20 11:43:09.161] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-20 11:43:31.778] [INFO] appLog - Results fetched
+[2016-03-20 11:43:31.907] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 11:44:57.681] [INFO] appLog - Results fetched
+[2016-03-20 11:44:57.811] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 11:46:23.523] [INFO] appLog - Results fetched
+[2016-03-20 11:46:23.612] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 11:46:54.592] [INFO] appLog - Results fetched
+[2016-03-20 11:46:54.690] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 11:50:36.982] [INFO] appLog - Results fetched
+[2016-03-20 11:50:37.112] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 11:50:59.850] [INFO] appLog - Results fetched
+[2016-03-20 11:50:59.955] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 11:51:16.635] [INFO] appLog - Results fetched
+[2016-03-20 11:51:16.720] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 11:53:01.296] [INFO] appLog - Results fetched
+[2016-03-20 11:53:01.373] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 11:53:18.261] [INFO] appLog - Results fetched
+[2016-03-20 11:53:18.353] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 11:53:51.088] [INFO] appLog - Results fetched
+[2016-03-20 11:53:51.180] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 11:54:17.906] [INFO] appLog - Results fetched
+[2016-03-20 11:54:17.993] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 11:54:39.990] [INFO] appLog - Results fetched
+[2016-03-20 11:54:40.085] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 11:55:13.820] [INFO] appLog - Results fetched
+[2016-03-20 11:55:13.925] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 11:56:17.950] [INFO] appLog - Results fetched
+[2016-03-20 11:56:18.039] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 11:57:50.675] [INFO] appLog - Results fetched
+[2016-03-20 11:57:50.758] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 11:58:35.601] [INFO] appLog - Results fetched
+[2016-03-20 11:58:35.688] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 11:59:04.952] [INFO] appLog - Results fetched
+[2016-03-20 11:59:05.031] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 11:59:26.713] [INFO] appLog - Results fetched
+[2016-03-20 11:59:26.792] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 11:59:55.662] [INFO] appLog - Results fetched
+[2016-03-20 11:59:55.749] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 12:02:23.202] [INFO] appLog - Results fetched
+[2016-03-20 12:02:23.260] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 12:02:53.575] [INFO] appLog - Results fetched
+[2016-03-20 12:02:53.646] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 12:04:35.045] [INFO] appLog - Results fetched
+[2016-03-20 12:04:35.116] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 12:07:25.601] [INFO] appLog - Results fetched
+[2016-03-20 12:07:25.685] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 12:07:40.294] [INFO] appLog - Results fetched
+[2016-03-20 12:07:40.363] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 12:08:48.839] [INFO] appLog - Results fetched
+[2016-03-20 12:08:48.890] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 12:09:17.184] [INFO] appLog - Results fetched
+[2016-03-20 12:09:17.251] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 12:12:36.662] [INFO] appLog - Results fetched
+[2016-03-20 12:12:36.729] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 12:13:05.183] [INFO] appLog - Results fetched
+[2016-03-20 12:13:05.227] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 12:13:24.163] [INFO] appLog - Results fetched
+[2016-03-20 12:13:24.256] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 12:13:47.609] [INFO] appLog - Results fetched
+[2016-03-20 12:13:47.656] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 12:14:14.544] [INFO] appLog - Results fetched
+[2016-03-20 12:14:14.631] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 12:14:38.158] [INFO] appLog - Results fetched
+[2016-03-20 12:14:38.247] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 12:14:51.971] [INFO] appLog - Results fetched
+[2016-03-20 12:14:52.077] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-20 12:15:25.288] [INFO] appLog - Results fetched
+[2016-03-20 12:15:25.390] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-21 10:08:18.507] [INFO] appLog - 
+[2016-03-21 10:08:18.547] [INFO] appLog - 
+[2016-03-21 10:08:18.549] [INFO] appLog - Results fetched
+[2016-03-21 10:08:18.551] [INFO] appLog - 
+[2016-03-21 10:08:18.553] [INFO] appLog - 
+[2016-03-21 10:08:18.555] [INFO] appLog - 
+[2016-03-21 10:08:18.568] [INFO] appLog - 
+[2016-03-21 10:08:26.224] [INFO] appLog - 
+[2016-03-21 10:08:26.248] [INFO] appLog - 
+[2016-03-21 10:08:26.272] [INFO] appLog - 
+[2016-03-21 10:08:26.274] [INFO] appLog - 
+[2016-03-21 10:08:55.176] [INFO] appLog - 
+[2016-03-21 10:08:55.180] [INFO] appLog - 
+[2016-03-21 10:08:55.189] [INFO] appLog - 
+[2016-03-21 10:08:55.197] [INFO] appLog - 
+[2016-03-21 10:08:55.203] [INFO] appLog - 
+[2016-03-21 10:08:55.212] [INFO] appLog - 
+[2016-03-21 10:08:55.217] [INFO] appLog - 
+[2016-03-21 10:08:55.219] [INFO] appLog - 
+[2016-03-21 10:08:55.224] [INFO] appLog - 
+[2016-03-21 10:08:55.228] [INFO] appLog - 
+[2016-03-21 10:09:01.144] [INFO] appLog - Results fetched
+[2016-03-21 10:09:01.240] [INFO] appLog - PracticeBillability: fetched details

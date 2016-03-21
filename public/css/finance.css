@@ -442,3 +442,24 @@ ul.alert-dropdown {
     float: right;
 }
 
+.dropdown-panel h5 {
+    display: inline;
+    font-weight: 600;
+}
+
+.dropdown-panel select {
+    display: inline;
+    width: 50%;
+    margin-left: 10px;
+}
+
+.multi-select-container h5 {
+    display: inline;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.multi-select-container .multi-select-dropdown {
+    display: inline;
+    width: 30% !important;
+}

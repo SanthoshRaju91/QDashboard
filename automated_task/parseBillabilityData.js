@@ -24,8 +24,12 @@ var LevelBillabilityBasedOnLocationAndVertical = require('../models/levelBillabi
 var DepartmentBillability = require('../models/departmentBillability.js');
 var DepartmentBillabilityBasedOnLocation = require('../models/departmentBillabilityBasedOnLocation.js');
 var DepartmentBillabilityBasedOnVertical = require('../models/departmentBillabilityBasedOnVertical.js')
-
 var OverallBillabilityTrendOnVertical = require('../models/overallBillabilityTrendOnVertical.js');
+
+var PracticeBillability = require('../models/practiceBillability.js');
+var PracticeBillabilityBasedOnLocation = require('../models/practiceBillabilityBasedOnLocation.js');
+var PracticeBillabilityBasedOnVertical = require('../models/practiceBillabilityBasedOnVertical.js');
+
 //Parsing the given excel file
 exports.parseBillabilityData = function (filename) {
     xlsxj({
@@ -43,10 +47,13 @@ exports.parseBillabilityData = function (filename) {
             processLevelAndLocationData(JSON.stringify(result));
             processLevelAndVerticalData(JSON.stringify(result));
             processLevelBasedOnLocationAndVerticalData(JSON.stringify(result));
-            processDepartment(JSON.stringify(result));
+            processDepartment(JSON.stringify(resulet));
             processDepartmentBasedOnLocation(JSON.stringify(result));
             processDepartmentBasedOnVertical(JSON.stringify(result));
             processBillabilityTrendOnVertical(JSON.stringify(result));
+            processPracticeData(JSON.stringify(result));
+            processPracticeBasedOnLocation(JSON.stringify(result));
+            processPracticeBasedOnVertical(JSON.stringify(result));
         }
     });
 }
@@ -182,6 +189,7 @@ function processLevelData(result) {
         var levelGrouped = _.groupBy(current.values, 'LVL');
         _.each(levelGrouped, function (object) {
             levelMap.push({
+                date: new Date(Date.parse(object[0].Week)),
                 week: object[0].Week,
                 level: object[0].LVL,
                 values: _.countBy(object, function (object) {
@@ -219,6 +227,7 @@ function processLevelAndLocationData(result) {
         var locationGrouped = _.groupBy(current.values, 'BASE_LOCATION');
         _.each(locationGrouped, function (object) {
             locationLevelMap.push({
+                date: new Date(Date.parse(object[0].Week)),
                 week: object[0].Week,
                 level: object[0].LVL,
                 location: object[0].BASE_LOCATION,
@@ -259,6 +268,7 @@ function processLevelAndVerticalData(result) {
         var verticalGrouped = _.groupBy(current.values, 'PROJECT_BG');
         _.each(verticalGrouped, function (object) {
             verticalLevelMap.push({
+                date: new Date(Date.parse(object[0].Week)),
                 week: object[0].Week,
                 level: object[0].LVL,
                 vertical: object[0].PROJECT_BG,
@@ -312,6 +322,7 @@ function processLevelBasedOnLocationAndVerticalData(result) {
         var verticalMap = _.groupBy(current.values, 'PROJECT_BG');
         _.each(verticalMap, function (object) {
             levelLocationVerticalMap.push({
+                date: new Date(Date.parse(object[0].Week)),
                 week: object[0].Week,
                 level: object[0].LVL,
                 location: object[0].BASE_LOCATION,
@@ -419,7 +430,6 @@ function processBillabilityTrendOnVertical(result) {
         vertical.data = verticalMap;
         verticalTrendMap.push(vertical);
     });
-    console.log(JSON.stringify(verticalTrendMap));
     loadVerticalBillabilityTrendToMongo(verticalTrendMap);
 }
 
@@ -459,6 +469,114 @@ function processDepartmentBasedOnVertical(result) {
         });
     });
     loadDepartmentOnDateVerticalToMongo(departmentVerticalMap);
+}
+
+// processing practice billability date
+function processPracticeData(result) {
+    var grouped = _.groupBy(JSON.parse(result), 'Week');
+    var groupedData = _.map(grouped, function(current) {
+        return {
+            week: current[0].Week,
+            values: current
+        }
+    });
+
+    var practiceMap = [];
+    _.map(groupedData, function (current) {
+        var practiceGrouped = _.groupBy(current.values, 'PRACTICE');
+        _.each(practiceGrouped, function (object) {
+            practiceMap.push({
+                date: new Date(Date.parse(object[0].Week)),
+                week: object[0].Week,
+                practice: object[0].PRACTICE,
+                values: _.countBy(object, function(currObject) {
+                    return currObject['BILLABLE'] == 'Billable' ? 'Billable' : 'NonBillable'
+                })
+            });
+        });
+    });
+
+    loadPracticeToMongo(practiceMap);
+}
+
+function processPracticeBasedOnLocation(result) {
+    var grouped = _.groupBy(JSON.parse(result), 'Week');
+    var groupedData = _.map(grouped, function(current) {
+        return {
+            week: current[0].Week,
+            values: current
+        }
+    });
+
+    var practiceMap = [];
+    _.map(groupedData, function (current) {
+        var practiceGrouped = _.groupBy(current.values, 'PRACTICE');
+        _.each(practiceGrouped, function(object) {
+            practiceMap.push({
+                week: object[0].Week,
+                practice: object[0].PRACTICE,
+                values: object
+            });
+        });
+    });
+
+    var practiceLocationMap = [];
+    _.map(practiceMap, function (current) {
+        var practiceLocationGrouped = _.groupBy(current.values, 'BASE_LOCATION');
+        _.each(practiceLocationGrouped, function (object) {
+            practiceLocationMap.push({
+                date: new Date(Date.parse(object[0].Week)),
+                week: object[0].Week,
+                practice: object[0].PRACTICE,
+                location: object[0].BASE_LOCATION,
+                values: _.countBy(object, function (objectVal) {
+                    return objectVal['BILLABLE'] == 'Billable' ? 'Billable' : 'NonBillable';
+                })            
+            });
+        });
+    });
+
+    loadPracticeLocationToMongo(practiceLocationMap);
+}
+
+function processPracticeBasedOnVertical(result) {
+    var grouped = _.groupBy(JSON.parse(result), 'Week');
+    var groupedData = _.map(grouped, function (current) {
+        return {
+            week: current.Week,
+            values: current
+        }
+    });
+
+    var practiceMap = [];
+    _.map(groupedData, function (current) {
+        var practiceGrouped = _.groupBy(current.values, 'PRACTICE');
+        _.each(practiceGrouped, function (object) {
+            practiceMap.push({
+                week: object[0].Week,
+                practice: object[0].PRACTICE,
+                values: object
+            });
+        });
+    });
+
+    var practiceVerticalMap = [];
+    _.map(practiceMap, function (current) {
+        var practiceVerticalGrouped = _.groupBy(current.values, 'PROJECT_BG');
+        _.each(practiceVerticalGrouped, function (object) {
+            practiceVerticalMap.push({
+                date: new Date(Date.parse(object[0].Week)),
+                week: object[0].Week,
+                practice: object[0].PRACTICE,
+                vertical: object[0].PROJECT_BG,
+                values: _.countBy(object, function (objectVal) {
+                    return objectVal['BILLABLE'] == 'Billable' ? 'Billable' : 'NonBillable';
+                })
+            })
+        });
+    });
+
+    loadPracticeVerticalToMongo(practiceVerticalMap);
 }
 
 //loading overall billing and non billing json to mongodb
@@ -573,6 +691,7 @@ function loadLevelDataToMongo(inputResultToStore) {
         } else {
             for (var i = 0; i < inputResultToStore.length; i++) {
                 var levelBillability = new LevelBillability({
+                    date: inputResultToStore[i].date,
                     week: inputResultToStore[i].week,
                     level: inputResultToStore[i].level,
                     values: inputResultToStore[i].values
@@ -597,6 +716,7 @@ function loadLevelLocationDataToMongo(inputResultToStore) {
         } else {
             for (var i = 0; i < inputResultToStore.length; i++) {
                 var levelBillabilityBasedOnLoc = new LevelBillabilityBasedOnLoc({
+                    date: inputResultToStore[i].date,
                     week: inputResultToStore[i].week,
                     level: inputResultToStore[i].level,
                     location: inputResultToStore[i].location,
@@ -622,6 +742,7 @@ function loadLevelVerticalDataToMongo(inputResultToStore) {
         } else {
             for (var i = 0; i < inputResultToStore.length; i++) {
                 var levelBillabilityBasedOnVertical = new LevelBillabilityBasedOnVertical({
+                    date: inputResultToStore[i].date,
                     week: inputResultToStore[i].week,
                     level: inputResultToStore[i].level,
                     vertical: inputResultToStore[i].vertical,
@@ -647,6 +768,7 @@ function loadLevelOnLocationAndVerticalToMongo(inputResultToStore) {
         } else {
             for (var i = 0; i < inputResultToStore.length; i++) {
                 var levelBillabilityBasedOnLocationAndVertical = new LevelBillabilityBasedOnLocationAndVertical({
+                    date: inputResultToStore[i].date,
                     week: inputResultToStore[i].week,
                     level: inputResultToStore[i].level,
                     location: inputResultToStore[i].location,
@@ -763,4 +885,82 @@ function loadVerticalBillabilityTrendToMongo(inputResultToStore) {
             }
        }
     });
+}
+
+function loadPracticeToMongo(inputResultToStore) {
+    PracticeBillability.remove({}, function(err) {
+        if(err) {
+            console.error("PracticeBillability: Error in removing data " + err);
+        } else {
+            for(var i=0; i<inputResultToStore.length; i++) {
+                var practiceBillability = new PracticeBillability({
+                    date: inputResultToStore[i].date, 
+                    week: inputResultToStore[i].week,
+                    practice: inputResultToStore[i].practice,
+                    values: inputResultToStore[i].values
+                });
+
+                practiceBillability.save(function(err) {
+                    if(err) {
+                        console.log("PracticeBillability: Error in inserting data " + err);
+                    } else {
+                        console.log("PracticeBillability: inserted successfully");
+                    }
+                });
+            }
+        }
+    });
+}
+
+
+function loadPracticeLocationToMongo(inputResultToStore) {
+    PracticeBillabilityBasedOnLocation.remove({}, function(err) {
+        if(err) {
+            console.error("PracticeBillabilityBasedOnLocation: Error in removing data " + err);
+        } else {
+            for(var i=0; i<inputResultToStore.length; i++) {
+                var practiceBillabilityBasedOnLocation = new PracticeBillabilityBasedOnLocation({
+                    date: inputResultToStore[i].date,
+                    week: inputResultToStore[i].week,
+                    practice: inputResultToStore[i].practice,
+                    location: inputResultToStore[i].location,
+                    values: inputResultToStore[i].values
+                });
+
+                practiceBillabilityBasedOnLocation.save(function(err) {
+                    if(err) {
+                        console.log("PracticeBillabilityBasedOnLocation: Error in inserting date " + err);
+                    } else {
+                        console.log("PracticeBillabilityBasedOnLocation: inserted successfully");
+                    }
+                });
+            }
+        }
+    });
+}
+
+function loadPracticeVerticalToMongo(inputResultToStore) {
+    PracticeBillabilityBasedOnVertical.remove({}, function(err) {
+        if(err) {
+            console.error("PracticeBillabilityBasedOnVertical: Error in removing data " + err);
+        } else {
+            for(var i=0; i<inputResultToStore.length; i++) {
+                var practiceBillabilityBasedOnVertical = new PracticeBillabilityBasedOnVertical({
+                    date: inputResultToStore[i].date,
+                    week: inputResultToStore[i].week,
+                    practice: inputResultToStore[i].practice,
+                    vertical: inputResultToStore[i].vertical,
+                    values: inputResultToStore[i].values
+                });
+
+                practiceBillabilityBasedOnVertical.save(function(err) {
+                    if(err) {
+                        console.log("PracticeBillabilityBasedOnVertical: Error in inserting data " + err);                        
+                    } else {
+                        console.log("PracticeBillabilityBasedOnVertical: inserted successfully");
+                    }
+                })
+            }
+        }
+    })
 }

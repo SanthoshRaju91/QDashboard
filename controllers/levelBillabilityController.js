@@ -7,7 +7,9 @@ var logger = require('../utils/loggerUtil.js').logger;
 
 //Level billability routes
 exports.getlevelBillability = function(req, res) {
-    LevelBillability.find({}, function(err, resultSet) {
+    var previous10days = new Date('2016, 2, 21');
+    previous10days = new Date(previous10days.setDate(previous10days.getDate() - 10));
+    LevelBillability.find({"date": {"$gte": previous10days, "$lte": new Date('2016, 2, 21') }}, function(err, resultSet) {
         if(err) {
             logger.error("Error in fetching" + err);
             res.json({status: 500, message: 'Error'});  
@@ -59,10 +61,8 @@ exports.getlevelBillabilityVerticalandLocation = function(req, res) {
    });
 }
 
-exports.getlevelBillabilityVertical = function(req, res) {   
-    console.log(req.params.vertical + " " + req.params.date + " " + req.params.level);
-    
-    LevelBillabilityBasedOnLocAndVer.find({"week":req.params.date, "vertical":req.params.vertical}, function(err, resultSet) {
+exports.getlevelBillabilityVertical = function(req, res) {           
+    LevelBillabilityBasedOnVertical.find({"week":req.params.date, "vertical":req.params.vertical}, function(err, resultSet) {
         if(err) {
             logger.error("Error in fetching" + err);
             res.json({status: 500, message: 'Error'});  
@@ -72,4 +72,35 @@ exports.getlevelBillabilityVertical = function(req, res) {
             res.json({status: 200,success: true, result: resultSet});
         }
    });
+}
+
+
+exports.getLevelBillabilityVerticalLatest = function(req, res) {
+    var previous10days = new Date('2016, 2, 21');
+    previous10days = new Date(previous10days.setDate(previous10days.getDate() - 10));
+    LevelBillabilityBasedOnVertical.find({"date": {"$gte": previous10days, "$lte": new Date('2016, 2, 21')}, "vertical": req.params.vertical}, function(err, resultSet) {
+        if(err) {
+            logger.error("Error in fetching" + err);
+            res.json({status: 500, message: 'Error'});  
+        } 
+        else {
+            console.log("result fetched");
+            res.json({status: 200,success: true, result: resultSet});
+        }
+    });
+}
+
+exports.getLevelBillabilityLocationLatest = function(req, res) {
+    var previous10days = new Date('2016, 2, 21');
+    previous10days = new Date(previous10days.setDate(previous10days.getDate() - 10));
+    LevelBillabilityBasedOnLoc.find({"date": {"$gte": previous10days, "$lte": new Date('2016, 2, 21')}, "location": req.params.location}, function(err, resultSet) {
+        if(err) {
+            logger.error("Error in fetching" + err);
+            res.json({status: 500, message: 'Error'});  
+        } 
+        else {
+            console.log("result fetched");
+            res.json({status: 200,success: true, result: resultSet});
+        }
+    });  
 }

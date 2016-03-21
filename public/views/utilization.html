@@ -21,10 +21,11 @@
 		</div>	
 	</div>
 	<div class = "well well-sm">
-        <h5 class = "text-clear">Select week to refresh</h5>
+        <h5 class = "text-clear"><span style = "margin-right: 20px; margin-left: 20px; ">Level Billability </span>Select week to refresh</h5>
         <select class = "form-control" ng-model = "selectedDate" ng-change = "selectDate(selectedDate)">
             <option ng-repeat = "date in dates" value = "{{date.week}}">{{date.week}}</option>
         </select>        
+        <button class="btn btn-primary btn-sm" style = "margin-left: 30px;">Export as PDF</button>
     </div>
     <div class="row">
     	<div class="col-md-12">
@@ -36,38 +37,56 @@
 	    	</div>
     	</div>    	
     </div>
-         <div class="well well-sm">
-        <h5 class="text-clear">Level Billability based on Location</h5>
-        <select class="form-control" ng-model="selectedLocation" ng-change="selectLocation(selectedLocation)">
-                <option ng-repeat="location in locations" value="{{location.value}}">{{location.text}}</option>
-           </select>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default border-warning">
+                <div class="panel-body">
+                    <div class = "dropdown-panel">
+                        <h5 class="text-clear">Select location</h5>
+                        <select class="form-control" ng-model="selectedLocation" ng-change="selectLocation(selectedLocation)">
+                            <option ng-repeat="location in locations" value="{{location.value}}">{{location.text}}</option>
+                        </select>
+                    </div> 
+                    <br>
+                    <highchart id="chart1" config="levelBillabilityLocTrend"></highchart>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default border-primary">
+                <div class="panel-body">
+                    <div class = "dropdown-panel">
+                        <h5 class="text-clear">Select vertical</h5>
+                        <select class="form-control" ng-model="selectedVertical" ng-change="selectVertical(selectedVertical)">
+                            <option ng-repeat="vertical in verticals" value="{{vertical.value}}">{{vertical.text}}</option>
+                        </select>
+                    </div>
+                    <br>
+                    <highchart id="chart1" config="levelBillabilityVerTrend"></highchart>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "well well-sm">
+        <h5 class = "text-clear"><span style = "margin-right: 20px; margin-left: 20px; ">Practice Billability </span>Select week to refresh</h5>
+        <select class = "form-control" ng-model = "selectedDate" ng-change = "selectDate(selectedDate)">
+            <option ng-repeat = "date in dates" value = "{{date.week}}">{{date.week}}</option>
+        </select>        
+        <button class="btn btn-primary btn-sm" style = "margin-left: 30px;">Export as PDF</button>
     </div>
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default border-warning">
                 <div class="panel-body">
-                        <h5 class="text-center">DEPARTMENT BILLABLE V/S NON-BILLABE BASED ON LOCATION-{{selectedDate}}</h5>
-                        <highchart id="chart1" config="levelBillabilityLocTrend"></highchart>
+                    <div class = "multi-select-container">
+                        <h5 class="text-center">Select Projects</h5>
+                        <div class = "multi-select-dropdown" ng-dropdown-multiselect="" options="practiceList" selected-model="selectedList" extra-settings = "multiSelectSettings"></div>
                     </div>
+                    
+                    <br>
+                    <highchart id="chart1" config="practiceBillabilityTrend"></highchart>
+                </div>
             </div>
         </div>
     </div>
-    
-    
-       <div class="well well-sm">
-        <h5 class="text-clear">Level Billability based on vertical</h5>
-         <select class="form-control" ng-model="selectedVertical" ng-change="selectVertical(selectedVertical)">
-                <option ng-repeat="vertical in verticals" value="{{vertical.value}}">{{vertical.text}}</option>
-        </select>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="panel panel-default border-primary">
-                <div class="panel-body">
-                        <h5 class="text-center">DEPARTMENT BILLABLE V/S NON-BILLABE BASED ON VERTICAL-{{selectedDate}}</h5>
-                        <highchart id="chart1" config="levelBillabilityVerTrend"></highchart>
-                    </div>
-            </div>
-        </div>
-    </div>
-    </div>
+</div>

@@ -77,7 +77,8 @@ app.controller('assignmentController', ['$scope', '$http', 'REST_URL', function 
                      style: {
                         color: '#2c3e50',
                         fontSize:'13px'
-                    }
+                    },
+                    x: 30
                 },
                 subtitle: {
                     text: ''
@@ -136,7 +137,8 @@ app.controller('assignmentController', ['$scope', '$http', 'REST_URL', function 
                      style: {
                         color: '#2c3e50',
                         fontSize:'13px'
-                    }
+                    },
+                    x: 30
                 },
                 subtitle: {
                     text: ''
@@ -197,7 +199,8 @@ app.controller('assignmentController', ['$scope', '$http', 'REST_URL', function 
                      style: {
                         color: '#2c3e50',
                         fontSize:'13px'
-                    }
+                    },
+                    x: 30
                 },
                 subtitle: {
                     text: ''
