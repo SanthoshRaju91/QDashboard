@@ -5,6 +5,7 @@ var methodOverride =  require('method-override');
 var jwt = require('express-jwt');
 var multer = require('multer');
 var path = require('path');
+var excel = require('node-excel-export');
 var config = require('./config.js');
 var logger = require('./utils/loggerUtil.js').logger;
 

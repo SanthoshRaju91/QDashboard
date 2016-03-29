@@ -1,52 +1,47 @@
-<div class="container-fluid">        
+<div class="container-fluid">
     <div class="row">
-		<div class = "col-md-12">
-			<div class = "panel panel-default border-calm">
-				<div class="panel-body">
-					<h5 class="text-center">Billable Vertical Trend</h5>
-					<highchart id="chart1" config="billableVerticalTrend"></highchart>  
-				</div>
-			</div>
-		</div>	
-	</div>
-    
-	<div class="row">
-		<div class = "col-md-12">
-			<div class = "panel panel-default border-warning">
-				<div class="panel-body">
-					<h5 class="text-center">Non-Billable Vertical Trend</h5>
-					<highchart id="chart1" config="nonBillableVerticalTrend"></highchart>  
-				</div>
-			</div>
-		</div>	
-	</div>
-	<div class = "well well-sm">
-        <h5 class = "text-clear"><span style = "margin-right: 20px; margin-left: 20px; ">Level Billability </span>Select week to refresh</h5>
-        <select class = "form-control" ng-model = "selectedDate" ng-change = "selectDate(selectedDate)">
-            <option ng-repeat = "date in dates" value = "{{date.week}}">{{date.week}}</option>
-        </select>        
-        <button class="btn btn-primary btn-sm" style = "margin-left: 30px;">Export as PDF</button>
+        <div class="col-md-12">
+            <div class="panel panel-default border-calm">
+                <div class="panel-body">
+                    <h5 class="text-center">Billable Vertical Trend</h5>
+                    <highchart id="chart1" config="billableVerticalTrend"></highchart>
+                </div>
+          
+     
+                <div class="panel-body">
+                    <h5 class="text-center">Non-Billable Vertical Trend</h5>
+                    <highchart id="chart1" config="nonBillableVerticalTrend"></highchart>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="well well-sm">
+        <h5 class="text-clear"><span style = "margin-right: 20px; margin-left: 20px; ">Level Billability </span>Select week to refresh</h5>
+        <select class="form-control" ng-model="selectedDate" ng-change="selectDate(selectedDate)">
+            <option ng-repeat="date in dates" value="{{date.week}}">{{date.week}}</option>
+        </select>
+        <button class="btn btn-primary btn-sm" style="margin-left: 30px;">Export as PDF</button>
     </div>
     <div class="row">
-    	<div class="col-md-12">
-    		<div class="panel panel-default border-primary">
-	    		<div class="panel-body">
-	    			<h5 class="text-center">Billability based on level</h5>
-	    			<highchart id = "chart1" config = "levelBillabilityTrend"></highcharts>
-	    		</div>
-	    	</div>
-    	</div>    	
+        <div class="col-md-12">
+            <div class="panel panel-default border-danger">
+                <div class="panel-body">
+                    <h5 class="text-center">Billability based on level</h5>
+                    <highchart id="chart1" config="levelBillabilityTrend"></highchart>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="row">
         <div class="col-md-6">
             <div class="panel panel-default border-warning">
                 <div class="panel-body">
-                    <div class = "dropdown-panel">
-                        <h5 class="text-clear">Select location</h5>
+                    <div class="dropdown-panel">
+                        <h5 class="text-clear">Select location | {{selectedDate}}</h5>
                         <select class="form-control" ng-model="selectedLocation" ng-change="selectLocation(selectedLocation)">
                             <option ng-repeat="location in locations" value="{{location.value}}">{{location.text}}</option>
                         </select>
-                    </div> 
+                    </div>
                     <br>
                     <highchart id="chart1" config="levelBillabilityLocTrend"></highchart>
                 </div>
@@ -55,8 +50,8 @@
         <div class="col-md-6">
             <div class="panel panel-default border-primary">
                 <div class="panel-body">
-                    <div class = "dropdown-panel">
-                        <h5 class="text-clear">Select vertical</h5>
+                    <div class="dropdown-panel">
+                        <h5 class="text-clear">Select vertical | {{selectedDate}}</h5>
                         <select class="form-control" ng-model="selectedVertical" ng-change="selectVertical(selectedVertical)">
                             <option ng-repeat="vertical in verticals" value="{{vertical.value}}">{{vertical.text}}</option>
                         </select>
@@ -67,24 +62,63 @@
             </div>
         </div>
     </div>
-    <div class = "well well-sm">
-        <h5 class = "text-clear"><span style = "margin-right: 20px; margin-left: 20px; ">Practice Billability </span>Select week to refresh</h5>
-        <select class = "form-control" ng-model = "selectedDate" ng-change = "selectDate(selectedDate)">
-            <option ng-repeat = "date in dates" value = "{{date.week}}">{{date.week}}</option>
-        </select>        
-        <button class="btn btn-primary btn-sm" style = "margin-left: 30px;">Export as PDF</button>
+    <div class="well well-sm">
+        <h5 class="text-clear"><span style = "margin-right: 20px; margin-left: 20px; ">Practice Billability </span>Select week to refresh</h5>
+        <select class="form-control" ng-model="practiceSelectedDate" ng-change="practiceSelectDate(practiceSelectedDate)">
+            <option ng-repeat="date in dates" value="{{date.week}}">{{date.week}}</option>
+        </select>
+        <button class="btn btn-primary btn-sm" style="margin-left: 30px;">Export as PDF</button>
     </div>
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default border-warning">
                 <div class="panel-body">
-                    <div class = "multi-select-container">
+                    <div class="multi-select-container">
                         <h5 class="text-center">Select Projects</h5>
-                        <div class = "multi-select-dropdown" ng-dropdown-multiselect="" options="practiceList" selected-model="selectedList" extra-settings = "multiSelectSettings"></div>
+                        <div class="multi-select-dropdown" ng-dropdown-multiselect="" options="practiceList" selected-model="selectedList" extra-settings="multiSelectSettings"></div>
                     </div>
-                    
+
                     <br>
                     <highchart id="chart1" config="practiceBillabilityTrend"></highchart>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="well well-sm">
+            <h5 class="text-clear">Select location | {{practiceSelectedDate}}</h5>
+            <select class="form-control" ng-model="practiceSelectedLocation" ng-change="practiceSelectedLocations(prcticeSelectedLocation)">
+                <option ng-repeat="place in locations" value="{{place.value}}">{{place.text}}</option>
+            </select>
+        </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default border-warning">
+                <div class="panel-body">
+                    <div class="multi-select-container">
+                        <h5 class="text-center">Select Projects</h5>
+                        <div class="multi-select-dropdown" ng-dropdown-multiselect="" options="practiceList" selected-model="selectedListForLocation" extra-settings="multiSelectSettings"></div>
+                    </div>
+                    <highchart id="chart2" config="practiceBillabilityLocationTrend"></highchart>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="well well-sm">
+            <h5 class="text-clear">Select vertical | {{practiceSelectedDate}}</h5>
+            <select class="form-control" ng-model="practiceSelectedVertical" ng-change="practiceSelectedVerticals(practiceSelectedVertical)">
+                <option ng-repeat="place in verticals" value="{{place.value}}">{{place.text}}</option>
+            </select>
+        </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default border-success">
+                <div class="panel-body">
+                    <div class="multi-select-container">
+                        <h5 class="text-center">Select Projects</h5>
+                        <div class="multi-select-dropdown" ng-dropdown-multiselect="" options="practiceList" selected-model="selectedListForVertical" extra-settings="multiSelectSettings"></div>
+                    </div>
+                    <highchart id="chart3" config="practiceBillabilityVerticalTrend"></highchart>
                 </div>
             </div>
         </div>

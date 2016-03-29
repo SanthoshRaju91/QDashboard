@@ -405,7 +405,6 @@ app.controller('assignmentController', ['$scope', '$http', 'REST_URL', function 
      $http.get(REST_URL + '/getDepartmentBillability/')
             .success(function (response) {
                 var departmentBillability  = [];
-                console.log(response.result[0].date);
                 $scope.selectedDate = response.result[0].week;
                 if (response.success) {
                     if (response.result.length > 0) {

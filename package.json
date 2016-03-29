@@ -30,6 +30,7 @@
     "method-override": "^2.3.5",
     "mongoose": "^4.4.5",
     "multer": "^1.1.0",
+    "node-excel-export": "^1.2.0",
     "socket.io": "^1.4.5",
     "underscore": "^1.8.3",
     "xlsx-to-json": "^0.2.4"

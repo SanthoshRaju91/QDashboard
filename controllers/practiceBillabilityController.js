@@ -45,12 +45,13 @@ exports.getVerticalPracticeBillability = function(req, res) {
 	});
 }
 
-exports.getPracticeBillabilityOnDate = function(req, res) {
-	PracticeBillability.find({"week": req.params.week}, function(err, resultSet) {
+exports.getPracticeBillabilityOnDate = function(req, res) {    
+	PracticeBillability.find({"week": req.params.date}, function(err, resultSet) {
 		if(err) {
 			logger.error("PracticeBillability on date : Error in fetching data " + err);
 			res.json({status: 500, success: false, message: 'Error in fetching data'});
 		} else {
+            console.log(resultSet);
 			logger.info("PracticeBillability on date : fetched details");
 			res.json({status: 200, success: true, result: resultSet});
 		}
@@ -58,7 +59,7 @@ exports.getPracticeBillabilityOnDate = function(req, res) {
 }
 
 exports.getLocationPracticeBillabilityOnDate = function(req, res) {
-	PracticeBillabilityBasedOnLocation.find({"week": req.params.week, "location": req.params.location}, function(err, resultSet) {
+	PracticeBillabilityBasedOnLocation.find({"week": req.params.date, "location": req.params.location}, function(err, resultSet) {
 		if(err) {
 			logger.error("PracticeBillabilityBasedOnLocation on date : Error in fetching data " + err);
 			res.json({status: 500, success: false, message: 'Error in fetching data'});
@@ -70,7 +71,7 @@ exports.getLocationPracticeBillabilityOnDate = function(req, res) {
 }
 
 exports.getVerticalPracticeBillabilityOnDate = function(req, res) {
-	PracticeBillabilityBasedOnVertical.find({"week": req.params.week, "vertical": req.params.vertical}, function(err, resultSet) {
+	PracticeBillabilityBasedOnVertical.find({"week": req.params.date, "vertical": req.params.vertical}, function(err, resultSet) {
 		if(err) {
 			logger.error("PracticeBillabilityBasedOnVertical on date : Error in fetching data " + err);
 			res.json({status: 500, success: false, message: 'Error in fetching data'});

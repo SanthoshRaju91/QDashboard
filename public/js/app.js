@@ -29,7 +29,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             authenticate: true
         })
         .state('landing.finance', {
-            url: '/finance',
+            url: '/excel',
             templateUrl: 'views/finance.html',
             controller: 'financeController',
             authenticate: true
@@ -45,7 +45,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: 'views/upload.html',
             controller: 'uploadController',
             authenticate: true
-        });
+            });
 });
 
 

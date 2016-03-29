@@ -47,7 +47,7 @@ exports.parseBillabilityData = function (filename) {
             processLevelAndLocationData(JSON.stringify(result));
             processLevelAndVerticalData(JSON.stringify(result));
             processLevelBasedOnLocationAndVerticalData(JSON.stringify(result));
-            processDepartment(JSON.stringify(resulet));
+            processDepartment(JSON.stringify(result));
             processDepartmentBasedOnLocation(JSON.stringify(result));
             processDepartmentBasedOnVertical(JSON.stringify(result));
             processBillabilityTrendOnVertical(JSON.stringify(result));

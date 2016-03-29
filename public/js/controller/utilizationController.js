@@ -335,7 +335,108 @@ app.controller('utilizationController', ['$scope', '$http','REST_URL', function(
                 data: nonBillable
             }]
         }
-    }
+    };
+    
+    function loadPracticeLocationTrendGraph(practice, billable, nonBillable) {
+        $scope.practiceBillabilityLocationTrend = {
+            options: {
+                chart: {
+                    type: 'column',
+                    height: 300
+                },
+                credits: {
+                           enabled: false
+                          },
+                title: {
+                    text: 'Practice billability Based on Location',
+                    style: {
+                        color: '#2c3e50',
+                        fontSize:'13px'
+                    },
+                    x: -20
+                },
+                subtitle: {
+                    text: '',
+                    x: -20
+                },
+                tooltip: {
+                    valueSuffix: ''
+                },
+                exporting: { enabled: false }
+            },
+            xAxis: {
+                categories: practice
+            },
+            yAxis: {
+                title: {
+                    text: 'Values'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            series: [{
+                name: 'Billable',
+                data: billable
+            }, {
+                name: 'Non-Billable',
+                data: nonBillable
+            }]
+        }
+    };
+    
+    
+    function loadPracticeVerticalTrendGraph(practice, billable, nonBillable) {
+        $scope.practiceBillabilityVerticalTrend = {
+            options: {
+                chart: {
+                    type: 'column',
+                    height: 300
+                },
+                credits: {
+                           enabled: false
+                          },
+                title: {
+                    text: 'Practice billability Based On Vertical',
+                    style: {
+                        color: '#2c3e50',
+                        fontSize:'13px'
+                    },
+                    x: -20
+                },
+                subtitle: {
+                    text: '',
+                    x: -20
+                },
+                tooltip: {
+                    valueSuffix: ''
+                },
+                exporting: { enabled: false }
+            },
+            xAxis: {
+                categories: practice
+            },
+            yAxis: {
+                title: {
+                    text: 'Values'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            series: [{
+                name: 'Billable',
+                data: billable
+            }, {
+                name: 'Non-Billable',
+                data: nonBillable
+            }]
+        }
+    };
     
       $http.get(REST_URL + '/getDates')
         .success(function(response) {
@@ -346,12 +447,12 @@ app.controller('utilizationController', ['$scope', '$http','REST_URL', function(
             }
         });
      
-     $scope.selectDate= function(selectedDate,selectedLevel) {
+     $scope.selectDate= function(selectedDate) {
         $scope.locationBillablity = [];
         $scope.verticalBillablity = [];
         $http.get(REST_URL+'/getlevelBillability/' + selectedDate)
             .success(function(response) {
-                if(response.success) { 
+                if(response.success) {                              
                     if(response.result.length > 0) {                        
                         var billabilty = response.result[response.result.length - 1];
                         var obj = {
@@ -413,7 +514,7 @@ app.controller('utilizationController', ['$scope', '$http','REST_URL', function(
         if($scope.selectedDate){
                 $http.get(REST_URL + '/getlevelBillabilityVertical/' + $scope.selectedDate + '/' +selectedVertical)
                 .success(function (response) {
-                    console.log(response.result);
+//                    console.log(response.result);
                      if(response.success){
                         if(response.result.length > 0){
                              var billabilty = response.result[response.result.length - 1];
@@ -462,40 +563,41 @@ app.controller('utilizationController', ['$scope', '$http','REST_URL', function(
 
      
      
-     $http.get(REST_URL+'/getBillabilityTrend')
-        .success(function(response) {
-            if(response.success) { 
-                if(response.result.length > 0) {                                              
-                    var weeksMap = [];
-                    var billableFinMap = [];
-                    var nonBillableFinMap = [];
-                    var billableManMap = [];
-                    var nonBillableManMap = [];
-                    var billableRetMap = [];
-                    var nonBillableRetMap = [];
-                    for(var i=0; i< response.result.length; i++) {
-                        weeksMap.push(response.result[i].week);
-                        for(var prop in response.result[i].data) {
-                            if(response.result[i].data[prop][0].vertical == 'Financial Services') {
-                                billableFinMap.push(response.result[i].data[prop][0].values[0].Billable || 0);
-                                nonBillableFinMap.push(response.result[i].data[prop][0].values[0].NonBillable || 0);
-                            } else if(response.result[i].data[prop][0].vertical == 'Manufacturing & Services') {
-                                billableManMap.push(response.result[i].data[prop][0].values[0].Billable || 0);
-                                nonBillableManMap.push(response.result[i].data[prop][0].values[0].NonBillable || 0);
-                            } else if(response.result[i].data[prop][0].vertical == 'Retail & Distribution') {
-                                billableRetMap.push(response.result[i].data[prop][0].values[0].Billable || 0);
-                                nonBillableRetMap.push(response.result[i].data[prop][0].values[0].NonBillable || 0);
+         $http.get(REST_URL+'/getBillabilityTrend')
+            .success(function(response) {
+                if(response.success) { 
+                    if(response.result.length > 0) {                                              
+                        var weeksMap = [];
+                        var billableFinMap = [];
+                        var nonBillableFinMap = [];
+                        var billableManMap = [];
+                        var nonBillableManMap = [];
+                        var billableRetMap = [];
+                        var nonBillableRetMap = [];
+                        for(var i=0; i< response.result.length; i++) {
+                            weeksMap.push(response.result[i].week);
+                            for(var prop in response.result[i].data) {
+                                if(response.result[i].data[prop][0].vertical == 'Financial Services') {
+                                    billableFinMap.push(response.result[i].data[prop][0].values[0].Billable || 0);
+                                    nonBillableFinMap.push(response.result[i].data[prop][0].values[0].NonBillable || 0);
+                                } else if(response.result[i].data[prop][0].vertical == 'Manufacturing & Services') {
+                                    billableManMap.push(response.result[i].data[prop][0].values[0].Billable || 0);
+                                    nonBillableManMap.push(response.result[i].data[prop][0].values[0].NonBillable || 0);
+                                } else if(response.result[i].data[prop][0].vertical == 'Retail & Distribution') {
+                                    billableRetMap.push(response.result[i].data[prop][0].values[0].Billable || 0);
+                                    nonBillableRetMap.push(response.result[i].data[prop][0].values[0].NonBillable || 0);
+                                }
                             }
                         }
-                    }
-                    loadBillableVerticalTrendGraph(weeksMap, billableFinMap, billableManMap, billableRetMap);
-                    loadNonBillableVerticalTrendGraph(weeksMap, nonBillableFinMap, nonBillableManMap, nonBillableRetMap);                    
-                }                
-            }
-        });
+                        loadBillableVerticalTrendGraph(weeksMap, billableFinMap, billableManMap, billableRetMap);
+                        loadNonBillableVerticalTrendGraph(weeksMap, nonBillableFinMap, nonBillableManMap, nonBillableRetMap);                    
+                    }                
+                }
+            });
 
         $http.get(REST_URL + '/getlevelBillability')
             .success(function(response) {
+            console.log("level Billability---->"+JSON.stringify(response));
                 if(response.success) {
                     if(response.result.length > 0) {                        
                         var billabilty = response.result[response.result.length - 1];
@@ -512,8 +614,9 @@ app.controller('utilizationController', ['$scope', '$http','REST_URL', function(
                     }
                 }
             });
-        $http.get(REST_URL + '/getlevelBillabilityLocation/Bengaluru')
-            .success(function(response) {                
+        $http.get(REST_URL + '/getlevelBillabilityLocation/'+'Bengaluru')
+            .success(function(response) {
+            console.log("location------>"+JSON.stringify(response));
                 if(response.success) {
                     if(response.result.length > 0) {
                         var billabilty = response.result[0];
@@ -526,13 +629,14 @@ app.controller('utilizationController', ['$scope', '$http','REST_URL', function(
                         var levelArray = []; levelArray.push(obj.level);
                         var billableArray = []; billableArray.push(obj.billable);
                         var nonBillableArray = []; nonBillableArray.push(obj.nonBillable);
-                        console.log(levelArray + " " + billableArray + " " + nonBillableArray);
+//                        console.log(levelArray + " " + billableArray + " " + nonBillableArray);
                         loadLevelBillableLocGraph(levelArray, billableArray, nonBillableArray);
                     }
                 }
             });
         $http.get(REST_URL + '/getlevelBillabilityVertical/Retail & Distribution')
             .success(function(response) {
+            console.log("Vertical---->"+JSON.stringify(response));
                 if(response.success) {
                     if(response.result.length > 0) {
                         var billabilty = response.result[0];
@@ -549,56 +653,311 @@ app.controller('utilizationController', ['$scope', '$http','REST_URL', function(
                     }
                 }
             });
-        
-        //Practice Billability data   
-        $http.get(REST_URL + '/getPracticeBillability')
-            .success(function(response) {
-                if(response.success) {
-                    if(response.result.length > 0) {
-                        $scope.practiceList = [];
-                        var practiceArray = [];
-                        var billableArray = [];
-                        var nonBillableArray = [];
-                        $scope.practiceListArray = []; 
-                        $scope.selectedDate = response.result[0].week;                        
-                        for(var i=0; i<response.result.length; i++) {
-                            $scope.practiceList.push({
-                                id: response.result[i].practice,
-                                label: response.result[i].practice
-                            });
-                            $scope.practiceListArray.push({
-                                practice: response.result[i].practice || 0,
-                                billable: response.result[i].values[0].Billable || 0,
-                                nonBillable: response.result[i].values[0].NonBillable || 0
-                            });
-                            practiceArray.push(response.result[i].practice);
-                            billableArray.push(response.result[i].values[0].Billable);
-                            nonBillableArray.push(response.result[i].values[0].NonBillable);
+
+    
+            $scope.practiceSelectDate = function (selectedDate) {
+                $http.get(REST_URL + '/getPracticeBillability/' + selectedDate)
+                       .success(function(response) {                
+                        if(response.success) {
+                            if(response.result.length > 0) {
+                                $scope.practiceList = [];
+                                var practiceArray = [];
+                                var billableArray = [];
+                                var nonBillableArray = [];
+                                $scope.practiceListArray = []; 
+                                $scope.selectedList = [];
+                                $scope.practiceSelectedDate = response.result[0].week;                        
+                                for(var i=0; i<response.result.length; i++) {
+                                    $scope.practiceList.push({
+                                        id: response.result[i].practice,
+                                        label: response.result[i].practice
+                                    });
+                                    $scope.practiceListArray.push({
+                                        practice: response.result[i].practice || 0,
+                                        billable: response.result[i].values[0].Billable || 0,
+                                        nonBillable: response.result[i].values[0].NonBillable || 0
+                                    });
+                                    practiceArray.push(response.result[i].practice || 0);
+                                    billableArray.push(response.result[i].values[0].Billable || 0);
+                                    nonBillableArray.push(response.result[i].values[0].NonBillable || 0);
+                                }
+                                loadPracticeTrendGraph(practiceArray, billableArray, nonBillableArray);
+                            }
                         }
-                        console.log(JSON.stringify($scope.practiceListArray));
-                        loadPracticeTrendGraph(practiceArray, billableArray, nonBillableArray);
-                    }
+                    });
+                
+                        if($scope.practiceSelectedLocation){ 
+                        $http.get(REST_URL + '/getLocationPracticeBillability/' + $scope.practiceSelectedDate + '/' + $scope.practiceSelectedLocation)
+                               .success(function(response) {   
+//                            console.log("Practice Selected Date"+response);
+                                if(response.success) {
+                                    if(response.result.length > 0) {
+                                        $scope.practiceList = [];
+                                        var practiceArray = [];
+                                        var billableArray = [];
+                                        var nonBillableArray = [];
+                                        $scope.practiceListArray = []; 
+                                        $scope.selectedList = [];
+                                        $scope.practiceSelectedDate = response.result[0].week;                        
+                                        for(var i=0; i<response.result.length; i++) {
+                                            $scope.practiceList.push({
+                                                id: response.result[i].practice,
+                                                label: response.result[i].practice
+                                            });
+                                            $scope.practiceListArray.push({
+                                                practice: response.result[i].practice || 0,
+                                                billable: response.result[i].values[0].Billable || 0,
+                                                nonBillable: response.result[i].values[0].NonBillable || 0
+                                            });
+                                            practiceArray.push(response.result[i].practice || 0);
+                                            billableArray.push(response.result[i].values[0].Billable || 0);
+                                            nonBillableArray.push(response.result[i].values[0].NonBillable || 0);
+                                        }
+                                        loadPracticeLocationTrendGraph(practiceArray, billableArray, nonBillableArray);
+                                    }
+                                }
+                            });
+                      }
+                
+                    if($scope.practiceSelectedVertical){ 
+                        $http.get(REST_URL + '/getVerticalPracticeBillability/' + $scope.practiceSelectedDate + '/' + $scope.practiceSelectedVertical)
+                               .success(function(response) {   
+                            console.log("Practice Selected Date"+response);
+                                if(response.success) {
+                                    if(response.result.length > 0) {
+                                        $scope.practiceList = [];
+                                        var practiceArray = [];
+                                        var billableArray = [];
+                                        var nonBillableArray = [];
+                                        $scope.practiceListArray = []; 
+                                        $scope.selectedList = [];
+                                        $scope.practiceSelectedDate = response.result[0].week;                        
+                                        for(var i=0; i<response.result.length; i++) {
+                                            $scope.practiceList.push({
+                                                id: response.result[i].practice,
+                                                label: response.result[i].practice
+                                            });
+                                            $scope.practiceListArray.push({
+                                                practice: response.result[i].practice || 0,
+                                                billable: response.result[i].values[0].Billable || 0,
+                                                nonBillable: response.result[i].values[0].NonBillable || 0
+                                            });
+                                            practiceArray.push(response.result[i].practice || 0);
+                                            billableArray.push(response.result[i].values[0].Billable || 0);
+                                            nonBillableArray.push(response.result[i].values[0].NonBillable || 0);
+                                        }
+                                        loadPracticeVerticalTrendGraph(practiceArray, billableArray, nonBillableArray);
+                                    }
+                                }
+                            });
+                      }
+            
+            }  
+            
+            
+            $scope.practiceSelectedLocations = function(prcticeSelectedLocation){
+                if($scope.practiceSelectedDate){
+                    $http.get(REST_URL + '/getLocationPracticeBillability/' + $scope.practiceSelectedDate + '/' + $scope.practiceSelectedLocation)
+                               .success(function(response) {   
+//                            console.log("Practice Selected Date"+response);
+                                if(response.success) {
+                                    if(response.result.length > 0) {
+                                        $scope.practiceList = [];
+                                        var practiceArray = [];
+                                        var billableArray = [];
+                                        var nonBillableArray = [];
+                                        $scope.practiceListArray = []; 
+                                        $scope.selectedList = [];
+                                        $scope.practiceSelectedDate = response.result[0].week;                        
+                                        for(var i=0; i<response.result.length; i++) {
+                                            $scope.practiceList.push({
+                                                id: response.result[i].practice,
+                                                label: response.result[i].practice
+                                            });
+                                            $scope.practiceListArray.push({
+                                                practice: response.result[i].practice || 0,
+                                                billable: response.result[i].values[0].Billable || 0,
+                                                nonBillable: response.result[i].values[0].NonBillable || 0
+                                            });
+                                            practiceArray.push(response.result[i].practice || 0);
+                                            billableArray.push(response.result[i].values[0].Billable || 0);
+                                            nonBillableArray.push(response.result[i].values[0].NonBillable || 0);
+                                        }
+                                        loadPracticeLocationTrendGraph(practiceArray, billableArray, nonBillableArray);
+                                    }
+                                }
+                            });
+                    
+                }else{
+                    alert("Select Date");
                 }
-            });
+            }
+            
+            
+            $scope.practiceSelectedVerticals = function(practiceSelectedVertical){
+                if($scope.practiceSelectedDate){
+                    $http.get(REST_URL + '/getVerticalPracticeBillability/' + $scope.practiceSelectedDate + '/' + $scope.practiceSelectedVertical)
+                               .success(function(response) {   
+//                            console.log("Practice Selected Date"+response);
+                                if(response.success) {
+                                    if(response.result.length > 0) {
+                                        $scope.practiceList = [];
+                                        var practiceArray = [];
+                                        var billableArray = [];
+                                        var nonBillableArray = [];
+                                        $scope.practiceListArray = []; 
+                                        $scope.selectedList = [];
+                                        $scope.practiceSelectedDate = response.result[0].week;                        
+                                        for(var i=0; i<response.result.length; i++) {
+                                            $scope.practiceList.push({
+                                                id: response.result[i].practice,
+                                                label: response.result[i].practice
+                                            });
+                                            $scope.practiceListArray.push({
+                                                practice: response.result[i].practice || 0,
+                                                billable: response.result[i].values[0].Billable || 0,
+                                                nonBillable: response.result[i].values[0].NonBillable || 0
+                                            });
+                                            practiceArray.push(response.result[i].practice || 0);
+                                            billableArray.push(response.result[i].values[0].Billable || 0);
+                                            nonBillableArray.push(response.result[i].values[0].NonBillable || 0);
+                                        }
+                                        loadPracticeVerticalTrendGraph(practiceArray, billableArray, nonBillableArray);
+                                    }
+                                }
+                            });
+                    
+                }else{
+                    alert("Select Date");
+                }
+            }
+    
+         
+                    
+                //Practice Billability data   
+                $http.get(REST_URL + '/getPracticeBillability')
+                    .success(function(response) {
+                        if(response.success) {
+                            if(response.result.length > 0) {
+                                $scope.practiceList = [];
+                                var practiceArray = [];
+                                var billableArray = [];
+                                var nonBillableArray = [];
+                                $scope.practiceListArray = []; 
+                                $scope.practiceSelectedDate = response.result[0].week;                        
+                                for(var i=0; i<response.result.length; i++) {
+                                    $scope.practiceList.push({
+                                        id: response.result[i].practice,
+                                        label: response.result[i].practice
+                                    });
+                                    $scope.practiceListArray.push({
+                                        practice: response.result[i].practice || 0,
+                                        billable: response.result[i].values[0].Billable || 0,
+                                        nonBillable: response.result[i].values[0].NonBillable || 0
+                                    });
+                                    practiceArray.push(response.result[i].practice || 0);
+                                    billableArray.push(response.result[i].values[0].Billable || 0);
+                                    nonBillableArray.push(response.result[i].values[0].NonBillable || 0);
+                                }
+                                loadPracticeTrendGraph(practiceArray, billableArray, nonBillableArray);
+                            }
+                        }
+                    });
+          
+    
+               $http.get(REST_URL + '/getLocationPracticeBillability/Bengaluru')
+                    .success(function(response){
+                   if(response.success){
+                       if(response.result.length > 0){
+                           $scope.practiceList = [];
+                            var practiceArray = [];
+                            var billableArray = [];
+                            var nonBillableArray = [];
+                            $scope.practiceListArray = []; 
+                            $scope.selectedDate = response.result[0].week;                        
+                            for(var i=0; i<response.result.length; i++) {
+                                $scope.practiceList.push({
+                                    id: response.result[i].practice,
+                                    label: response.result[i].practice
+                                });
+                                $scope.practiceListArray.push({
+                                    practice: response.result[i].practice || 0,
+                                    billable: response.result[i].values[0].Billable || 0,
+                                    nonBillable: response.result[i].values[0].NonBillable || 0
+                                });
+                                practiceArray.push(response.result[i].practice || 0);
+                                billableArray.push(response.result[i].values[0].Billable || 0);
+                                nonBillableArray.push(response.result[i].values[0].NonBillable || 0);
+                            }
+                            $scope.practiceSelectedLocation=response.result[0].location;
+                            loadPracticeLocationTrendGraph(practiceArray, billableArray, nonBillableArray);
+                       }
+                   }
+               });
+    
+    
+             $http.get(REST_URL + '/getVerticalPracticeBillability/'+'Retail & Distribution')
+                    .success(function(response){
+                   if(response.success){
+                       if(response.result.length > 0){
+                           $scope.practiceList = [];
+                            var practiceArray = [];
+                            var billableArray = [];
+                            var nonBillableArray = [];
+                            $scope.praticeListArrayOnVertical = []; 
+                            $scope.selectedDate = response.result[0].week;                        
+                            for(var i=0; i<response.result.length; i++) {
+                                $scope.practiceList.push({
+                                    id: response.result[i].practice,
+                                    label: response.result[i].practice
+                                });
+                                $scope.praticeListArrayOnVertical.push({
+                                    practice: response.result[i].practice || 0,
+                                    billable: response.result[i].values[0].Billable || 0,
+                                    nonBillable: response.result[i].values[0].NonBillable || 0
+                                });
+                                practiceArray.push(response.result[i].practice || 0);
+                                billableArray.push(response.result[i].values[0].Billable || 0);
+                                nonBillableArray.push(response.result[i].values[0].NonBillable || 0);
+                            }
+                            console.log(response.result[0].vertical);                            
+                            $scope.practiceSelectedVertical=response.result[0].vertical;
+                            console.log($scope.practiceListArray.length + " " + practiceArray.length + " " + $scope.practiceList.length);
+                            loadPracticeVerticalTrendGraph(practiceArray, billableArray, nonBillableArray);
+                       }
+                   }
+               });  
+    
+    
 
     $scope.multiSelectSettings = {
         showCheckAll: false,
-        showUncheckAll: false,
+        showUncheckAll: true,
         scrollableHeight: '200px',
         scrollable: true        
     }
-    $scope.selectedList = [];
     
-    $scope.$watch('selectedList', function(newVal, oldVal) {        
+    // for dropdown
+    $scope.selectedList = [];
+    $scope.selectedListForLocation = [];
+    $scope.selectedListForVertical = [];
+    
+    
+    // $watch for whole pratice.
+    $scope.$watch('selectedList',function(newVal, oldVal) {        
         var filtered = [];
-        
-        for(var i = 0; i < $scope.selectedList.length; i++) {
-            var filter = _.filter($scope.practiceListArray, function(item) {
-                return item.practice.indexOf($scope.selectedList[i].id) != -1;                
-            });
-            filtered.push(filter[0]);
-        }     
-       
+                
+        if(newVal == '') {            
+            filtered = $scope.practiceListArray;
+        } else {
+            for(var i = 0; i < $scope.selectedList.length; i++) {
+                var filter = _.filter($scope.practiceListArray, function(item) {
+                    return item.practice.indexOf($scope.selectedList[i].id) != -1;                
+                });
+                filtered.push(filter[0]);
+            }    
+        }
+                   
         var practiceArray = [];
         var billableArray = [];
         var nonBillableArray = [];
@@ -608,7 +967,36 @@ app.controller('utilizationController', ['$scope', '$http','REST_URL', function(
             nonBillableArray.push(filtered[i].nonBillable);               
         }
         if(filtered.length > 0) {
-            loadPracticeTrendGraph(practiceArray, billableArray, nonBillableArray);
+            loadPracticeTrendGraph(practiceArray, billableArray, nonBillableArray);           
         }       
     }, true); 
+    
+    
+    //$watch only vertical practice.
+    $scope.$watch('selectedListForVertical', function(newVal, oldVal) {
+        var filtered = [];
+        console.log("selectedListForVertical" + newVal);
+        if(newVal == '') {            
+            filtered = $scope.praticeListArrayOnVertical;
+        } else {
+            for(var i = 0; i < $scope.selectedListForVertical.length; i++) {
+                var filter = _.filter($scope.praticeListArrayOnVertical, function(item) {
+                    return item.practice.indexOf($scope.selectedList[i].id) != -1;                
+                });
+                filtered.push(filter[0]);
+            }    
+        }
+                   
+        var practiceArray = [];
+        var billableArray = [];
+        var nonBillableArray = [];
+        for(var i =0; i < filtered.length; i++) {
+            practiceArray.push(filtered[i].practice);
+            billableArray.push(filtered[i].billable);
+            nonBillableArray.push(filtered[i].nonBillable);               
+        }
+        if(filtered.length > 0) {                        
+            loadPracticeVerticalTrendGraph(practiceArray, billableArray, nonBillableArray);
+        } 
+    }, true);
 }]);
