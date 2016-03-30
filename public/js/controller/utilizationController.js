@@ -766,7 +766,7 @@ app.controller('utilizationController', ['$scope', '$http','REST_URL', function(
                                         var practiceArray = [];
                                         var billableArray = [];
                                         var nonBillableArray = [];
-                                        $scope.practiceListArray = []; 
+                                        $scope.practiceListArrayOnLocation = []; 
                                         $scope.selectedList = [];
                                         $scope.practiceSelectedDate = response.result[0].week;                        
                                         for(var i=0; i<response.result.length; i++) {
@@ -774,7 +774,7 @@ app.controller('utilizationController', ['$scope', '$http','REST_URL', function(
                                                 id: response.result[i].practice,
                                                 label: response.result[i].practice
                                             });
-                                            $scope.practiceListArray.push({
+                                            $scope.practiceListArrayOnLocation.push({
                                                 practice: response.result[i].practice || 0,
                                                 billable: response.result[i].values[0].Billable || 0,
                                                 nonBillable: response.result[i].values[0].NonBillable || 0
@@ -805,7 +805,7 @@ app.controller('utilizationController', ['$scope', '$http','REST_URL', function(
                                         var practiceArray = [];
                                         var billableArray = [];
                                         var nonBillableArray = [];
-                                        $scope.practiceListArray = []; 
+                                        $scope.praticeListArrayOnVertical = []; 
                                         $scope.selectedList = [];
                                         $scope.practiceSelectedDate = response.result[0].week;                        
                                         for(var i=0; i<response.result.length; i++) {
@@ -813,7 +813,7 @@ app.controller('utilizationController', ['$scope', '$http','REST_URL', function(
                                                 id: response.result[i].practice,
                                                 label: response.result[i].practice
                                             });
-                                            $scope.practiceListArray.push({
+                                            $scope.praticeListArrayOnVertical.push({
                                                 practice: response.result[i].practice || 0,
                                                 billable: response.result[i].values[0].Billable || 0,
                                                 nonBillable: response.result[i].values[0].NonBillable || 0
@@ -873,14 +873,14 @@ app.controller('utilizationController', ['$scope', '$http','REST_URL', function(
                             var practiceArray = [];
                             var billableArray = [];
                             var nonBillableArray = [];
-                            $scope.practiceListArray = []; 
+                            $scope.practiceListArrayOnLocation = []; 
                             $scope.selectedDate = response.result[0].week;                        
                             for(var i=0; i<response.result.length; i++) {
                                 $scope.practiceList.push({
                                     id: response.result[i].practice,
                                     label: response.result[i].practice
                                 });
-                                $scope.practiceListArray.push({
+                                $scope.practiceListArrayOnLocation.push({
                                     practice: response.result[i].practice || 0,
                                     billable: response.result[i].values[0].Billable || 0,
                                     nonBillable: response.result[i].values[0].NonBillable || 0
@@ -975,18 +975,17 @@ app.controller('utilizationController', ['$scope', '$http','REST_URL', function(
     //$watch only vertical practice.
     $scope.$watch('selectedListForVertical', function(newVal, oldVal) {
         var filtered = [];
-        console.log("selectedListForVertical" + newVal);
+        
         if(newVal == '') {            
             filtered = $scope.praticeListArrayOnVertical;
         } else {
             for(var i = 0; i < $scope.selectedListForVertical.length; i++) {
                 var filter = _.filter($scope.praticeListArrayOnVertical, function(item) {
-                    return item.practice.indexOf($scope.selectedList[i].id) != -1;                
+                    return item.practice.indexOf($scope.selectedListForVertical[i].id) != -1;                
                 });
                 filtered.push(filter[0]);
             }    
-        }
-                   
+        }                   
         var practiceArray = [];
         var billableArray = [];
         var nonBillableArray = [];
@@ -999,4 +998,32 @@ app.controller('utilizationController', ['$scope', '$http','REST_URL', function(
             loadPracticeVerticalTrendGraph(practiceArray, billableArray, nonBillableArray);
         } 
     }, true);
+    
+    //$watch only location practice
+    $scope.$watch('selectedListForLocation', function(newVal, oldVal) {
+         var filtered = [];
+        
+        if(newVal == '') {            
+            filtered = $scope.practiceListArrayOnLocation;
+        } else {
+            for(var i = 0; i < $scope.selectedListForLocation.length; i++) {
+                var filter = _.filter($scope.practiceListArrayOnLocation, function(item) {
+                    return item.practice.indexOf($scope.selectedListForLocation[i].id) != -1;                
+                });
+                filtered.push(filter[0]);
+            }    
+        }                   
+        var practiceArray = [];
+        var billableArray = [];
+        var nonBillableArray = [];
+        for(var i =0; i < filtered.length; i++) {
+            practiceArray.push(filtered[i].practice);
+            billableArray.push(filtered[i].billable);
+            nonBillableArray.push(filtered[i].nonBillable);               
+        }
+        if(filtered.length > 0) {                        
+            loadPracticeLocationTrendGraph(practiceArray, billableArray, nonBillableArray);
+        } 
+    }, true);
+    
 }]);
