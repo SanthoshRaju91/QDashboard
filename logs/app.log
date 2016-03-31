@@ -5417,3 +5417,30 @@
 [2016-03-30 13:27:37.516] [INFO] appLog - PracticeBillabilityBasedOnVertical on date : fetched data
 [2016-03-30 13:35:43.800] [INFO] appLog - Results fetched
 [2016-03-30 13:35:43.806] [INFO] appLog - 
+[2016-03-31 10:32:46.879] [INFO] appLog - Server listening on port: 3000
+[2016-03-31 10:32:46.906] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-31 10:33:08.950] [INFO] appLog - Results fetched
+[2016-03-31 10:33:08.995] [INFO] appLog - 
+[2016-03-31 10:33:09.033] [INFO] appLog - 
+[2016-03-31 10:33:09.086] [INFO] appLog - 
+[2016-03-31 10:33:09.125] [INFO] appLog - 
+[2016-03-31 10:33:09.127] [INFO] appLog - 
+[2016-03-31 10:33:09.156] [INFO] appLog - 
+[2016-03-31 10:33:09.178] [INFO] appLog - 
+[2016-03-31 10:33:09.197] [INFO] appLog - 
+[2016-03-31 10:33:09.210] [INFO] appLog - 
+[2016-03-31 10:33:09.226] [INFO] appLog - 
+[2016-03-31 10:33:13.336] [INFO] appLog - Results fetched
+[2016-03-31 10:33:13.477] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-31 10:33:13.482] [INFO] appLog - PracticeBillabilityBasedOnLocation: fetched details
+[2016-03-31 10:33:13.503] [INFO] appLog - PracticeBillabilityBasedOnVertical: fetched details
+[2016-03-31 10:33:48.234] [INFO] appLog - PracticeBillability on date : fetched details
+[2016-03-31 10:33:48.259] [INFO] appLog - PracticeBillabilityBasedOnLocation on date : fetched details
+[2016-03-31 10:33:48.268] [INFO] appLog - PracticeBillabilityBasedOnVertical on date : fetched data
+[2016-03-31 10:33:56.367] [INFO] appLog - PracticeBillability on date : fetched details
+[2016-03-31 10:33:56.389] [INFO] appLog - PracticeBillabilityBasedOnLocation on date : fetched details
+[2016-03-31 10:33:56.414] [INFO] appLog - PracticeBillabilityBasedOnVertical on date : fetched data
+[2016-03-31 10:34:24.425] [INFO] appLog - Results fetched
+[2016-03-31 10:34:24.435] [INFO] appLog - 
+[2016-03-31 10:34:31.590] [INFO] appLog - 
+[2016-03-31 10:35:00.335] [INFO] appLog - 

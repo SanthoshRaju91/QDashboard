@@ -33,6 +33,23 @@ app.controller('uploadController', ['Upload', 'REST_URL', '$scope', function(Upl
                 $scope.progressFinPercentage = parseInt(100.0 * event.loaded / event.total);    
             }            
         });
-    }    
+    }
+    
+    $scope.clients = [
+        {id: '1', name: 'Waste Management'},
+        {id: '2', name: 'MMI'},
+        {id: '3', name: 'CCE'},
+        {id: '4', name: 'SAP'},
+        {id: '5', name: 'MSI'}
+    ];
+    
+    $scope.selectedClientName = "Select Client";
+    
+    $scope.selectedClient = function(clientid, clientname) {
+        if(clientname) {
+            $scope.selectedClientName = clientname
+        }
+    }
+    
 }]);
 

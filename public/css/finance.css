@@ -463,3 +463,36 @@ ul.alert-dropdown {
     display: inline;
     width: 30% !important;
 }
+
+.custom-panel .panel-heading {
+    cursor: pointer;
+    background: #D64541;
+    border-color: #D64541;
+    height: 7%;
+}
+
+.custom-panel .panel-heading .panel-title {
+    margin-top: 5px;
+}
+
+.custom-panel .panel-body {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.custom-panel a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.client-project-containers table thead th {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.client-project-containers table tbody td {
+    font-size: 14px;
+}
