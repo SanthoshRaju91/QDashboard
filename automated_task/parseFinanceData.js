@@ -11,19 +11,34 @@ mongoose.connect(config.dbConnectionURL, function(err){
     else console.info("Connected to MongoDB");
 }); 
 
+exports.parseFinancialDataForVertical = function(verticalName, filename) {
+        xlsxj({
+            input: config.excelPath + 'finance.xls',
+            output: "output.json"
+        }, function (err, result) {
+        if (err) {
+            console.error(err);
+        } else {     
+            loadFinancialDataForVertical(verticalName, result);                
+        }
+    });
+}
 
-xlsxj({
-        input: 'finance.xls',
-        output: "output.json"
-    }, function (err, result) {
-    if (err) {
-        console.error(err);
-    } else {
-        loadFinancialDateForVertical(result);
-    }
-});
+exports.parseFinancialDataForProject = function(clientName, projectName, filename) {
+      xlsxj({
+            input: 'finance.xls',
+            output: "output.json"
+        }, function (err, result) {
+        if (err) {
+            console.error(err);
+        } else {     
+            loadFinancialDataForProject(clientName, projectName, result);                
+        }
+    });
+}
 
-function loadFinancialDateForVertical(inputResultToStore) {
+
+function loadFinancialDataForVertical(verticalName, inputResultToStore) {
     
     FinanceBasedOnVertical.remove({}, function(err) {
         if(err) {
@@ -34,7 +49,7 @@ function loadFinancialDateForVertical(inputResultToStore) {
                     var financeBasedOnVertical = new FinanceBasedOnVertical({
                         period: inputResultToStore[i].Month, 
                         date: new Date(Date.parse(inputResultToStore[i].Month)),
-                        vertical: 'Financial & Service',
+                        vertical: verticalName,
                         Revenue: [{"Plan": inputResultToStore[i].Revenue_Plan || 0, "Actual": inputResultToStore[i].Revenue_Actual || 0}],
                         DirectCostPlan: [{"Plan": inputResultToStore[i].Direct_Cost_Plan || 0, "Actual": inputResultToStore[i].Direct_Cost_Actual || 0}],
                         EmpCompensation: [{"Plan": inputResultToStore[i].Emp_Compensation_Plan || 0, "Actual": inputResultToStore[i].Emp_Compensation_Actual || 0}],
@@ -56,7 +71,7 @@ function loadFinancialDateForVertical(inputResultToStore) {
                     var financeBasedOnVertical = new FinanceBasedOnVertical({
                         period: inputResultToStore[i].Month, 
                         date: new Date(),
-                        vertical: 'Financial & Service',
+                        vertical: verticalName,
                         Revenue: [{"Plan": inputResultToStore[i].Revenue_Plan || 0, "Actual": inputResultToStore[i].Revenue_Actual || 0}],
                         DirectCostPlan: [{"Plan": inputResultToStore[i].Direct_Cost_Plan || 0, "Actual": inputResultToStore[i].Direct_Cost_Actual || 0}],
                         EmpCompensation: [{"Plan": inputResultToStore[i].Emp_Compensation_Plan || 0, "Actual": inputResultToStore[i].Emp_Compensation_Actual || 0}],
@@ -78,4 +93,8 @@ function loadFinancialDateForVertical(inputResultToStore) {
             }      
         }
     })        
+}
+
+function loadFinancialDataForProject(clientName, projectName, inputResultToStore) {
+    
 }
