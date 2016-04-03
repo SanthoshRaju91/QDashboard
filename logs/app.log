@@ -6360,3 +6360,459 @@
 [2016-04-03 18:38:38.102] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
 [2016-04-03 18:38:59.317] [INFO] appLog - Socket connection established
 [2016-04-03 18:38:59.621] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 20:57:15.503] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 20:57:15.535] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 20:57:28.881] [INFO] appLog - Socket connection established
+[2016-04-03 20:57:50.112] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 20:58:57.126] [INFO] appLog - Socket connection established
+[2016-04-03 20:58:57.430] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 20:59:12.906] [INFO] appLog - Socket connection established
+[2016-04-03 20:59:13.224] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:02:32.378] [INFO] appLog - Socket connection established
+[2016-04-03 21:02:32.702] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:02:32.719] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:02:32.738] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:02:32.754] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:03:42.211] [INFO] appLog - Socket connection established
+[2016-04-03 21:03:42.553] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:03:42.561] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:03:42.582] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:03:42.598] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:04:03.696] [INFO] appLog - Socket connection established
+[2016-04-03 21:04:04.045] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:04:04.062] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:04:04.065] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:04:04.076] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:04:09.065] [INFO] appLog - Socket connection established
+[2016-04-03 21:04:09.385] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:04:09.405] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:04:09.408] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:04:09.422] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:04:59.683] [INFO] appLog - Socket connection established
+[2016-04-03 21:05:00.031] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:05:00.037] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:05:00.045] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:05:00.062] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:05:22.656] [INFO] appLog - Socket connection established
+[2016-04-03 21:05:22.970] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:05:22.981] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:05:22.994] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:05:23.008] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:06:45.035] [INFO] appLog - Socket connection established
+[2016-04-03 21:06:45.400] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:06:45.414] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:06:45.425] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:06:45.437] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:09:08.588] [INFO] appLog - Socket connection established
+[2016-04-03 21:09:09.087] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:09:09.096] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:09:09.106] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:09:09.120] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:09:27.331] [INFO] appLog - Results fetched
+[2016-04-03 21:09:27.370] [INFO] appLog - 
+[2016-04-03 21:09:38.406] [INFO] appLog - Results fetched
+[2016-04-03 21:09:38.548] [INFO] appLog - PracticeBillability: fetched details
+[2016-04-03 21:09:38.587] [INFO] appLog - PracticeBillabilityBasedOnVertical: fetched details
+[2016-04-03 21:09:38.607] [INFO] appLog - PracticeBillabilityBasedOnLocation: fetched details
+[2016-04-03 21:09:47.560] [INFO] appLog - Results fetched
+[2016-04-03 21:09:47.564] [INFO] appLog - 
+[2016-04-03 21:09:47.591] [INFO] appLog - 
+[2016-04-03 21:09:47.627] [INFO] appLog - 
+[2016-04-03 21:09:47.633] [INFO] appLog - 
+[2016-04-03 21:09:47.661] [INFO] appLog - 
+[2016-04-03 21:09:47.692] [INFO] appLog - 
+[2016-04-03 21:09:47.726] [INFO] appLog - 
+[2016-04-03 21:09:47.729] [INFO] appLog - 
+[2016-04-03 21:09:47.732] [INFO] appLog - 
+[2016-04-03 21:09:47.744] [INFO] appLog - 
+[2016-04-03 21:11:25.056] [INFO] appLog - 
+[2016-04-03 21:11:25.067] [INFO] appLog - 
+[2016-04-03 21:11:25.072] [INFO] appLog - 
+[2016-04-03 21:11:25.087] [INFO] appLog - 
+[2016-04-03 21:11:25.090] [INFO] appLog - 
+[2016-04-03 21:11:25.137] [INFO] appLog - 
+[2016-04-03 21:11:25.150] [INFO] appLog - 
+[2016-04-03 21:11:25.152] [INFO] appLog - 
+[2016-04-03 21:11:25.156] [INFO] appLog - 
+[2016-04-03 21:11:25.158] [INFO] appLog - 
+[2016-04-03 21:11:50.795] [INFO] appLog - Socket connection established
+[2016-04-03 21:11:51.230] [INFO] appLog - Results fetched
+[2016-04-03 21:11:51.234] [INFO] appLog - 
+[2016-04-03 21:11:51.261] [INFO] appLog - 
+[2016-04-03 21:11:51.265] [INFO] appLog - 
+[2016-04-03 21:11:51.299] [INFO] appLog - 
+[2016-04-03 21:11:51.304] [INFO] appLog - 
+[2016-04-03 21:11:51.349] [INFO] appLog - 
+[2016-04-03 21:11:51.352] [INFO] appLog - 
+[2016-04-03 21:11:51.369] [INFO] appLog - 
+[2016-04-03 21:11:51.389] [INFO] appLog - 
+[2016-04-03 21:11:51.393] [INFO] appLog - 
+[2016-04-03 21:11:52.411] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:11:52.426] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:11:52.445] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:11:52.449] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:12:06.352] [INFO] appLog - Socket connection established
+[2016-04-03 21:12:06.666] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:12:06.676] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:12:06.683] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:12:06.691] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:12:26.788] [INFO] appLog - Socket connection established
+[2016-04-03 21:12:27.130] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:12:27.139] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:12:27.153] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:12:27.157] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:30:19.050] [INFO] appLog - Socket connection established
+[2016-04-03 21:30:19.573] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:30:19.589] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:30:19.592] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:30:19.602] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:30:56.134] [INFO] appLog - Socket connection established
+[2016-04-03 21:30:56.599] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:30:56.613] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:30:56.615] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:30:56.626] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:31:16.233] [INFO] appLog - Socket connection established
+[2016-04-03 21:31:16.700] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:31:16.716] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:31:16.719] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:31:16.731] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:31:50.811] [INFO] appLog - Socket connection established
+[2016-04-03 21:31:51.250] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:31:51.265] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:31:51.268] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:31:51.281] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:32:11.082] [INFO] appLog - Socket connection established
+[2016-04-03 21:32:11.520] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:32:11.536] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:32:11.538] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:32:11.547] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:33:21.401] [INFO] appLog - Socket connection established
+[2016-04-03 21:33:21.830] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:33:21.852] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:33:21.854] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:33:21.864] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:43:51.259] [INFO] appLog - Socket connection established
+[2016-04-03 21:43:51.645] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:43:51.657] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:43:51.666] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:43:51.670] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:45:47.074] [INFO] appLog - Socket connection established
+[2016-04-03 21:45:47.464] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:45:47.472] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:45:47.486] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:45:47.493] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:49:16.283] [INFO] appLog - Socket connection established
+[2016-04-03 21:49:16.646] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:49:16.658] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:49:16.662] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:49:16.669] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:49:16.692] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:49:16.702] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:49:16.714] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:49:16.718] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:55:29.072] [INFO] appLog - Socket connection established
+[2016-04-03 21:55:29.499] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:55:29.584] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:55:29.587] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:55:29.600] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:55:29.602] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:55:29.605] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:55:29.624] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:55:29.632] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:55:29.635] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:55:29.638] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:55:29.641] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:55:29.644] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:56:56.620] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:56:56.637] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:56:56.652] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:56:56.657] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:56:56.676] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:56:56.682] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:56:56.715] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:56:56.745] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:56:56.748] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:56:56.751] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:56:56.762] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:56:56.766] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:58:01.185] [INFO] appLog - Socket connection established
+[2016-04-03 21:58:01.598] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:58:01.611] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:58:01.622] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:58:01.625] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:58:01.640] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:58:01.642] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:58:01.655] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:58:01.675] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:58:01.690] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:58:01.694] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:58:01.703] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 21:58:01.706] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:00:36.074] [INFO] appLog - Socket connection established
+[2016-04-03 22:00:36.522] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:00:36.524] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:00:36.536] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:00:36.555] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:00:36.558] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:00:36.560] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:00:36.575] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:00:36.608] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:00:36.628] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:00:36.641] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:00:36.644] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:00:36.647] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:01:25.323] [INFO] appLog - Results fetched
+[2016-04-03 22:01:25.330] [INFO] appLog - 
+[2016-04-03 22:01:32.776] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:01:32.796] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:01:32.811] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:01:32.816] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:01:32.819] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:01:32.837] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:01:32.841] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:01:32.869] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:01:32.878] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:01:32.890] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:01:32.893] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:01:32.898] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:01:34.751] [INFO] appLog - Results fetched
+[2016-04-03 22:01:34.871] [INFO] appLog - PracticeBillability: fetched details
+[2016-04-03 22:01:34.896] [INFO] appLog - PracticeBillabilityBasedOnLocation: fetched details
+[2016-04-03 22:01:34.914] [INFO] appLog - PracticeBillabilityBasedOnVertical: fetched details
+[2016-04-03 22:01:36.815] [INFO] appLog - Results fetched
+[2016-04-03 22:01:36.819] [INFO] appLog - 
+[2016-04-03 22:01:36.876] [INFO] appLog - 
+[2016-04-03 22:01:36.880] [INFO] appLog - 
+[2016-04-03 22:01:36.884] [INFO] appLog - 
+[2016-04-03 22:01:36.923] [INFO] appLog - 
+[2016-04-03 22:01:36.940] [INFO] appLog - 
+[2016-04-03 22:01:36.964] [INFO] appLog - 
+[2016-04-03 22:01:36.977] [INFO] appLog - 
+[2016-04-03 22:01:36.996] [INFO] appLog - 
+[2016-04-03 22:01:36.998] [INFO] appLog - 
+[2016-04-03 22:03:47.796] [INFO] appLog - Results fetched
+[2016-04-03 22:03:47.845] [INFO] appLog - PracticeBillability: fetched details
+[2016-04-03 22:03:47.907] [INFO] appLog - PracticeBillabilityBasedOnLocation: fetched details
+[2016-04-03 22:03:47.928] [INFO] appLog - PracticeBillabilityBasedOnVertical: fetched details
+[2016-04-03 22:03:54.617] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:03:54.625] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:03:54.642] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:03:54.645] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:03:54.651] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:03:54.662] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:03:54.666] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:03:54.678] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:03:54.698] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:03:54.714] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:03:54.716] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:03:54.720] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:04:00.008] [INFO] appLog - Results fetched
+[2016-04-03 22:04:00.020] [INFO] appLog - 
+[2016-04-03 22:05:11.776] [INFO] appLog - Results fetched
+[2016-04-03 22:05:11.780] [INFO] appLog - 
+[2016-04-03 22:05:21.719] [INFO] appLog - 
+[2016-04-03 22:05:24.932] [INFO] appLog - 
+[2016-04-03 22:51:41.667] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:51:41.701] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:51:41.704] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:51:41.715] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:51:41.718] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:51:41.720] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:51:41.737] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:51:41.754] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:51:41.756] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:51:41.758] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:51:41.761] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:51:41.767] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:54:07.031] [INFO] appLog - Socket connection established
+[2016-04-03 22:54:07.669] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:54:07.672] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:54:07.682] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:54:07.695] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:54:07.697] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:54:07.703] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:54:07.713] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:54:07.724] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:54:07.750] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:54:07.759] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:54:07.761] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:54:07.766] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:54:36.753] [INFO] appLog - Socket connection established
+[2016-04-03 22:54:37.169] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:54:37.171] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:54:37.185] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:54:37.188] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:54:37.191] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:54:37.200] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:54:37.214] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:54:37.224] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:54:37.243] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:54:37.247] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:54:37.252] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:54:37.259] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:56:02.193] [INFO] appLog - Socket connection established
+[2016-04-03 22:56:02.624] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:56:02.640] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:56:02.642] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:56:02.652] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:56:02.655] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:56:02.658] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:56:02.669] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:56:02.680] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:56:02.693] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:56:02.703] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:56:02.713] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:56:02.716] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:56:22.217] [INFO] appLog - Socket connection established
+[2016-04-03 22:56:22.616] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:56:22.633] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:56:22.636] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:56:22.642] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:56:22.655] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:56:22.660] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:56:22.671] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:56:22.694] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:56:22.698] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:56:22.712] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:56:22.715] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:56:22.718] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:59:34.719] [INFO] appLog - Socket connection established
+[2016-04-03 22:59:35.258] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:59:35.269] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:59:35.280] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:59:35.290] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:59:35.292] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:59:35.295] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:59:35.302] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:59:35.313] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:59:35.324] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:59:35.335] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:59:35.337] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:59:35.359] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 22:59:35.365] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:00:08.918] [INFO] appLog - Socket connection established
+[2016-04-03 23:00:09.413] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:00:09.430] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:00:09.440] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:00:09.444] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:00:09.446] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:00:09.451] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:00:09.458] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:00:09.477] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:00:09.480] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:00:09.484] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:00:09.497] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:00:09.499] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:00:09.511] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:06:52.028] [INFO] appLog - Socket connection established
+[2016-04-03 23:06:52.597] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:06:52.613] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:06:52.616] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:06:52.624] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:06:52.635] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:06:52.637] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:06:52.645] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:06:52.660] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:06:52.675] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:06:52.678] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:06:52.687] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:06:52.708] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:06:52.718] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:06:52.725] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:06:52.731] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:35.220] [INFO] appLog - Socket connection established
+[2016-04-03 23:07:36.153] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:36.156] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:36.170] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:36.172] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:36.179] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:36.182] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:36.190] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:36.200] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:36.216] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:36.226] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:36.235] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:36.243] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:36.255] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:36.263] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:36.269] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:47.643] [INFO] appLog - Socket connection established
+[2016-04-03 23:07:48.107] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:48.114] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:48.134] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:48.137] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:48.140] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:48.146] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:48.161] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:48.163] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:48.180] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:48.189] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:48.203] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:48.206] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:48.215] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:48.217] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:07:48.225] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:08:13.602] [INFO] appLog - Socket connection established
+[2016-04-03 23:08:14.057] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:08:14.066] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:08:14.083] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:08:14.087] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:08:14.097] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:08:14.107] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:08:14.111] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:08:14.113] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:08:14.128] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:08:14.131] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:08:14.147] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:08:14.164] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:08:14.169] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:08:14.175] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:08:14.183] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:23.530] [INFO] appLog - Socket connection established
+[2016-04-03 23:09:23.992] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:24.007] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:24.012] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:24.023] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:24.026] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:24.029] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:24.035] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:24.055] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:24.058] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:24.060] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:24.064] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:24.077] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:24.087] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:24.096] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:24.102] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:54.437] [INFO] appLog - Socket connection established
+[2016-04-03 23:09:54.867] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:54.888] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:54.892] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:54.907] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:54.909] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:54.911] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:54.921] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:54.953] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:54.959] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:54.972] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:54.974] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:54.982] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:54.989] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:55.001] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:09:55.006] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:10:06.510] [INFO] appLog - Socket connection established
+[2016-04-03 23:10:06.928] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:10:06.945] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:10:06.951] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:10:06.966] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:10:06.969] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:10:06.972] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:10:06.980] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:10:07.022] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:10:07.025] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:10:07.028] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:10:07.031] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:10:07.039] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:10:07.049] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:10:07.059] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 23:10:07.065] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched

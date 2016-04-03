@@ -34,7 +34,7 @@
             
             socket.on('connected', function(msg) {
                 console.log(msg);
-            })
+            });
         </script>
     </head>
     <body>
@@ -54,5 +54,15 @@
         <script src="js/exporting.js"></script>
         <script src="js/jspdf.js"></script>
         <script src="js/rgbcolor.js"></script>        
+        <script>
+
+             $(function () {
+                Highcharts.setOptions({
+                    lang: {
+                        thousandsSep: ','
+                    }
+                });
+            });                
+        </script>
     </body>
 </html>

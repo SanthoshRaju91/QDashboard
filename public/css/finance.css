@@ -511,3 +511,7 @@ ul.alert-dropdown {
     font-size: 11.5px;
     letter-spacing: 0.3px;
 }
+
+.panel-finance .panel-body {
+    padding: 5px;
+}
