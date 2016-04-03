@@ -1,67 +1,103 @@
 <div class = "container">
-    <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-    <!--<table id = "datatable" class="table table-responsive table-hover">
-        <thead>
-            <tr>
-                <th></th>
-                <th>Planned</th>
-                <th>Actual</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat = 'row in financeQuarterMetrics'>
-                <th>{{row.metricsName}}</th>
-                <td>{{row.plannedValue}}</td>
-                <td>{{row.actualValue}}</td>
-            </tr>
-        </tbody>
-    </table>-->
-    
-    <table id="datatable">
-        <thead>
-            <tr>
-                <th></th>
-                <th>Planned</th>
-                <th>Actual</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat = 'row in financeQuarterMetrics'>
-                <th>{{row.metricsName}}</th>
-                <td>{{row.plannedValue}}</td>
-                <td>{{row.actualValue}}</td>
-            </tr>
-        </tbody>
-    </table>
-    
+    <!-- <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>     -->
+    <div class = "row">
+        <h5>Financial & Services</h5>
+        <div class="col-md-3">
+            <highchart id = "chart1" class = "myChart1" config = "ManufacturingQ1"></highchart>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">            
+            <div class="panel panel-default panel-table panel-finance-custom">
+                <h5 class = "text-center" style = "color:#fff; z-index: 9999px;font-weight: 600; letter-spacing: 0.3px;">Financial & Services - Q1</h5>
+                <div class="panel-body">
+                    <table class = "table table-condensed table-custom animated fadeIn">
+                        <thead>
+                            <tr>
+                                <th>Metrics</th>
+                                <th>Planned</th>
+                                <th>Actual</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat = 'row in financeQuarterMetrics'>
+                                <td>{{row.metricsName}}</td>                
+                                <td>{{row.Plan | currency: "$": 0 }}</td>
+                                <td>{{row.Actual | currency: "$": 0}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default panel-table panel-finance-custom">
+                <h5 class = "text-center" style = "color:#fff; z-index: 9999px;font-weight: 600; letter-spacing: 0.3px;">Financial & Services - Q2</h5>
+                <div class="panel-body">
+                    <table class = "table table-condensed table-custom animated fadeIn">
+                        <thead>
+                            <tr>
+                                <th>Metrics</th>
+                                <th>Planned</th>
+                                <th>Actual</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat = 'row in financeQuarterMetrics'>
+                                <td>{{row.metricsName}}</td>                
+                                <td>{{row.Plan | currency: "$": 0 }}</td>
+                                <td>{{row.Actual | currency: "$": 0}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default panel-table panel-finance-custom">
+                <h5 class = "text-center" style = "color:#fff; z-index: 9999px;font-weight: 600; letter-spacing: 0.3px;">Financial & Services - Q3</h5>
+                <div class="panel-body">
+                    <table class = "table table-condensed table-custom animated fadeIn">
+                        <thead>
+                            <tr>
+                                <th>Metrics</th>
+                                <th>Planned</th>
+                                <th>Actual</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat = 'row in financeQuarterMetrics'>
+                                <td>{{row.metricsName}}</td>                
+                                <td>{{row.Plan | currency: "$": 0 }}</td>
+                                <td>{{row.Actual | currency: "$": 0}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default panel-table panel-finance-custom">
+                <h5 class = "text-center" style = "color:#fff; z-index: 9999px;font-weight: 600; letter-spacing: 0.3px;">Financial & Services - Q4</h5>
+                <div class="panel-body">
+                    <table class = "table table-condensed table-custom animated fadeIn">
+                        <thead>
+                            <tr>
+                                <th>Metrics</th>
+                                <th>Planned</th>
+                                <th>Actual</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat = 'row in financeQuarterMetrics'>
+                                <td>{{row.metricsName}}</td>                
+                                <td>{{row.Plan | currency: "$": 0 }}</td>
+                                <td>{{row.Actual | currency: "$": 0}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>    
 </div>
-
-<script>
-    $(function() {
-        setTimeout(function() {
-            $('#container').highcharts({
-                data: {
-                    table: 'datatable'
-                },
-                chart: {
-                    type: 'column'
-                },
-                title: {
-                    text: 'Data extracted from a HTML table in the page'
-                },
-                yAxis: {
-                    allowDecimals: false,
-                    title: {
-                        text: 'Units'
-                    }
-                },
-                tooltip: {
-                    formatter: function () {
-                        return '<b>' + this.series.name + '</b><br/>' +
-                            this.point.y + ' ' + this.point.name.toLowerCase();
-                    }
-                }
-            });
-        }, 1000); 
-    });    
-</script>

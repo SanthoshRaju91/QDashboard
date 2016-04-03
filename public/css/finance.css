@@ -502,3 +502,12 @@ ul.alert-dropdown {
     font-size: 12px;
     letter-spacing: 0.5px;
 }
+
+.panel-finance-custom .panel-body {
+    padding: 5px !important;
+}
+
+.panel-finance-custom .panel-body .table td, .panel-finance-custom .panel-body .table th {
+    font-size: 11.5px;
+    letter-spacing: 0.3px;
+}
