@@ -5444,3 +5444,801 @@
 [2016-03-31 10:34:24.435] [INFO] appLog - 
 [2016-03-31 10:34:31.590] [INFO] appLog - 
 [2016-03-31 10:35:00.335] [INFO] appLog - 
+[2016-03-31 12:04:12.127] [INFO] appLog - Server listening on port: 3000
+[2016-03-31 12:04:12.159] [INFO] appLog - Connected to Mongo DB successfully
+[2016-03-31 12:04:19.114] [INFO] appLog - Results fetched
+[2016-03-31 12:04:19.244] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-31 12:04:19.336] [INFO] appLog - PracticeBillabilityBasedOnLocation: fetched details
+[2016-03-31 12:04:19.365] [INFO] appLog - PracticeBillabilityBasedOnVertical: fetched details
+[2016-03-31 12:04:25.336] [INFO] appLog - Results fetched
+[2016-03-31 12:04:25.457] [INFO] appLog - PracticeBillability: fetched details
+[2016-03-31 12:04:25.481] [INFO] appLog - PracticeBillabilityBasedOnLocation: fetched details
+[2016-03-31 12:04:25.497] [INFO] appLog - PracticeBillabilityBasedOnVertical: fetched details
+[2016-04-01 08:36:53.477] [INFO] appLog - Server listening on port: 3000
+[2016-04-01 08:36:53.503] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-01 08:37:44.890] [INFO] appLog - Results fetched
+[2016-04-01 08:37:44.953] [INFO] appLog - 
+[2016-04-01 08:37:44.980] [INFO] appLog - 
+[2016-04-01 08:37:45.024] [INFO] appLog - 
+[2016-04-01 08:37:45.031] [INFO] appLog - 
+[2016-04-01 08:37:45.060] [INFO] appLog - 
+[2016-04-01 08:37:45.086] [INFO] appLog - 
+[2016-04-01 08:37:45.117] [INFO] appLog - 
+[2016-04-01 08:37:45.121] [INFO] appLog - 
+[2016-04-01 08:37:45.137] [INFO] appLog - 
+[2016-04-01 08:37:45.151] [INFO] appLog - 
+[2016-04-01 08:39:21.322] [INFO] appLog - Results fetched
+[2016-04-01 08:39:21.400] [INFO] appLog - 
+[2016-04-01 08:39:21.402] [INFO] appLog - 
+[2016-04-01 08:39:21.406] [INFO] appLog - 
+[2016-04-01 08:39:21.421] [INFO] appLog - 
+[2016-04-01 08:39:21.461] [INFO] appLog - 
+[2016-04-01 08:39:21.466] [INFO] appLog - 
+[2016-04-01 08:39:21.494] [INFO] appLog - 
+[2016-04-01 08:39:21.496] [INFO] appLog - 
+[2016-04-01 08:39:21.530] [INFO] appLog - 
+[2016-04-01 08:39:21.532] [INFO] appLog - 
+[2016-04-01 08:39:26.793] [INFO] appLog - 
+[2016-04-01 08:39:26.806] [INFO] appLog - 
+[2016-04-01 08:39:26.819] [INFO] appLog - 
+[2016-04-01 08:39:26.826] [INFO] appLog - 
+[2016-04-01 08:39:26.841] [INFO] appLog - 
+[2016-04-01 08:39:26.846] [INFO] appLog - 
+[2016-04-01 08:39:26.851] [INFO] appLog - 
+[2016-04-01 08:39:26.855] [INFO] appLog - 
+[2016-04-01 08:39:26.860] [INFO] appLog - 
+[2016-04-01 08:39:26.866] [INFO] appLog - 
+[2016-04-01 08:39:31.572] [INFO] appLog - Results fetched
+[2016-04-01 08:39:31.704] [INFO] appLog - PracticeBillability: fetched details
+[2016-04-01 08:39:31.723] [INFO] appLog - PracticeBillabilityBasedOnLocation: fetched details
+[2016-04-01 08:39:31.742] [INFO] appLog - PracticeBillabilityBasedOnVertical: fetched details
+[2016-04-01 08:39:37.751] [INFO] appLog - Results fetched
+[2016-04-01 08:39:37.774] [INFO] appLog - 
+[2016-04-01 14:02:50.797] [INFO] appLog - Server listening on port: 3000
+[2016-04-01 14:02:50.829] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-01 14:03:14.277] [INFO] appLog - 
+[2016-04-01 14:03:14.338] [INFO] appLog - 
+[2016-04-01 14:03:14.341] [INFO] appLog - 
+[2016-04-01 14:03:14.344] [INFO] appLog - 
+[2016-04-01 14:03:14.349] [INFO] appLog - 
+[2016-04-01 14:03:14.356] [INFO] appLog - Results fetched
+[2016-04-01 14:03:14.372] [INFO] appLog - 
+[2016-04-01 14:03:14.386] [INFO] appLog - 
+[2016-04-01 14:03:14.432] [INFO] appLog - 
+[2016-04-01 14:03:14.435] [INFO] appLog - 
+[2016-04-01 14:03:14.448] [INFO] appLog - 
+[2016-04-01 14:03:18.905] [INFO] appLog - 
+[2016-04-01 14:03:18.914] [INFO] appLog - 
+[2016-04-01 14:03:18.945] [INFO] appLog - 
+[2016-04-01 14:03:18.947] [INFO] appLog - 
+[2016-04-01 14:03:18.954] [INFO] appLog - 
+[2016-04-01 14:03:18.960] [INFO] appLog - 
+[2016-04-01 14:03:18.976] [INFO] appLog - 
+[2016-04-01 14:03:18.985] [INFO] appLog - 
+[2016-04-01 14:03:18.994] [INFO] appLog - 
+[2016-04-01 14:03:18.997] [INFO] appLog - 
+[2016-04-01 14:03:21.873] [INFO] appLog - 
+[2016-04-01 14:03:21.905] [INFO] appLog - 
+[2016-04-01 14:03:21.907] [INFO] appLog - 
+[2016-04-01 14:03:21.911] [INFO] appLog - 
+[2016-04-01 14:03:21.926] [INFO] appLog - 
+[2016-04-01 14:03:21.936] [INFO] appLog - 
+[2016-04-01 14:03:21.951] [INFO] appLog - 
+[2016-04-01 14:03:21.966] [INFO] appLog - 
+[2016-04-01 14:03:21.972] [INFO] appLog - 
+[2016-04-01 14:03:21.973] [INFO] appLog - 
+[2016-04-01 14:03:26.344] [INFO] appLog - Results fetched
+[2016-04-01 14:03:26.428] [INFO] appLog - PracticeBillability: fetched details
+[2016-04-01 14:03:26.451] [INFO] appLog - PracticeBillabilityBasedOnLocation: fetched details
+[2016-04-01 14:03:26.510] [INFO] appLog - PracticeBillabilityBasedOnVertical: fetched details
+[2016-04-01 14:07:01.236] [INFO] appLog - Server listening on port: 3000
+[2016-04-01 14:07:01.262] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-01 14:07:40.504] [INFO] appLog - Server listening on port: 3000
+[2016-04-01 14:07:40.530] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-01 14:08:11.891] [INFO] appLog - Server listening on port: 3000
+[2016-04-01 14:08:11.916] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-01 14:08:46.150] [INFO] appLog - Server listening on port: 3000
+[2016-04-01 14:08:46.175] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-02 00:23:02.549] [INFO] appLog - Server listening on port: 3000
+[2016-04-02 00:23:02.583] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-02 00:23:16.333] [INFO] appLog - Results fetched
+[2016-04-02 00:23:16.378] [INFO] appLog - 
+[2016-04-02 00:23:16.412] [INFO] appLog - 
+[2016-04-02 00:23:16.432] [INFO] appLog - 
+[2016-04-02 00:23:16.481] [INFO] appLog - 
+[2016-04-02 00:23:16.482] [INFO] appLog - 
+[2016-04-02 00:23:16.504] [INFO] appLog - 
+[2016-04-02 00:23:16.521] [INFO] appLog - 
+[2016-04-02 00:23:16.542] [INFO] appLog - 
+[2016-04-02 00:23:16.556] [INFO] appLog - 
+[2016-04-02 00:23:16.570] [INFO] appLog - 
+[2016-04-02 01:01:14.940] [INFO] appLog - Results fetched
+[2016-04-02 01:01:14.952] [INFO] appLog - 
+[2016-04-02 01:01:14.956] [INFO] appLog - 
+[2016-04-02 01:01:15.012] [INFO] appLog - 
+[2016-04-02 01:01:15.016] [INFO] appLog - 
+[2016-04-02 01:01:15.019] [INFO] appLog - 
+[2016-04-02 01:01:15.108] [INFO] appLog - 
+[2016-04-02 01:01:15.124] [INFO] appLog - 
+[2016-04-02 01:01:15.128] [INFO] appLog - 
+[2016-04-02 01:01:15.213] [INFO] appLog - 
+[2016-04-02 01:01:15.220] [INFO] appLog - 
+[2016-04-02 01:01:16.802] [INFO] appLog - Results fetched
+[2016-04-02 01:01:19.924] [INFO] appLog - PracticeBillability: fetched details
+[2016-04-02 01:01:19.939] [INFO] appLog - PracticeBillabilityBasedOnVertical: fetched details
+[2016-04-02 01:01:19.954] [INFO] appLog - PracticeBillabilityBasedOnLocation: fetched details
+[2016-04-02 01:02:08.058] [INFO] appLog - PracticeBillability on date : fetched details
+[2016-04-02 01:02:08.084] [INFO] appLog - PracticeBillabilityBasedOnLocation on date : fetched details
+[2016-04-02 01:02:08.098] [INFO] appLog - PracticeBillabilityBasedOnVertical on date : fetched data
+[2016-04-02 01:02:53.658] [INFO] appLog - Results fetched
+[2016-04-02 01:02:53.667] [INFO] appLog - 
+[2016-04-02 01:02:59.547] [INFO] appLog - 
+[2016-04-02 01:03:05.637] [INFO] appLog - Results fetched
+[2016-04-02 01:03:05.716] [INFO] appLog - PracticeBillability: fetched details
+[2016-04-02 01:03:05.750] [INFO] appLog - PracticeBillabilityBasedOnVertical: fetched details
+[2016-04-02 01:03:05.754] [INFO] appLog - PracticeBillabilityBasedOnLocation: fetched details
+[2016-04-02 01:03:08.447] [INFO] appLog - Results fetched
+[2016-04-02 01:03:08.472] [INFO] appLog - 
+[2016-04-02 01:03:08.473] [INFO] appLog - 
+[2016-04-02 01:03:08.475] [INFO] appLog - 
+[2016-04-02 01:03:08.492] [INFO] appLog - 
+[2016-04-02 01:03:08.494] [INFO] appLog - 
+[2016-04-02 01:03:08.510] [INFO] appLog - 
+[2016-04-02 01:03:08.527] [INFO] appLog - 
+[2016-04-02 01:03:08.554] [INFO] appLog - 
+[2016-04-02 01:03:08.556] [INFO] appLog - 
+[2016-04-02 01:03:08.564] [INFO] appLog - 
+[2016-04-02 01:03:09.986] [INFO] appLog - Results fetched
+[2016-04-02 01:03:10.058] [INFO] appLog - PracticeBillability: fetched details
+[2016-04-02 01:03:10.078] [INFO] appLog - PracticeBillabilityBasedOnLocation: fetched details
+[2016-04-02 01:03:10.094] [INFO] appLog - PracticeBillabilityBasedOnVertical: fetched details
+[2016-04-02 01:03:27.003] [INFO] appLog - Results fetched
+[2016-04-02 01:03:27.006] [INFO] appLog - 
+[2016-04-02 01:03:27.027] [INFO] appLog - 
+[2016-04-02 01:03:27.038] [INFO] appLog - 
+[2016-04-02 01:03:27.077] [INFO] appLog - 
+[2016-04-02 01:03:27.079] [INFO] appLog - 
+[2016-04-02 01:03:27.082] [INFO] appLog - 
+[2016-04-02 01:03:27.097] [INFO] appLog - 
+[2016-04-02 01:03:27.112] [INFO] appLog - 
+[2016-04-02 01:03:27.113] [INFO] appLog - 
+[2016-04-02 01:03:27.123] [INFO] appLog - 
+[2016-04-02 08:23:19.118] [INFO] appLog - Results fetched
+[2016-04-02 08:23:19.140] [INFO] appLog - 
+[2016-04-02 08:23:19.142] [INFO] appLog - 
+[2016-04-02 08:23:19.143] [INFO] appLog - 
+[2016-04-02 08:23:19.163] [INFO] appLog - 
+[2016-04-02 08:23:19.171] [INFO] appLog - 
+[2016-04-02 08:23:19.207] [INFO] appLog - 
+[2016-04-02 08:23:19.209] [INFO] appLog - 
+[2016-04-02 08:23:19.211] [INFO] appLog - 
+[2016-04-02 08:23:19.212] [INFO] appLog - 
+[2016-04-02 08:23:19.222] [INFO] appLog - 
+[2016-04-02 08:23:20.997] [INFO] appLog - Results fetched
+[2016-04-02 08:23:21.063] [INFO] appLog - PracticeBillability: fetched details
+[2016-04-02 08:23:21.082] [INFO] appLog - PracticeBillabilityBasedOnLocation: fetched details
+[2016-04-02 08:23:21.091] [INFO] appLog - PracticeBillabilityBasedOnVertical: fetched details
+[2016-04-02 08:23:28.356] [INFO] appLog - Results fetched
+[2016-04-02 08:23:28.365] [INFO] appLog - 
+[2016-04-02 13:04:11.011] [INFO] appLog - Results fetched
+[2016-04-02 13:04:13.032] [INFO] appLog - 
+[2016-04-02 17:43:06.446] [INFO] appLog - Server listening on port: 3000
+[2016-04-02 17:43:06.473] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-02 17:43:17.878] [INFO] appLog - Results fetched
+[2016-04-02 17:43:17.938] [INFO] appLog - 
+[2016-04-02 17:43:17.968] [INFO] appLog - 
+[2016-04-02 17:43:18.015] [INFO] appLog - 
+[2016-04-02 17:43:18.055] [INFO] appLog - 
+[2016-04-02 17:43:18.057] [INFO] appLog - 
+[2016-04-02 17:43:18.106] [INFO] appLog - 
+[2016-04-02 17:43:18.149] [INFO] appLog - 
+[2016-04-02 17:43:18.152] [INFO] appLog - 
+[2016-04-02 17:43:18.181] [INFO] appLog - 
+[2016-04-02 17:43:18.199] [INFO] appLog - 
+[2016-04-03 00:09:08.135] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 00:09:08.166] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 01:23:52.056] [INFO] appLog - Results fetched
+[2016-04-03 01:23:52.088] [INFO] appLog - 
+[2016-04-03 01:23:52.139] [INFO] appLog - 
+[2016-04-03 01:23:52.156] [INFO] appLog - 
+[2016-04-03 01:23:52.165] [INFO] appLog - 
+[2016-04-03 01:23:52.198] [INFO] appLog - 
+[2016-04-03 01:23:52.221] [INFO] appLog - 
+[2016-04-03 01:23:52.231] [INFO] appLog - 
+[2016-04-03 01:23:52.249] [INFO] appLog - 
+[2016-04-03 01:23:52.268] [INFO] appLog - 
+[2016-04-03 01:23:52.290] [INFO] appLog - 
+[2016-04-03 01:23:56.784] [INFO] appLog - Results fetched
+[2016-04-03 01:23:56.903] [INFO] appLog - PracticeBillability: fetched details
+[2016-04-03 01:23:56.908] [INFO] appLog - PracticeBillabilityBasedOnLocation: fetched details
+[2016-04-03 01:23:56.935] [INFO] appLog - PracticeBillabilityBasedOnVertical: fetched details
+[2016-04-03 01:24:01.804] [INFO] appLog - Results fetched
+[2016-04-03 01:24:01.814] [INFO] appLog - 
+[2016-04-03 01:24:31.727] [INFO] appLog - Results fetched
+[2016-04-03 01:24:31.742] [INFO] appLog - 
+[2016-04-03 01:24:31.743] [INFO] appLog - 
+[2016-04-03 01:24:31.783] [INFO] appLog - 
+[2016-04-03 01:24:31.822] [INFO] appLog - 
+[2016-04-03 01:24:31.823] [INFO] appLog - 
+[2016-04-03 01:24:31.825] [INFO] appLog - 
+[2016-04-03 01:24:31.839] [INFO] appLog - 
+[2016-04-03 01:24:31.851] [INFO] appLog - 
+[2016-04-03 01:24:31.863] [INFO] appLog - 
+[2016-04-03 01:24:31.874] [INFO] appLog - 
+[2016-04-03 01:24:35.122] [INFO] appLog - Results fetched
+[2016-04-03 01:24:35.131] [INFO] appLog - 
+[2016-04-03 01:24:38.896] [INFO] appLog - Results fetched
+[2016-04-03 01:24:39.009] [INFO] appLog - PracticeBillability: fetched details
+[2016-04-03 01:24:39.014] [INFO] appLog - PracticeBillabilityBasedOnLocation: fetched details
+[2016-04-03 01:24:39.033] [INFO] appLog - PracticeBillabilityBasedOnVertical: fetched details
+[2016-04-03 01:33:56.428] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 01:33:56.457] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 01:38:06.534] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 01:38:06.562] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 01:38:12.559] [INFO] appLog - Results fetched
+[2016-04-03 01:38:12.628] [INFO] appLog - PracticeBillability: fetched details
+[2016-04-03 01:38:12.758] [INFO] appLog - PracticeBillabilityBasedOnLocation: fetched details
+[2016-04-03 01:38:12.790] [INFO] appLog - PracticeBillabilityBasedOnVertical: fetched details
+[2016-04-03 01:39:57.481] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 01:39:57.512] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 01:42:37.476] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 01:42:37.503] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 01:44:12.442] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 01:44:12.473] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 01:48:06.440] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 01:48:06.467] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 01:48:12.829] [INFO] appLog - Socket ports running
+[2016-04-03 01:48:51.301] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 01:48:51.329] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 01:48:53.488] [INFO] appLog - Socket connection established
+[2016-04-03 01:52:20.829] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 01:52:20.870] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 01:52:20.905] [INFO] appLog - Socket connection established
+[2016-04-03 01:52:26.732] [INFO] appLog - Socket connection established
+[2016-04-03 01:53:17.653] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 01:53:17.692] [INFO] appLog - Socket connection established
+[2016-04-03 01:53:17.720] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 01:53:24.241] [INFO] appLog - Socket connection established
+[2016-04-03 01:53:28.147] [INFO] appLog - Results fetched
+[2016-04-03 01:53:28.186] [INFO] appLog - 
+[2016-04-03 01:53:28.217] [INFO] appLog - 
+[2016-04-03 01:53:28.235] [INFO] appLog - 
+[2016-04-03 01:53:28.265] [INFO] appLog - 
+[2016-04-03 01:53:28.299] [INFO] appLog - 
+[2016-04-03 01:53:28.327] [INFO] appLog - 
+[2016-04-03 01:53:28.354] [INFO] appLog - 
+[2016-04-03 01:53:28.366] [INFO] appLog - 
+[2016-04-03 01:53:28.411] [INFO] appLog - 
+[2016-04-03 01:53:28.444] [INFO] appLog - 
+[2016-04-03 01:55:33.829] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 01:55:33.867] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 01:55:34.822] [INFO] appLog - Socket connection established
+[2016-04-03 01:55:37.883] [INFO] appLog - Socket connection established
+[2016-04-03 01:57:30.697] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 01:57:30.726] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 01:57:30.881] [INFO] appLog - Socket connection established
+[2016-04-03 01:57:33.479] [INFO] appLog - Socket connection established
+[2016-04-03 01:58:04.912] [INFO] appLog - Socket connection established
+[2016-04-03 01:59:09.507] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 01:59:09.534] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 01:59:12.717] [INFO] appLog - Socket connection established
+[2016-04-03 02:01:42.341] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 02:01:42.372] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 02:01:42.400] [INFO] appLog - Socket connection established
+[2016-04-03 02:01:46.824] [INFO] appLog - Socket connection established
+[2016-04-03 02:02:32.463] [INFO] appLog - Socket connection established
+[2016-04-03 02:04:35.565] [INFO] appLog - Socket connection established
+[2016-04-03 02:04:58.119] [INFO] appLog - Socket connection established
+[2016-04-03 02:05:09.417] [INFO] appLog - Socket connection established
+[2016-04-03 02:05:29.815] [INFO] appLog - Socket connection established
+[2016-04-03 02:06:32.480] [INFO] appLog - Socket connection established
+[2016-04-03 02:06:49.359] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 02:06:49.386] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 02:06:49.560] [INFO] appLog - Socket connection established
+[2016-04-03 02:06:52.647] [INFO] appLog - Socket connection established
+[2016-04-03 02:08:02.671] [INFO] appLog - Socket connection established
+[2016-04-03 02:09:17.987] [INFO] appLog - Socket connection established
+[2016-04-03 02:09:31.172] [INFO] appLog - Socket connection established
+[2016-04-03 02:09:46.651] [INFO] appLog - Socket connection established
+[2016-04-03 02:10:04.627] [INFO] appLog - Socket connection established
+[2016-04-03 02:15:17.837] [INFO] appLog - Socket connection established
+[2016-04-03 02:15:22.333] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 02:15:22.360] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 02:15:23.751] [INFO] appLog - Socket connection established
+[2016-04-03 02:15:27.775] [INFO] appLog - Socket connection established
+[2016-04-03 02:18:26.566] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 02:18:26.593] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 02:18:29.931] [INFO] appLog - Socket connection established
+[2016-04-03 02:18:43.257] [INFO] appLog - Socket connection established
+[2016-04-03 02:18:48.336] [INFO] appLog - Socket connection established
+[2016-04-03 02:19:07.424] [INFO] appLog - Socket connection established
+[2016-04-03 02:19:45.627] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 02:19:45.667] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 02:19:45.687] [INFO] appLog - Socket connection established
+[2016-04-03 02:19:50.330] [INFO] appLog - Socket connection established
+[2016-04-03 02:21:37.106] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 02:21:37.147] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 02:22:42.551] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 02:22:42.578] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 02:22:43.794] [INFO] appLog - Socket connection established
+[2016-04-03 02:22:47.388] [INFO] appLog - Socket connection established
+[2016-04-03 02:23:12.378] [INFO] appLog - Socket connection established
+[2016-04-03 02:23:22.069] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 02:23:22.096] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 02:23:22.185] [INFO] appLog - Socket connection established
+[2016-04-03 02:23:27.398] [INFO] appLog - Socket connection established
+[2016-04-03 02:24:25.249] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 02:24:25.300] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 02:24:27.880] [INFO] appLog - Socket connection established
+[2016-04-03 02:25:09.202] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 02:25:09.234] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 02:30:27.305] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 02:30:27.335] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 02:30:27.434] [INFO] appLog - Socket connection established
+[2016-04-03 02:30:31.991] [INFO] appLog - Socket connection established
+[2016-04-03 02:31:02.580] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 02:31:02.612] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 02:33:18.572] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 02:33:18.601] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 02:33:18.716] [INFO] appLog - Socket connection established
+[2016-04-03 02:33:23.531] [INFO] appLog - Socket connection established
+[2016-04-03 02:33:23.855] [INFO] appLog - Socket connection established
+[2016-04-03 02:34:22.555] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 02:34:22.585] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 02:34:22.664] [INFO] appLog - Socket connection established
+[2016-04-03 02:34:23.668] [INFO] appLog - Socket connection established
+[2016-04-03 02:34:26.304] [INFO] appLog - Socket connection established
+[2016-04-03 02:34:26.610] [INFO] appLog - Socket connection established
+[2016-04-03 02:34:49.840] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 02:34:49.866] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 02:36:10.123] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 02:36:10.164] [INFO] appLog - Socket connection established
+[2016-04-03 02:36:10.183] [INFO] appLog - Socket connection established
+[2016-04-03 02:36:10.193] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 02:36:18.500] [INFO] appLog - Socket connection established
+[2016-04-03 02:36:18.817] [INFO] appLog - Socket connection established
+[2016-04-03 02:38:05.701] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 02:38:05.728] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 02:38:06.409] [INFO] appLog - Socket connection established
+[2016-04-03 02:38:07.327] [INFO] appLog - Socket connection established
+[2016-04-03 02:38:16.296] [INFO] appLog - Socket connection established
+[2016-04-03 02:38:16.312] [INFO] appLog - Socket connection established
+[2016-04-03 02:38:45.091] [INFO] appLog - Socket connection established
+[2016-04-03 02:44:14.366] [INFO] appLog - Socket connection established
+[2016-04-03 02:47:22.481] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 02:47:22.515] [INFO] appLog - Socket connection established
+[2016-04-03 02:47:22.533] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 02:47:29.932] [INFO] appLog - Socket connection established
+[2016-04-03 11:45:43.356] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 11:45:43.392] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 11:45:46.829] [INFO] appLog - Socket connection established
+[2016-04-03 11:45:48.819] [INFO] appLog - Socket connection established
+[2016-04-03 11:46:09.434] [INFO] appLog - Socket connection established
+[2016-04-03 11:46:12.351] [INFO] appLog - Socket connection established
+[2016-04-03 11:48:08.107] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 11:48:08.136] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 11:49:54.548] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 11:49:54.578] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 11:50:38.108] [INFO] appLog - Results fetched
+[2016-04-03 11:50:38.155] [INFO] appLog - 
+[2016-04-03 11:50:38.179] [INFO] appLog - 
+[2016-04-03 11:50:38.209] [INFO] appLog - 
+[2016-04-03 11:50:38.213] [INFO] appLog - 
+[2016-04-03 11:50:38.237] [INFO] appLog - 
+[2016-04-03 11:50:38.267] [INFO] appLog - 
+[2016-04-03 11:50:38.299] [INFO] appLog - 
+[2016-04-03 11:50:38.302] [INFO] appLog - 
+[2016-04-03 11:50:38.334] [INFO] appLog - 
+[2016-04-03 11:50:38.336] [INFO] appLog - 
+[2016-04-03 11:50:48.904] [INFO] appLog - Results fetched
+[2016-04-03 11:50:48.920] [INFO] appLog - 
+[2016-04-03 11:50:48.951] [INFO] appLog - 
+[2016-04-03 11:50:48.996] [INFO] appLog - 
+[2016-04-03 11:50:48.999] [INFO] appLog - 
+[2016-04-03 11:50:49.039] [INFO] appLog - 
+[2016-04-03 11:50:49.043] [INFO] appLog - 
+[2016-04-03 11:50:49.063] [INFO] appLog - 
+[2016-04-03 11:50:49.092] [INFO] appLog - 
+[2016-04-03 11:50:49.094] [INFO] appLog - 
+[2016-04-03 11:50:49.105] [INFO] appLog - 
+[2016-04-03 11:51:43.778] [INFO] appLog - Results fetched
+[2016-04-03 11:51:43.796] [INFO] appLog - 
+[2016-04-03 11:51:43.817] [INFO] appLog - 
+[2016-04-03 11:51:43.848] [INFO] appLog - 
+[2016-04-03 11:51:43.851] [INFO] appLog - 
+[2016-04-03 11:51:43.885] [INFO] appLog - 
+[2016-04-03 11:51:43.908] [INFO] appLog - 
+[2016-04-03 11:51:43.927] [INFO] appLog - 
+[2016-04-03 11:51:43.952] [INFO] appLog - 
+[2016-04-03 11:51:43.954] [INFO] appLog - 
+[2016-04-03 11:51:43.968] [INFO] appLog - 
+[2016-04-03 11:53:04.865] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 11:53:04.895] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 11:53:09.118] [INFO] appLog - Results fetched
+[2016-04-03 11:53:09.164] [INFO] appLog - 
+[2016-04-03 11:53:09.193] [INFO] appLog - 
+[2016-04-03 11:53:09.227] [INFO] appLog - 
+[2016-04-03 11:53:09.261] [INFO] appLog - 
+[2016-04-03 11:53:09.264] [INFO] appLog - 
+[2016-04-03 11:53:09.295] [INFO] appLog - 
+[2016-04-03 11:53:09.328] [INFO] appLog - 
+[2016-04-03 11:53:09.331] [INFO] appLog - 
+[2016-04-03 11:53:09.365] [INFO] appLog - 
+[2016-04-03 11:53:09.368] [INFO] appLog - 
+[2016-04-03 11:53:40.067] [INFO] appLog - Results fetched
+[2016-04-03 11:53:40.104] [INFO] appLog - 
+[2016-04-03 11:53:40.105] [INFO] appLog - 
+[2016-04-03 11:53:40.152] [INFO] appLog - 
+[2016-04-03 11:53:40.184] [INFO] appLog - 
+[2016-04-03 11:53:40.210] [INFO] appLog - 
+[2016-04-03 11:53:40.242] [INFO] appLog - 
+[2016-04-03 11:53:40.262] [INFO] appLog - 
+[2016-04-03 11:53:40.310] [INFO] appLog - 
+[2016-04-03 11:53:40.313] [INFO] appLog - 
+[2016-04-03 11:53:40.327] [INFO] appLog - 
+[2016-04-03 11:54:10.213] [INFO] appLog - Results fetched
+[2016-04-03 11:54:10.220] [INFO] appLog - 
+[2016-04-03 11:54:10.245] [INFO] appLog - 
+[2016-04-03 11:54:10.264] [INFO] appLog - 
+[2016-04-03 11:54:10.267] [INFO] appLog - 
+[2016-04-03 11:54:10.326] [INFO] appLog - 
+[2016-04-03 11:54:10.329] [INFO] appLog - 
+[2016-04-03 11:54:10.356] [INFO] appLog - 
+[2016-04-03 11:54:10.371] [INFO] appLog - 
+[2016-04-03 11:54:10.405] [INFO] appLog - 
+[2016-04-03 11:54:10.409] [INFO] appLog - 
+[2016-04-03 11:58:17.455] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 11:58:17.488] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 11:58:17.671] [INFO] appLog - Socket connection established
+[2016-04-03 11:58:18.896] [INFO] appLog - Socket connection established
+[2016-04-03 11:58:27.156] [INFO] appLog - Socket connection established
+[2016-04-03 11:58:31.429] [INFO] appLog - Socket connection established
+[2016-04-03 11:58:35.593] [INFO] appLog - Results fetched
+[2016-04-03 11:58:35.653] [INFO] appLog - 
+[2016-04-03 11:58:35.680] [INFO] appLog - 
+[2016-04-03 11:58:35.711] [INFO] appLog - 
+[2016-04-03 11:58:35.736] [INFO] appLog - 
+[2016-04-03 11:58:35.762] [INFO] appLog - 
+[2016-04-03 11:58:35.784] [INFO] appLog - 
+[2016-04-03 11:58:35.811] [INFO] appLog - 
+[2016-04-03 11:58:35.814] [INFO] appLog - 
+[2016-04-03 11:58:35.842] [INFO] appLog - 
+[2016-04-03 11:58:35.856] [INFO] appLog - 
+[2016-04-03 11:59:27.802] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 11:59:27.829] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 11:59:28.363] [INFO] appLog - Socket connection established
+[2016-04-03 11:59:29.588] [INFO] appLog - Socket connection established
+[2016-04-03 12:00:10.174] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 12:00:10.200] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 12:00:10.222] [INFO] appLog - Socket connection established
+[2016-04-03 12:00:23.447] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 12:00:23.475] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 12:00:26.622] [INFO] appLog - Socket connection established
+[2016-04-03 12:00:27.055] [INFO] appLog - Socket connection established
+[2016-04-03 12:00:27.475] [INFO] appLog - Results fetched
+[2016-04-03 12:00:27.538] [INFO] appLog - 
+[2016-04-03 12:00:27.565] [INFO] appLog - 
+[2016-04-03 12:00:27.599] [INFO] appLog - 
+[2016-04-03 12:00:27.638] [INFO] appLog - 
+[2016-04-03 12:00:27.641] [INFO] appLog - 
+[2016-04-03 12:00:27.663] [INFO] appLog - 
+[2016-04-03 12:00:27.675] [INFO] appLog - 
+[2016-04-03 12:00:27.691] [INFO] appLog - 
+[2016-04-03 12:00:27.709] [INFO] appLog - 
+[2016-04-03 12:00:27.727] [INFO] appLog - 
+[2016-04-03 12:00:30.751] [INFO] appLog - Socket connection established
+[2016-04-03 12:02:47.517] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 12:02:47.544] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 12:02:49.006] [INFO] appLog - Socket connection established
+[2016-04-03 12:02:49.495] [INFO] appLog - Socket connection established
+[2016-04-03 12:02:54.809] [INFO] appLog - Socket connection established
+[2016-04-03 12:02:59.340] [INFO] appLog - Socket connection established
+[2016-04-03 12:02:59.854] [INFO] appLog - Results fetched
+[2016-04-03 12:02:59.923] [INFO] appLog - 
+[2016-04-03 12:02:59.952] [INFO] appLog - 
+[2016-04-03 12:02:59.992] [INFO] appLog - 
+[2016-04-03 12:03:00.000] [INFO] appLog - 
+[2016-04-03 12:03:00.018] [INFO] appLog - 
+[2016-04-03 12:03:00.041] [INFO] appLog - 
+[2016-04-03 12:03:00.053] [INFO] appLog - 
+[2016-04-03 12:03:00.073] [INFO] appLog - 
+[2016-04-03 12:03:00.101] [INFO] appLog - 
+[2016-04-03 12:03:00.103] [INFO] appLog - 
+[2016-04-03 12:03:17.233] [INFO] appLog - Socket connection established
+[2016-04-03 12:03:17.676] [INFO] appLog - Results fetched
+[2016-04-03 12:03:17.687] [INFO] appLog - 
+[2016-04-03 12:03:17.719] [INFO] appLog - 
+[2016-04-03 12:03:17.722] [INFO] appLog - 
+[2016-04-03 12:03:17.815] [INFO] appLog - 
+[2016-04-03 12:03:17.819] [INFO] appLog - 
+[2016-04-03 12:03:17.860] [INFO] appLog - 
+[2016-04-03 12:03:17.875] [INFO] appLog - 
+[2016-04-03 12:03:17.914] [INFO] appLog - 
+[2016-04-03 12:03:17.916] [INFO] appLog - 
+[2016-04-03 12:03:17.932] [INFO] appLog - 
+[2016-04-03 12:03:42.817] [INFO] appLog - Results fetched
+[2016-04-03 12:03:42.829] [INFO] appLog - 
+[2016-04-03 12:03:42.845] [INFO] appLog - 
+[2016-04-03 12:03:42.902] [INFO] appLog - 
+[2016-04-03 12:03:42.905] [INFO] appLog - 
+[2016-04-03 12:03:42.907] [INFO] appLog - 
+[2016-04-03 12:03:42.944] [INFO] appLog - 
+[2016-04-03 12:03:42.957] [INFO] appLog - 
+[2016-04-03 12:03:42.979] [INFO] appLog - 
+[2016-04-03 12:03:42.982] [INFO] appLog - 
+[2016-04-03 12:03:42.996] [INFO] appLog - 
+[2016-04-03 12:05:11.180] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 12:05:11.206] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 12:05:11.587] [INFO] appLog - Socket connection established
+[2016-04-03 12:05:12.922] [INFO] appLog - Socket connection established
+[2016-04-03 12:05:13.578] [INFO] appLog - Socket connection established
+[2016-04-03 12:05:14.076] [INFO] appLog - Results fetched
+[2016-04-03 12:05:14.127] [INFO] appLog - 
+[2016-04-03 12:05:14.168] [INFO] appLog - 
+[2016-04-03 12:05:14.175] [INFO] appLog - 
+[2016-04-03 12:05:14.204] [INFO] appLog - 
+[2016-04-03 12:05:14.223] [INFO] appLog - 
+[2016-04-03 12:05:14.245] [INFO] appLog - 
+[2016-04-03 12:05:14.262] [INFO] appLog - 
+[2016-04-03 12:05:14.301] [INFO] appLog - 
+[2016-04-03 12:05:14.305] [INFO] appLog - 
+[2016-04-03 12:05:14.323] [INFO] appLog - 
+[2016-04-03 12:05:21.088] [INFO] appLog - Socket connection established
+[2016-04-03 12:05:21.489] [INFO] appLog - Results fetched
+[2016-04-03 12:05:21.527] [INFO] appLog - 
+[2016-04-03 12:05:21.528] [INFO] appLog - 
+[2016-04-03 12:05:21.583] [INFO] appLog - 
+[2016-04-03 12:05:21.587] [INFO] appLog - 
+[2016-04-03 12:05:21.622] [INFO] appLog - 
+[2016-04-03 12:05:21.626] [INFO] appLog - 
+[2016-04-03 12:05:21.649] [INFO] appLog - 
+[2016-04-03 12:05:21.658] [INFO] appLog - 
+[2016-04-03 12:05:21.683] [INFO] appLog - 
+[2016-04-03 12:05:21.686] [INFO] appLog - 
+[2016-04-03 12:06:08.740] [INFO] appLog - Socket connection established
+[2016-04-03 12:15:41.708] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 12:15:41.736] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 12:15:44.576] [INFO] appLog - Socket connection established
+[2016-04-03 12:15:45.035] [INFO] appLog - Results fetched
+[2016-04-03 12:15:45.082] [INFO] appLog - 
+[2016-04-03 12:15:45.113] [INFO] appLog - 
+[2016-04-03 12:15:45.148] [INFO] appLog - 
+[2016-04-03 12:15:45.152] [INFO] appLog - 
+[2016-04-03 12:15:45.168] [INFO] appLog - 
+[2016-04-03 12:15:45.210] [INFO] appLog - 
+[2016-04-03 12:15:45.214] [INFO] appLog - 
+[2016-04-03 12:15:45.276] [INFO] appLog - 
+[2016-04-03 12:15:45.285] [INFO] appLog - 
+[2016-04-03 12:15:45.291] [INFO] appLog - 
+[2016-04-03 12:15:48.456] [INFO] appLog - Socket connection established
+[2016-04-03 12:16:04.682] [INFO] appLog - Socket connection established
+[2016-04-03 12:16:05.082] [INFO] appLog - Results fetched
+[2016-04-03 12:16:05.110] [INFO] appLog - 
+[2016-04-03 12:16:05.111] [INFO] appLog - 
+[2016-04-03 12:16:05.146] [INFO] appLog - 
+[2016-04-03 12:16:05.200] [INFO] appLog - 
+[2016-04-03 12:16:05.202] [INFO] appLog - 
+[2016-04-03 12:16:05.206] [INFO] appLog - 
+[2016-04-03 12:16:05.247] [INFO] appLog - 
+[2016-04-03 12:16:05.249] [INFO] appLog - 
+[2016-04-03 12:16:05.275] [INFO] appLog - 
+[2016-04-03 12:16:05.277] [INFO] appLog - 
+[2016-04-03 12:21:56.394] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 12:21:56.421] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 12:21:58.074] [INFO] appLog - Socket connection established
+[2016-04-03 12:21:58.445] [INFO] appLog - Socket connection established
+[2016-04-03 12:22:01.742] [INFO] appLog - Socket connection established
+[2016-04-03 12:22:05.418] [INFO] appLog - Socket connection established
+[2016-04-03 12:22:05.864] [INFO] appLog - Results fetched
+[2016-04-03 12:22:05.919] [INFO] appLog - 
+[2016-04-03 12:22:05.950] [INFO] appLog - 
+[2016-04-03 12:22:05.998] [INFO] appLog - 
+[2016-04-03 12:22:06.007] [INFO] appLog - 
+[2016-04-03 12:22:06.034] [INFO] appLog - 
+[2016-04-03 12:22:06.062] [INFO] appLog - 
+[2016-04-03 12:22:06.080] [INFO] appLog - 
+[2016-04-03 12:22:06.158] [INFO] appLog - 
+[2016-04-03 12:22:06.163] [INFO] appLog - 
+[2016-04-03 12:22:06.181] [INFO] appLog - 
+[2016-04-03 12:23:06.101] [INFO] appLog - Socket connection established
+[2016-04-03 12:23:32.809] [INFO] appLog - Socket connection established
+[2016-04-03 12:23:49.923] [INFO] appLog - Socket connection established
+[2016-04-03 12:24:11.935] [INFO] appLog - Socket connection established
+[2016-04-03 12:24:51.874] [INFO] appLog - Socket connection established
+[2016-04-03 12:24:52.312] [INFO] appLog - Results fetched
+[2016-04-03 12:24:52.326] [INFO] appLog - 
+[2016-04-03 12:24:52.352] [INFO] appLog - 
+[2016-04-03 12:24:52.395] [INFO] appLog - 
+[2016-04-03 12:24:52.405] [INFO] appLog - 
+[2016-04-03 12:24:52.416] [INFO] appLog - 
+[2016-04-03 12:24:52.445] [INFO] appLog - 
+[2016-04-03 12:24:52.462] [INFO] appLog - 
+[2016-04-03 12:24:52.484] [INFO] appLog - 
+[2016-04-03 12:24:52.512] [INFO] appLog - 
+[2016-04-03 12:24:52.514] [INFO] appLog - 
+[2016-04-03 12:24:55.548] [INFO] appLog - Socket connection established
+[2016-04-03 12:26:07.755] [INFO] appLog - Socket connection established
+[2016-04-03 12:26:30.153] [INFO] appLog - Socket connection established
+[2016-04-03 12:27:08.464] [INFO] appLog - Socket connection established
+[2016-04-03 12:28:47.693] [INFO] appLog - Socket connection established
+[2016-04-03 12:29:05.325] [INFO] appLog - Socket connection established
+[2016-04-03 12:29:31.485] [INFO] appLog - Socket connection established
+[2016-04-03 12:29:50.650] [INFO] appLog - Socket connection established
+[2016-04-03 12:30:03.446] [INFO] appLog - Socket connection established
+[2016-04-03 12:30:03.876] [INFO] appLog - Results fetched
+[2016-04-03 12:30:03.885] [INFO] appLog - 
+[2016-04-03 12:30:03.906] [INFO] appLog - 
+[2016-04-03 12:30:03.944] [INFO] appLog - 
+[2016-04-03 12:30:03.951] [INFO] appLog - 
+[2016-04-03 12:30:03.962] [INFO] appLog - 
+[2016-04-03 12:30:03.988] [INFO] appLog - 
+[2016-04-03 12:30:04.000] [INFO] appLog - 
+[2016-04-03 12:30:04.037] [INFO] appLog - 
+[2016-04-03 12:30:04.040] [INFO] appLog - 
+[2016-04-03 12:30:04.055] [INFO] appLog - 
+[2016-04-03 12:30:52.719] [INFO] appLog - Socket connection established
+[2016-04-03 12:30:53.051] [INFO] appLog - Socket connection established
+[2016-04-03 12:30:53.545] [INFO] appLog - Results fetched
+[2016-04-03 12:30:53.580] [INFO] appLog - 
+[2016-04-03 12:30:53.581] [INFO] appLog - 
+[2016-04-03 12:30:53.594] [INFO] appLog - 
+[2016-04-03 12:30:53.622] [INFO] appLog - 
+[2016-04-03 12:30:53.634] [INFO] appLog - 
+[2016-04-03 12:30:53.652] [INFO] appLog - 
+[2016-04-03 12:30:53.685] [INFO] appLog - 
+[2016-04-03 12:30:53.687] [INFO] appLog - 
+[2016-04-03 12:30:53.707] [INFO] appLog - 
+[2016-04-03 12:30:53.721] [INFO] appLog - 
+[2016-04-03 12:31:15.041] [INFO] appLog - Socket connection established
+[2016-04-03 12:31:15.514] [INFO] appLog - Results fetched
+[2016-04-03 12:31:15.527] [INFO] appLog - 
+[2016-04-03 12:31:15.563] [INFO] appLog - 
+[2016-04-03 12:31:15.565] [INFO] appLog - 
+[2016-04-03 12:31:15.567] [INFO] appLog - 
+[2016-04-03 12:31:15.579] [INFO] appLog - 
+[2016-04-03 12:31:15.592] [INFO] appLog - 
+[2016-04-03 12:31:15.609] [INFO] appLog - 
+[2016-04-03 12:31:15.659] [INFO] appLog - 
+[2016-04-03 12:31:15.662] [INFO] appLog - 
+[2016-04-03 12:31:15.666] [INFO] appLog - 
+[2016-04-03 12:31:19.055] [INFO] appLog - Socket connection established
+[2016-04-03 12:38:05.068] [INFO] appLog - Socket connection established
+[2016-04-03 12:38:29.408] [INFO] appLog - Socket connection established
+[2016-04-03 13:50:06.609] [INFO] appLog - Socket connection established
+[2016-04-03 13:53:31.253] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 13:53:31.280] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 13:53:31.986] [INFO] appLog - Socket connection established
+[2016-04-03 13:53:37.762] [INFO] appLog - Socket connection established
+[2016-04-03 13:59:01.158] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 13:59:01.190] [INFO] appLog - Socket connection established
+[2016-04-03 13:59:01.209] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 14:00:44.521] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 14:00:44.547] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 14:00:44.666] [INFO] appLog - Socket connection established
+[2016-04-03 14:00:57.460] [ERROR] appLog - Invalid login
+[2016-04-03 14:00:57.486] [ERROR] appLog - User not found in DB for 
+[2016-04-03 14:01:32.245] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 14:01:32.271] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 14:01:32.409] [INFO] appLog - Socket connection established
+[2016-04-03 14:01:56.162] [INFO] appLog - Vertical Result fetched
+[2016-04-03 14:02:20.639] [INFO] appLog - Vertical Result fetched
+[2016-04-03 14:02:54.407] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 14:02:54.433] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 14:02:54.454] [INFO] appLog - Socket connection established
+[2016-04-03 14:03:11.197] [INFO] appLog - Vertical Result fetched
+[2016-04-03 14:03:38.684] [INFO] appLog - Vertical Result fetched
+[2016-04-03 14:04:20.696] [INFO] appLog - Socket connection established
+[2016-04-03 14:09:41.215] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 14:09:41.253] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 14:09:42.401] [INFO] appLog - Socket connection established
+[2016-04-03 14:11:22.736] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 14:11:22.761] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 14:11:26.662] [INFO] appLog - Socket connection established
+[2016-04-03 14:11:27.402] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 14:11:53.618] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 14:11:53.658] [INFO] appLog - Socket connection established
+[2016-04-03 14:11:53.667] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 14:11:56.084] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 14:13:26.866] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 14:13:26.893] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 14:13:29.654] [INFO] appLog - Socket connection established
+[2016-04-03 14:13:34.008] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 14:13:46.100] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 14:17:41.624] [INFO] appLog - Socket connection established
+[2016-04-03 14:17:41.975] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 14:17:53.231] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 14:17:53.259] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 14:17:54.664] [INFO] appLog - Socket connection established
+[2016-04-03 14:17:55.917] [INFO] appLog - Socket connection established
+[2016-04-03 14:17:56.285] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 14:18:41.236] [INFO] appLog - Socket connection established
+[2016-04-03 14:18:41.570] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 14:55:19.817] [INFO] appLog - Socket connection established
+[2016-04-03 15:28:18.225] [INFO] appLog - Socket connection established
+[2016-04-03 15:28:18.522] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:28:34.986] [INFO] appLog - Socket connection established
+[2016-04-03 15:28:35.315] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:29:07.956] [INFO] appLog - Socket connection established
+[2016-04-03 15:29:08.248] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:30:10.674] [INFO] appLog - Socket connection established
+[2016-04-03 15:30:10.992] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:30:38.181] [INFO] appLog - Socket connection established
+[2016-04-03 15:30:38.507] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:30:47.987] [INFO] appLog - Socket connection established
+[2016-04-03 15:30:48.310] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:31:09.826] [INFO] appLog - Socket connection established
+[2016-04-03 15:31:10.162] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:31:28.007] [INFO] appLog - Socket connection established
+[2016-04-03 15:31:28.301] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:31:46.279] [INFO] appLog - Socket connection established
+[2016-04-03 15:31:46.609] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:32:05.853] [INFO] appLog - Socket connection established
+[2016-04-03 15:32:06.176] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:32:12.187] [INFO] appLog - Socket connection established
+[2016-04-03 15:32:12.509] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:32:19.844] [INFO] appLog - Socket connection established
+[2016-04-03 15:32:20.156] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:33:45.146] [INFO] appLog - Socket connection established
+[2016-04-03 15:33:54.907] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:37:50.705] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 15:37:50.731] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 15:37:50.776] [INFO] appLog - Socket connection established
+[2016-04-03 15:37:57.554] [INFO] appLog - Socket connection established
+[2016-04-03 15:37:57.917] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:38:52.332] [INFO] appLog - Server listening on port: 3000
+[2016-04-03 15:38:52.361] [INFO] appLog - Connected to Mongo DB successfully
+[2016-04-03 15:38:52.444] [INFO] appLog - Socket connection established
+[2016-04-03 15:39:00.637] [INFO] appLog - Socket connection established
+[2016-04-03 15:39:23.315] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:39:30.351] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:39:32.727] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:39:42.644] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:39:59.195] [INFO] appLog - Socket connection established
+[2016-04-03 15:39:59.488] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:40:35.165] [INFO] appLog - Socket connection established
+[2016-04-03 15:40:38.187] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:41:16.182] [INFO] appLog - Socket connection established
+[2016-04-03 15:41:24.560] [INFO] appLog - Socket connection established
+[2016-04-03 15:41:24.887] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:46:17.372] [INFO] appLog - Socket connection established
+[2016-04-03 15:46:17.669] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:46:50.108] [INFO] appLog - Socket connection established
+[2016-04-03 15:46:50.449] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:47:14.618] [INFO] appLog - Socket connection established
+[2016-04-03 15:47:14.955] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:47:40.591] [INFO] appLog - Socket connection established
+[2016-04-03 15:47:40.916] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:48:53.313] [INFO] appLog - Socket connection established
+[2016-04-03 15:48:53.617] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:49:44.821] [INFO] appLog - Socket connection established
+[2016-04-03 15:49:45.195] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:51:09.637] [INFO] appLog - Socket connection established
+[2016-04-03 15:51:10.100] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:52:07.780] [INFO] appLog - Socket connection established
+[2016-04-03 15:52:08.217] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:52:38.119] [INFO] appLog - Socket connection established
+[2016-04-03 15:52:59.258] [INFO] appLog - Results fetched
+[2016-04-03 15:52:59.377] [INFO] appLog - 
+[2016-04-03 15:52:59.380] [INFO] appLog - 
+[2016-04-03 15:52:59.385] [INFO] appLog - 
+[2016-04-03 15:52:59.451] [INFO] appLog - 
+[2016-04-03 15:52:59.453] [INFO] appLog - 
+[2016-04-03 15:52:59.478] [INFO] appLog - 
+[2016-04-03 15:52:59.491] [INFO] appLog - 
+[2016-04-03 15:52:59.510] [INFO] appLog - 
+[2016-04-03 15:52:59.533] [INFO] appLog - 
+[2016-04-03 15:52:59.548] [INFO] appLog - 
+[2016-04-03 15:53:01.320] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:53:29.836] [INFO] appLog - Socket connection established
+[2016-04-03 15:53:42.846] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:54:18.893] [INFO] appLog - Socket connection established
+[2016-04-03 15:54:19.318] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:54:53.447] [INFO] appLog - Socket connection established
+[2016-04-03 15:55:18.596] [INFO] appLog - Socket connection established
+[2016-04-03 15:55:45.817] [INFO] appLog - Socket connection established
+[2016-04-03 15:56:00.876] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:56:39.579] [INFO] appLog - Socket connection established
+[2016-04-03 15:56:52.539] [INFO] appLog - Socket connection established
+[2016-04-03 15:56:52.873] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched
+[2016-04-03 15:57:11.241] [INFO] appLog - Socket connection established
+[2016-04-03 15:57:11.570] [INFO] appLog - getFinanceDataForVerticalQuarter: data fetched

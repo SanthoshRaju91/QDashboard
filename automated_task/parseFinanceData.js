@@ -40,7 +40,7 @@ exports.parseFinancialDataForProject = function(clientName, projectName, filenam
 
 function loadFinancialDataForVertical(verticalName, inputResultToStore) {
     
-    FinanceBasedOnVertical.remove({}, function(err) {
+    FinanceBasedOnVertical.remove({vertical: verticalName}, function(err) {
         if(err) {
             console.log("Error in removing data" + err);
         } else {
@@ -50,14 +50,16 @@ function loadFinancialDataForVertical(verticalName, inputResultToStore) {
                         period: inputResultToStore[i].Month, 
                         date: new Date(Date.parse(inputResultToStore[i].Month)),
                         vertical: verticalName,
-                        Revenue: [{"Plan": inputResultToStore[i].Revenue_Plan || 0, "Actual": inputResultToStore[i].Revenue_Actual || 0}],
-                        DirectCostPlan: [{"Plan": inputResultToStore[i].Direct_Cost_Plan || 0, "Actual": inputResultToStore[i].Direct_Cost_Actual || 0}],
-                        EmpCompensation: [{"Plan": inputResultToStore[i].Emp_Compensation_Plan || 0, "Actual": inputResultToStore[i].Emp_Compensation_Actual || 0}],
-                        SubContractor: [{"Plan": inputResultToStore[i].Subcontractor_Cost_Plan || 0, "Actual": inputResultToStore[i].Subcontractor_Cost_Actual || 0 }],
-                        TravelEntertainment: [{"Plan": inputResultToStore[i].Travel_Entertainment_Plan || 0, "Actual": inputResultToStore[i].Travel_Entertainment_Actual || 0}],
-                        TeleCommunication: [{"Plan": inputResultToStore[i].Telecommunication_Plan || 0, "Actual": inputResultToStore[i].Telecommunication_Actual || 0}],
-                        Others: [{"Plan": inputResultToStore[i].Others_Plan || 0, "Actual": inputResultToStore[i].Others_Actual || 0}],
-                        TotalDirectCost: [{"Plan": inputResultToStore[i].Total_Direct_Cost_Plan || 0, "Actual": inputResultToStore[i].Total_Direct_Cost_Actual || 0}]
+                        metrics: {
+                            Revenue: [{"Plan": inputResultToStore[i].Revenue_Plan || 0, "Actual": inputResultToStore[i].Revenue_Actual || 0}],    
+                            DirectCostPlan: [{"Plan": inputResultToStore[i].Direct_Cost_Plan || 0, "Actual": inputResultToStore[i].Direct_Cost_Actual || 0}],
+                            EmpCompensation: [{"Plan": inputResultToStore[i].Emp_Compensation_Plan || 0, "Actual": inputResultToStore[i].Emp_Compensation_Actual || 0}],
+                            SubContractor: [{"Plan": inputResultToStore[i].Subcontractor_Cost_Plan || 0, "Actual": inputResultToStore[i].Subcontractor_Cost_Actual || 0 }],
+                            TravelEntertainment: [{"Plan": inputResultToStore[i].Travel_Entertainment_Plan || 0, "Actual": inputResultToStore[i].Travel_Entertainment_Actual || 0}],
+                            TeleCommunication: [{"Plan": inputResultToStore[i].Telecommunication_Plan || 0, "Actual": inputResultToStore[i].Telecommunication_Actual || 0}],
+                            Others: [{"Plan": inputResultToStore[i].Others_Plan || 0, "Actual": inputResultToStore[i].Others_Actual || 0}],
+                            TotalDirectCost: [{"Plan": inputResultToStore[i].Total_Direct_Cost_Plan || 0, "Actual": inputResultToStore[i].Total_Direct_Cost_Actual || 0}]
+                        }                                            
                     });
 
                     financeBasedOnVertical.save(function(err) {
@@ -72,14 +74,16 @@ function loadFinancialDataForVertical(verticalName, inputResultToStore) {
                         period: inputResultToStore[i].Month, 
                         date: new Date(),
                         vertical: verticalName,
-                        Revenue: [{"Plan": inputResultToStore[i].Revenue_Plan || 0, "Actual": inputResultToStore[i].Revenue_Actual || 0}],
-                        DirectCostPlan: [{"Plan": inputResultToStore[i].Direct_Cost_Plan || 0, "Actual": inputResultToStore[i].Direct_Cost_Actual || 0}],
-                        EmpCompensation: [{"Plan": inputResultToStore[i].Emp_Compensation_Plan || 0, "Actual": inputResultToStore[i].Emp_Compensation_Actual || 0}],
-                        SubContractor: [{"Plan": inputResultToStore[i].Subcontractor_Cost_Plan || 0, "Actual": inputResultToStore[i].Subcontractor_Cost_Actual || 0 }],
-                        TravelEntertainment: [{"Plan": inputResultToStore[i].Travel_Entertainment_Plan || 0, "Actual": inputResultToStore[i].Travel_Entertainment_Actual || 0}],
-                        TeleCommunication: [{"Plan": inputResultToStore[i].Telecommunication_Plan || 0, "Actual": inputResultToStore[i].Telecommunication_Actual || 0}],
-                        Others: [{"Plan": inputResultToStore[i].Others_Plan || 0, "Actual": inputResultToStore[i].Others_Actual || 0}],
-                        TotalDirectCost: [{"Plan": inputResultToStore[i].Total_Direct_Cost_Plan || 0, "Actual": inputResultToStore[i].Total_Direct_Cost_Actual || 0}]
+                        metrics: {
+                            Revenue: [{"Plan": inputResultToStore[i].Revenue_Plan || 0, "Actual": inputResultToStore[i].Revenue_Actual || 0}],
+                            DirectCostPlan: [{"Plan": inputResultToStore[i].Direct_Cost_Plan || 0, "Actual": inputResultToStore[i].Direct_Cost_Actual || 0}],
+                            EmpCompensation: [{"Plan": inputResultToStore[i].Emp_Compensation_Plan || 0, "Actual": inputResultToStore[i].Emp_Compensation_Actual || 0}],
+                            SubContractor: [{"Plan": inputResultToStore[i].Subcontractor_Cost_Plan || 0, "Actual": inputResultToStore[i].Subcontractor_Cost_Actual || 0 }],
+                            TravelEntertainment: [{"Plan": inputResultToStore[i].Travel_Entertainment_Plan || 0, "Actual": inputResultToStore[i].Travel_Entertainment_Actual || 0}],
+                            TeleCommunication: [{"Plan": inputResultToStore[i].Telecommunication_Plan || 0, "Actual": inputResultToStore[i].Telecommunication_Actual || 0}],
+                            Others: [{"Plan": inputResultToStore[i].Others_Plan || 0, "Actual": inputResultToStore[i].Others_Actual || 0}],
+                            TotalDirectCost: [{"Plan": inputResultToStore[i].Total_Direct_Cost_Plan || 0, "Actual": inputResultToStore[i].Total_Direct_Cost_Actual || 0}]   
+                        }                        
                     });
 
                     financeBasedOnVertical.save(function(err) {

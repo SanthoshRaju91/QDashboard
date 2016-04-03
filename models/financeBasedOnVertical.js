@@ -14,14 +14,16 @@ var FinanceBasedOnVerticalSchema = new Schema({
         type: String,
         required: true
     },
-    Revenue: [Schema.Types.Mixed],
-    DirectCostPlan: [Schema.Types.Mixed],
-    EmpCompensation: [Schema.Types.Mixed],
-    SubContractor: [Schema.Types.Mixed],
-    TravelEntertainment: [Schema.Types.Mixed],
-    TeleCommunication: [Schema.Types.Mixed],
-    Others: [Schema.Types.Mixed],
-    TotalDirectCost: [Schema.Types.Mixed]
+    metrics: {
+        Revenue: [Schema.Types.Mixed],      
+        DirectCostPlan: [Schema.Types.Mixed],
+        EmpCompensation: [Schema.Types.Mixed],
+        SubContractor: [Schema.Types.Mixed],
+        TravelEntertainment: [Schema.Types.Mixed],
+        TeleCommunication: [Schema.Types.Mixed],
+        Others: [Schema.Types.Mixed],
+        TotalDirectCost: [Schema.Types.Mixed]
+    }             
 });
 
 module.exports = mongoose.model('FinanceBasedOnVertical', FinanceBasedOnVerticalSchema);

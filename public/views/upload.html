@@ -3,10 +3,6 @@
         <h5 class="text-center">Upload Data File.</h5>
     </div>
     
-    <div class="alert alert-danger">        
-        <p>Please ensure you are uploading the proper file, because the application renders the exact same data in the data file. Any mismatch/discrepancies seen in the graph are bound to wrong data loaded.</p>
-    </div>
-    
     
     <div class = "panel-group" id = "accordion" role = "tablist" aria-multiselecttable = "true">
         <div class = "panel panel-default custom-panel">
@@ -38,43 +34,83 @@
                     </form>
                 </div>
             </div>
-        </div>
-        
-        <div class = "panel panel-default custom-panel">
-            <div class="panel-heading" role = "tab" id = "financeTab" data-parent="#accordion" href="#collapseTwo" aria-controls="collapseOne" data-toggle = "collapse" >
-                <h5 class="panel-title">
-                    <a role = "button"  aria-expanded="true">
-                        Upload Finance Data
-                    </a>
-                </h5>
+        </div>                
+    </div>
+    
+    <div class = "panel panel-default custom-panel">                     
+        <div class="panel-body" style = "height: 100%">
+            <div>
+                <h5>Load Financial Data for Vertical</h5>
+                <br>
+                <table class="table table-responsive table-condensed">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <button class="btn btn-warning btn-sm btn-block">Financial & Services</button>
+                            </td>
+                            <td style="width: 50%;">
+                                <input type="file" class="form-control" ngf-select ng-model = "file" name = "file" ngf-pattern = "'*'" accept = "*" style = "width:50%;"> 
+                                <button style = "display:inline; margin-top:10px;" type="submit" class = "btn btn-sm btn-danger" ng-click="submitFinancial('Vertical', 'Financial & Services', 'Fin')">submit</button>
+                            </td>
+                            <td>
+                                <div class="progress" ng-show = "progressFin" style="width: 100%;">
+                                  <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="{{progressFinPercentage}}"
+                                  aria-valuemin="0" aria-valuemax="100" style="width:{{progressFinPercentage}}%">                    
+                                      {{progressFinPercentage}} %
+                                  </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class="btn btn-primary btn-sm btn-block">Manufacturing & Services</button>    
+                            </td>
+                            <td style="width: 50%;">
+                                <input type="file" class="form-control" ngf-select ng-model = "file" name = "file" ngf-pattern = "'*'" accept = "*" style="width: 50%;"> 
+                                <button style = "display:inline; margin-top:10px;" type="submit" class = "btn btn-sm btn-danger" ng-click="submitFinancial('Vertical', 'Manufacturing & Services', 'Man')">submit</button>
+                            </td>
+                            <td>
+                                <div class="progress" ng-show = "progressMan">
+                                  <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="{{progressManPercentage}}"
+                                  aria-valuemin="0" aria-valuemax="100" style="width:{{progressManPercentage}}%">                    
+                                      {{progressManPercentage}} %
+                                  </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class="btn btn-success btn-sm btn-block">Retail & Distribution</button>
+                            </td>
+                            <td style="width: 50%;">
+                                <input type="file" class="form-control" ngf-select ng-model = "file" name = "file" ngf-pattern = "'*'" accept = "*" style="width: 50%;"> 
+                                <button style = "display:inline; margin-top:10px;" type="submit" class = "btn btn-sm btn-danger" ng-click="submitFinancial('Vertical', 'Retail & Distribution', 'Ret')">submit</button>
+                            </td>
+                            <td>
+                                <div class="progress" ng-show = "progressRet">
+                                  <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="{{progressRetPercentage}}"
+                                  aria-valuemin="0" aria-valuemax="100" style="width:{{progressRetPercentage}}%">                    
+                                      {{progressRetPercentage}} %
+                                  </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>                
             </div>
-            <div id = "collapseTwo" class = "panel-collapse collapse in" role = "tabpanel" aria-labelledby="financeTab">                         
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <h5>Load Financial Data for Vertical</h5>
-                        <div class="row">
-                            <div class="col-md-offset-3 col-md-6">
-                                <button class="btn btn-warning">Financial Services</button>
-                                <button class="btn btn-primary">Manufacturing & Services</button>
-                                <button class="btn btn-success">Retail & Distribution</button>
-                            </div>
-                        </div>
+            <hr>
+            <br>
+            <form name = "financeForm" class = "form-horizontal">
+                <div class="row">
+                    <label class="col-md-2 control-label" for = "client name">Client Name</label>
+                    <div class="col-md-3">
+                        <input type = "text" name = "clientName" class="form-control" placeholder="Client Name">                        
                     </div>
-                </div>
-                <div class="panel-body" style = "height: 100%">
-                    <form name = "financeForm" class = "form-horizontal">
-                        <div class="row">
-                            <label class="col-md-4 control-label" for = "client name">Client Name</label>
-                            <div class="col-md-4">
-                                <input type = "text" name = "clientName" class="form-control" placeholder="Client Name">                        
-                            </div>
-                            <div class="col-md-4">
-                                <button class="btn btn-primary">Create client</button>
-                            </div>
-                        </div>
-                    </form>
-                    <div class="client-container">
-                        <h5 style = "display:inline;">Select Client</h5>
+                    <div class="col-md-2">
+                        <button class="btn btn-primary btn-sm">Create client</button>
+                    </div>
+                    <div class="col-md-5">
+                        <label class="control-label" for = "client name">Select Client</label>
                         <div class="dropdown" style = "display:inline;margin-left:10px;">
                             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-   haspopup="true" aria-expanded="true">
                                 {{selectedClientName}}
@@ -87,70 +123,68 @@
                                 </li>
                             </ul>
                         </div>
-                        <hr>
-                        
-                        <div class = "client-project-containers">
-                            <table class="table table-hover table-condensed">
-                                <thead>
-                                    <tr>                                        
-                                        <th>Project Name</th>
-                                        <th>Project Manager</th>
-                                        <th>Last Upload Date</th>
-                                        <th>Template</th>
-                                        <th>Upload</th>
-                                        <th>Progress</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>eBusiness</td>
-                                        <td>Vasudevan Vaiypuri</td>
-                                        <td>12-Jan-2016</td>
-                                        <td>
-                                            <button class="btn btn-warning btn-sm">Download <span class="icon ion-ios-cloud-download-outline" style="font-size: 14px;"></span></button>
-                                        </td>
-                                        <td>
-                                            <input type="file" class="form-control" ngf-select ng-model = "file" name = "file" ngf-pattern = "'*'" accept = "*" style="width: 70%;"> 
-                                            <button style = "display:inline; margin-top:10px;" type="submit" class = "btn btn-sm btn-danger" ng-click="submit('billability')">submit</button>
-                                        </td>
-                                        <td>
-                                            <div class="progress" ng-show = "progressFin">
-                                              <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="{{progressFinPercentage}}"
-                                              aria-valuemin="0" aria-valuemax="100" style="width:{{progressFinPercentage}}%">                    
-                                                  {{progressFinPercentage}} %
-                                              </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                     <tr>
-                                        <td>eBusiness</td>
-                                        <td>Vasudevan Vaiypuri</td>
-                                        <td>12-Jan-2016</td>
-                                        <td>
-                                            <button class="btn btn-warning btn-sm">Download <span class="icon ion-ios-cloud-download-outline" style="font-size: 14px;"></span></button>
-                                        </td>
-                                        <td>
-                                            <input type="file" class="form-control" ngf-select ng-model = "file" name = "file" ngf-pattern = "'*'" accept = "*" style="width: 70%;"> 
-                                            <button style = "display:inline; margin-top:10px;" type="submit" class = "btn btn-sm btn-danger" ng-click="submit('billability')">submit</button>
-                                        </td>
-                                        <td>
-                                            <div class="progress" ng-show = "progressFin">
-                                              <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="{{progressFinPercentage}}"
-                                              aria-valuemin="0" aria-valuemax="100" style="width:{{progressFinPercentage}}%">                    
-                                                  {{progressFinPercentage}} %
-                                              </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
                     </div>
-                    
                 </div>
-            </div>
+            </form>
+            <div class="client-container">                
+                <div class = "client-project-containers">
+                    <table class="table table-hover table-condensed">
+                        <thead>
+                            <tr>                                        
+                                <th>Project Name</th>
+                                <th>Project Manager</th>
+                                <th>Last Upload Date</th>
+                                <th>Template</th>
+                                <th>Upload</th>
+                                <th>Progress</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>eBusiness</td>
+                                <td>Vasudevan Vaiypuri</td>
+                                <td>12-Jan-2016</td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm">Download <span class="icon ion-ios-cloud-download-outline" style="font-size: 14px;"></span></button>
+                                </td>
+                                <td>
+                                    <input type="file" class="form-control" ngf-select ng-model = "file" name = "file" ngf-pattern = "'*'" accept = "*" style="width: 70%;"> 
+                                    <button style = "display:inline; margin-top:10px;" type="submit" class = "btn btn-sm btn-danger" ng-click="submit('billability')">submit</button>
+                                </td>
+                                <td>
+                                    <div class="progress" ng-show = "progressFin">
+                                      <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="{{progressFinPercentage}}"
+                                      aria-valuemin="0" aria-valuemax="100" style="width:{{progressFinPercentage}}%">                    
+                                          {{progressFinPercentage}} %
+                                      </div>
+                                    </div>
+                                </td>
+                            </tr>
+                             <tr>
+                                <td>eBusiness</td>
+                                <td>Vasudevan Vaiypuri</td>
+                                <td>12-Jan-2016</td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm">Download <span class="icon ion-ios-cloud-download-outline" style="font-size: 14px;"></span></button>
+                                </td>
+                                <td>
+                                    <input type="file" class="form-control" ngf-select ng-model = "file" name = "file" ngf-pattern = "'*'" accept = "*" style="width: 70%;"> 
+                                    <button style = "display:inline; margin-top:10px;" type="submit" class = "btn btn-sm btn-danger" ng-click="submit('billability')">submit</button>
+                                </td>
+                                <td>
+                                    <div class="progress" ng-show = "progressFin">
+                                      <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="{{progressFinPercentage}}"
+                                      aria-valuemin="0" aria-valuemax="100" style="width:{{progressFinPercentage}}%">                    
+                                          {{progressFinPercentage}} %
+                                      </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>             
         </div>
-    </div>
     
     <!--<div class="alert alert-success animated fadeIn" ng-show = "success">
         <p>{{message}}</p>
@@ -197,6 +231,6 @@
     </div>        -->
     
     <script>
-        $('.collapse').collapse();
+        $('.collapse').collapse();        
     </script>
 </section>

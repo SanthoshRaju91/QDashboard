@@ -1,0 +1,67 @@
+<div class = "container">
+    <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+    <!--<table id = "datatable" class="table table-responsive table-hover">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Planned</th>
+                <th>Actual</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat = 'row in financeQuarterMetrics'>
+                <th>{{row.metricsName}}</th>
+                <td>{{row.plannedValue}}</td>
+                <td>{{row.actualValue}}</td>
+            </tr>
+        </tbody>
+    </table>-->
+    
+    <table id="datatable">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Planned</th>
+                <th>Actual</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat = 'row in financeQuarterMetrics'>
+                <th>{{row.metricsName}}</th>
+                <td>{{row.plannedValue}}</td>
+                <td>{{row.actualValue}}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>
+
+<script>
+    $(function() {
+        setTimeout(function() {
+            $('#container').highcharts({
+                data: {
+                    table: 'datatable'
+                },
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: 'Data extracted from a HTML table in the page'
+                },
+                yAxis: {
+                    allowDecimals: false,
+                    title: {
+                        text: 'Units'
+                    }
+                },
+                tooltip: {
+                    formatter: function () {
+                        return '<b>' + this.series.name + '</b><br/>' +
+                            this.point.y + ' ' + this.point.name.toLowerCase();
+                    }
+                }
+            });
+        }, 1000); 
+    });    
+</script>

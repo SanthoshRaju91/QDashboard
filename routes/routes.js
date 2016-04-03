@@ -10,6 +10,8 @@ var OverallBillability = require('../controllers/billabilityController.js');
 var LevelBillability = require('../controllers/levelBillabilityController.js');
 var DepartmentBillability = require('../controllers/departmentBillabilityController.js');
 var PracticeBillability = require('../controllers/practiceBillabilityController.js');
+var Finance = require('../controllers/financeController.js');
+
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -66,50 +68,7 @@ router.get('/getLocationPracticeBillability/:date/:location', PracticeBillabilit
 router.get('/getVerticalPracticeBillability/:vertical', PracticeBillability.getVerticalPracticeBillability);
 router.get('/getVerticalPracticeBillability/:date/:vertical', PracticeBillability.getVerticalPracticeBillabilityOnDate);
 
-router.post('/upload', function (req, res) {
-    upload(req, res, function (err) {
-        if (err) {
-            console.log("Error : " + err);
-            res.json({
-                status: 500,
-                success: false,
-                errorCode: 1,
-                desc: err
-            });
-        } else {
-            if (req.body.option == 'billability') {
-                console.log("Billability Data uploaded, data is being processed for insertion");
-                parseBillabilityData.parseBillabilityData(req.file.filename);
-                res.json({
-                    status: 200,
-                    success: true,
-                    errorCode: 0,
-                    desc: 'Uploaded!'
-                });
-            } else if (req.body.option == 'financial') {
-                if(req.body.financeOption == 'Vertical') {
-                    parseFinancialData.parseFinancialDataForVertical('Vertical', req.body.verticalName); 
-                    res.json({
-                        status: 200,
-                        success: true,
-                        errorCode: 0,
-                        desc: 'Financial Data uploaded!'
-                    });
-                } else {
-                    parseFinancialData.parseFinancialDataForProject('Project', req.body.clientName, req.body.projectName, req.file.filename);
-                    res.json({
-                       status: 200,
-                        success: true,
-                        errorCode: 0,
-                        desc: 'Financial Data uploaded!'
-                    });
-                }
-                
-            }
-        }
-    });
-});
-
+router.get('/getFinanceDataForVerticalQuarter/:vertical/:period', Finance.getFinanceDataForVerticalQuarter);
  
 
 module.exports = router;

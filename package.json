@@ -21,6 +21,7 @@
     "bcryptjs": "^2.3.0",
     "body-parser": "^1.15.0",
     "cron": "^1.1.0",
+    "excel-parser": "^0.2.2",
     "express": "^4.13.4",
     "express-jwt": "^3.3.0",
     "express-stormpath": "^3.0.0",

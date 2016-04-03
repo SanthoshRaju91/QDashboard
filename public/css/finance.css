@@ -496,3 +496,9 @@ ul.alert-dropdown {
 .client-project-containers table tbody td {
     font-size: 14px;
 }
+
+.custom-notify {
+    width: 600px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}

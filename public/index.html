@@ -19,13 +19,23 @@
         <script type="text/javascript" src = "bower_components/lodash/dist/lodash.min.js"></script>        
         <script type="text/javascript" src = "bower_components/angularjs-dropdown-multiselect/dist/angularjs-dropdown-multiselect.min.js"></script>
         <script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
-
+        <script type="text/javascript" src="bower_components/remarkable-bootstrap-notify/dist/bootstrap-notify.js"></script>
+        <script src="https://code.highcharts.com/modules/data.js"></script>
+        
         <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/animate.css">
         <link href="css/font-awesome.css" rel="stylesheet" />                    
         <link href="css/finance.css" rel="stylesheet"/>
         
+        <script src="js/socket.io.js"></script>
+        <script>
+            var socket = io();            
+            
+            socket.on('connected', function(msg) {
+                console.log(msg);
+            })
+        </script>
     </head>
     <body>
         <div ui-view ></div>
@@ -43,6 +53,6 @@
         <script src="js/canvg.js"></script>
         <script src="js/exporting.js"></script>
         <script src="js/jspdf.js"></script>
-        <script src="js/rgbcolor.js"></script>
+        <script src="js/rgbcolor.js"></script>        
     </body>
 </html>
