@@ -421,4 +421,108 @@
             </div>
         </div>
     </div>
+
+    <div class = "well well-sm">
+        <h5 class = "text-clear">Vertical Monthly View - Select Month</h5>                
+        <select class = "form-control" ng-model = "selectedMonth" ng-change = "selectMonth(selectedMonth)">
+            <option ng-repeat = "month in FinanceDates" value = "{{month}}">{{month}}</option>
+        </select>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-default panel-finance border-calm">
+                <div class="panel-body">
+                    <highchart id = "chart1" class = "myChart1" config = "financialServicesMetrics"></highchart>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default panel-finance border-success">
+                <div class="panel-body">
+                    <highchart id = "chart1" class = "myChart1" config = "manufacturingServicesMetrics"></highchart>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default panel-finance border-danger">
+                <div class="panel-body">
+                    <highchart id = "chart1" class = "myChart1" config = "retailDistributionMetrics"></highchart>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-default panel-table panel-finance-custom">
+                <h5 class = "text-center" style = "color:#fff; z-index: 9999px;font-weight: 600; letter-spacing: 0.3px;">Financial & Services - {{selectedMonth}}</h5>
+                <div class="panel-body">
+                    <table class = "table table-condensed table-custom animated fadeIn">
+                        <thead>
+                            <tr>
+                                <th>Metrics</th>
+                                <th>Planned</th>
+                                <th>Actual</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat = 'row in financeServiceQuarterMetrics'>
+                                <td>{{row.metricsName}}</td>                
+                                <td>{{row.Plan | currency: "$": 0 }}</td>
+                                <td>{{row.Actual | currency: "$": 0}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default panel-table panel-finance-custom">
+                <h5 class = "text-center" style = "color:#fff; z-index: 9999px;font-weight: 600; letter-spacing: 0.3px;">Manufacturing & Services - {{selectedMonth}}</h5>
+                <div class="panel-body">
+                    <table class = "table table-condensed table-custom animated fadeIn">
+                        <thead>
+                            <tr>
+                                <th>Metrics</th>
+                                <th>Planned</th>
+                                <th>Actual</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat = 'row in financeManufacturingQuarterMetrics'>
+                                <td>{{row.metricsName}}</td>                
+                                <td>{{row.Plan | currency: "$": 0 }}</td>
+                                <td>{{row.Actual | currency: "$": 0}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default panel-table panel-finance-custom">
+                <h5 class = "text-center" style = "color:#fff; z-index: 9999px;font-weight: 600; letter-spacing: 0.3px;">Retail & Distribution - {{selectedMonth}}</h5>
+                <div class="panel-body">
+                    <table class = "table table-condensed table-custom animated fadeIn">
+                        <thead>
+                            <tr>
+                                <th>Metrics</th>
+                                <th>Planned</th>
+                                <th>Actual</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat = 'row in financeRetailQuarterMetrics'>
+                                <td>{{row.metricsName}}</td>                
+                                <td>{{row.Plan | currency: "$": 0 }}</td>
+                                <td>{{row.Actual | currency: "$": 0}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

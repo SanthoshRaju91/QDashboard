@@ -69,6 +69,6 @@ router.get('/getVerticalPracticeBillability/:vertical', PracticeBillability.getV
 router.get('/getVerticalPracticeBillability/:date/:vertical', PracticeBillability.getVerticalPracticeBillabilityOnDate);
 
 router.get('/getFinanceDataForVerticalQuarter/:vertical/:period', Finance.getFinanceDataForVerticalQuarter);
- 
+router.get('/getFinanceDates', Finance.getFinancePeriods);
 
 module.exports = router;

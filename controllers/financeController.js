@@ -1,20 +1,12 @@
 var logger = require('../utils/loggerUtil.js').logger;
 var Finance = require('../models/financeBasedOnVertical.js');
 
-/*exports.getVertical = function(req, res) {
-  Finance.find({}, function(err, resultSet) {
-      if(err) {
-          logger.error("Error while fetching: " + err);
-          res.json({status: 500, success: false, message: 'Error while fetching'});
-      } else if(!resultSet) {
-          logger.error("No data");
-          res.json({status: 404, success: false, message: 'Not data'});
-      } else {
-          logger.info("Vertical Result fetched");
-          res.json({status: 200, success: true, result: resultSet});
-      }
-  });  
-};*/
+var financeDates = ["Apr 2015", "May 2015", "Jun 2015", "Jul 2015", "Aug 2015", "Sep 2015", "Oct 2015", "Nov 2015", "Dec 2015", "Jan 2016", "Feb 2016"];
+
+exports.getFinancePeriods = function(req, res) {
+    logger.info("getFinancePeriods: Data fetched");
+    res.json({status: 200, success: true, result: financeDates});
+};
 
 
 exports.getFinanceDataForVerticalQuarter = function(req, res) {

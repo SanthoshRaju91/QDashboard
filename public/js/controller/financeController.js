@@ -2,6 +2,18 @@ var app = angular.module('finance', ["highcharts-ng"]);
 
 app.controller('financeController', ['$scope', '$http', '$parse', 'REST_URL', function($scope, $http, $parse, REST_URL) {
 
+
+    $http.get(REST_URL + '/getFinanceDates')
+        .success(function(response) {
+            if(response.success) {
+                $scope.FinanceDates = response.result;
+                $scope.lastMonth = $scope.FinanceDates[$scope.FinanceDates.length - 1];
+                $scope.selectedMonth = $scope.lastMonth;                
+            }
+        });
+
+
+
     function loadFinanceMetricsForVerticalGraph(verticalName, scopeName, metricsName, plannedValue, ActualValue) {
 
        var modelValue = {
@@ -428,4 +440,150 @@ app.controller('financeController', ['$scope', '$http', '$parse', 'REST_URL', fu
             }
             loadFinanceMetricsForVerticalYTDGraph('Manufacturing & Services - YTD', 'manufacturingServicesYTD', financeQuarterMetricsName, financeQuarterMetricsPlannedValue, financeQuarterMetricsNameActualValue);        
         });
+
+
+
+    setTimeout(function() {
+        if($scope.lastMonth) {
+            $http.get(REST_URL + '/getFinanceDataForVerticalQuarter/Manufacturing & Services/' + $scope.lastMonth)
+                .success(function(response) {
+                    if(response.success && response.result.length > 0) {
+                        $scope.financeManufacturingQuarterMetrics = [];
+                        var financeQuarterMetricsName = [];
+                        var financeQuarterMetricsPlannedValue = [];
+                        var financeQuarterMetricsNameActualValue = [];            
+                        for(var obj in response.result[0].metrics) {
+                            $scope.quarterMetrics = {};
+                            financeQuarterMetricsName.push(obj);
+                            financeQuarterMetricsPlannedValue.push(parseInt(response.result[0].metrics[obj][0].Plan));
+                            financeQuarterMetricsNameActualValue.push(parseInt(response.result[0].metrics[obj][0].Actual));                
+
+                            $scope.quarterMetrics.metricsName = obj;
+                            $scope.quarterMetrics.Plan = response.result[0].metrics[obj][0].Plan;
+                            $scope.quarterMetrics.Actual = response.result[0].metrics[obj][0].Actual;
+
+                            $scope.financeManufacturingQuarterMetrics.push($scope.quarterMetrics);
+                        }
+                        loadFinanceMetricsForVerticalYTDGraph('Manufacturing & Services - ' + $scope.lastMonth, 'manufacturingServicesMetrics', financeQuarterMetricsName, financeQuarterMetricsPlannedValue, financeQuarterMetricsNameActualValue);            
+                    }
+                });
+
+            $http.get(REST_URL + '/getFinanceDataForVerticalQuarter/Retail & Distribution/' + $scope.lastMonth)
+                .success(function(response) {
+                    if(response.success && response.result.length > 0) {
+                        $scope.financeRetailQuarterMetrics = [];
+                        var financeQuarterMetricsName = [];
+                        var financeQuarterMetricsPlannedValue = [];
+                        var financeQuarterMetricsNameActualValue = [];            
+                        for(var obj in response.result[0].metrics) {
+                            $scope.quarterMetrics = {};
+                            financeQuarterMetricsName.push(obj);
+                            financeQuarterMetricsPlannedValue.push(parseInt(response.result[0].metrics[obj][0].Plan));
+                            financeQuarterMetricsNameActualValue.push(parseInt(response.result[0].metrics[obj][0].Actual));                
+
+                            $scope.quarterMetrics.metricsName = obj;
+                            $scope.quarterMetrics.Plan = response.result[0].metrics[obj][0].Plan;
+                            $scope.quarterMetrics.Actual = response.result[0].metrics[obj][0].Actual;
+
+                            $scope.financeRetailQuarterMetrics.push($scope.quarterMetrics);
+                        }
+                        loadFinanceMetricsForVerticalYTDGraph('Retail & Distribution - ' + $scope.lastMonth, 'retailDistributionMetrics', financeQuarterMetricsName, financeQuarterMetricsPlannedValue, financeQuarterMetricsNameActualValue);            
+                    }
+                });   
+
+             $http.get(REST_URL + '/getFinanceDataForVerticalQuarter/Financial & Services/' + $scope.lastMonth)
+                .success(function(response) {
+                    if(response.success && response.result.length > 0) {
+                        $scope.financeServiceQuarterMetrics = [];
+                        var financeQuarterMetricsName = [];
+                        var financeQuarterMetricsPlannedValue = [];
+                        var financeQuarterMetricsNameActualValue = [];            
+                        for(var obj in response.result[0].metrics) {
+                            $scope.quarterMetrics = {};
+                            financeQuarterMetricsName.push(obj);
+                            financeQuarterMetricsPlannedValue.push(parseInt(response.result[0].metrics[obj][0].Plan));
+                            financeQuarterMetricsNameActualValue.push(parseInt(response.result[0].metrics[obj][0].Actual));                
+
+                            $scope.quarterMetrics.metricsName = obj;
+                            $scope.quarterMetrics.Plan = response.result[0].metrics[obj][0].Plan;
+                            $scope.quarterMetrics.Actual = response.result[0].metrics[obj][0].Actual;
+
+                            $scope.financeServiceQuarterMetrics.push($scope.quarterMetrics);
+                        }
+                        loadFinanceMetricsForVerticalYTDGraph('Financial & Services - ' + $scope.lastMonth, 'financialServicesMetrics', financeQuarterMetricsName, financeQuarterMetricsPlannedValue, financeQuarterMetricsNameActualValue);            
+                    }
+                });
+        }
+    }, 1000);
+
+    $scope.selectMonth = function(selectedMonth) {
+        $http.get(REST_URL + '/getFinanceDataForVerticalQuarter/Manufacturing & Services/' + selectedMonth)
+                .success(function(response) {
+                    if(response.success && response.result.length > 0) {
+                        $scope.financeManufacturingQuarterMetrics = [];
+                        var financeQuarterMetricsName = [];
+                        var financeQuarterMetricsPlannedValue = [];
+                        var financeQuarterMetricsNameActualValue = [];            
+                        for(var obj in response.result[0].metrics) {
+                            $scope.quarterMetrics = {};
+                            financeQuarterMetricsName.push(obj);
+                            financeQuarterMetricsPlannedValue.push(parseInt(response.result[0].metrics[obj][0].Plan));
+                            financeQuarterMetricsNameActualValue.push(parseInt(response.result[0].metrics[obj][0].Actual));                
+
+                            $scope.quarterMetrics.metricsName = obj;
+                            $scope.quarterMetrics.Plan = response.result[0].metrics[obj][0].Plan;
+                            $scope.quarterMetrics.Actual = response.result[0].metrics[obj][0].Actual;
+
+                            $scope.financeManufacturingQuarterMetrics.push($scope.quarterMetrics);
+                        }
+                        loadFinanceMetricsForVerticalYTDGraph('Manufacturing & Services - ' + selectedMonth, 'manufacturingServicesMetrics', financeQuarterMetricsName, financeQuarterMetricsPlannedValue, financeQuarterMetricsNameActualValue);            
+                    }
+                });
+
+            $http.get(REST_URL + '/getFinanceDataForVerticalQuarter/Retail & Distribution/' + selectedMonth)
+                .success(function(response) {
+                    if(response.success && response.result.length > 0) {
+                        $scope.financeRetailQuarterMetrics = [];
+                        var financeQuarterMetricsName = [];
+                        var financeQuarterMetricsPlannedValue = [];
+                        var financeQuarterMetricsNameActualValue = [];            
+                        for(var obj in response.result[0].metrics) {
+                            $scope.quarterMetrics = {};
+                            financeQuarterMetricsName.push(obj);
+                            financeQuarterMetricsPlannedValue.push(parseInt(response.result[0].metrics[obj][0].Plan));
+                            financeQuarterMetricsNameActualValue.push(parseInt(response.result[0].metrics[obj][0].Actual));                
+
+                            $scope.quarterMetrics.metricsName = obj;
+                            $scope.quarterMetrics.Plan = response.result[0].metrics[obj][0].Plan;
+                            $scope.quarterMetrics.Actual = response.result[0].metrics[obj][0].Actual;
+
+                            $scope.financeRetailQuarterMetrics.push($scope.quarterMetrics);
+                        }
+                        loadFinanceMetricsForVerticalYTDGraph('Retail & Distribution - ' + selectedMonth, 'retailDistributionMetrics', financeQuarterMetricsName, financeQuarterMetricsPlannedValue, financeQuarterMetricsNameActualValue);            
+                    }
+                });   
+
+             $http.get(REST_URL + '/getFinanceDataForVerticalQuarter/Financial & Services/' + selectedMonth)
+                .success(function(response) {
+                    if(response.success && response.result.length > 0) {
+                        $scope.financeServiceQuarterMetrics = [];
+                        var financeQuarterMetricsName = [];
+                        var financeQuarterMetricsPlannedValue = [];
+                        var financeQuarterMetricsNameActualValue = [];            
+                        for(var obj in response.result[0].metrics) {
+                            $scope.quarterMetrics = {};
+                            financeQuarterMetricsName.push(obj);
+                            financeQuarterMetricsPlannedValue.push(parseInt(response.result[0].metrics[obj][0].Plan));
+                            financeQuarterMetricsNameActualValue.push(parseInt(response.result[0].metrics[obj][0].Actual));                
+
+                            $scope.quarterMetrics.metricsName = obj;
+                            $scope.quarterMetrics.Plan = response.result[0].metrics[obj][0].Plan;
+                            $scope.quarterMetrics.Actual = response.result[0].metrics[obj][0].Actual;
+
+                            $scope.financeServiceQuarterMetrics.push($scope.quarterMetrics);
+                        }
+                        loadFinanceMetricsForVerticalYTDGraph('Financial & Services - ' + selectedMonth, 'financialServicesMetrics', financeQuarterMetricsName, financeQuarterMetricsPlannedValue, financeQuarterMetricsNameActualValue);            
+                    }
+                });    
+    }; 
 }]);
