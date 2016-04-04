@@ -62,6 +62,7 @@ app.controller('uploadController', ['Upload', 'REST_URL', '$scope', '$parse', fu
                 $scope.error = true;
                 $scope.message = 'Failed to upload';
             } else {
+                socket.emit('notify', "Data uploaded for project " + projectName)
                 $scope.success = true;
                 $scope.message = option.toUpperCase() + 'data uploaded successfully, backend started processing the data file. Please check after a few seconds';
             }
@@ -75,7 +76,7 @@ app.controller('uploadController', ['Upload', 'REST_URL', '$scope', '$parse', fu
     }
     
         
-    $scope.upload = function(option, file) {
+    $scope.uploadBillability = function(option, file) {
         Upload.upload({
             url: REST_URL + '/upload/',
             data: {option: option, file: file}
@@ -84,7 +85,8 @@ app.controller('uploadController', ['Upload', 'REST_URL', '$scope', '$parse', fu
             if(response.data.errorCode === 1) {
                $scope.error = true;
                $scope.message = "Failed to upload";
-           } else {               
+           } else {            
+                socket.emit('notify', "Billability data uploaded ");   
                $scope.success = true;
                $scope.message = option.toUpperCase() + " data uploaded successfully, backend started processing the data file. Please check after a few seconds";
            }
